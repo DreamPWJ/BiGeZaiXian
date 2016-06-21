@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.MarkAdMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.MarkAd" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="MARK" property="mark" jdbcType="VARCHAR" />
+    <result column="GOODKINDCODE" property="goodkindcode" jdbcType="VARCHAR" />
+    <result column="PICURL" property="picurl" jdbcType="VARCHAR" />
+    <result column="OPERATIONID" property="operationid" jdbcType="DECIMAL" />
+    <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="STATUSCODE" property="statuscode" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, MARK, GOODKINDCODE, PICURL, OPERATIONID, OPERATIONIP, CREATETIME, STATUSCODE, 
+    MEMO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from REC_MARKAD
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from REC_MARKAD
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.MarkAd" >
+    insert into REC_MARKAD (ID, MARK, GOODKINDCODE, 
+      PICURL, OPERATIONID, OPERATIONIP, 
+      CREATETIME, STATUSCODE, MEMO
+      )
+    values (#{id,jdbcType=DECIMAL}, #{mark,jdbcType=VARCHAR}, #{goodkindcode,jdbcType=VARCHAR}, 
+      #{picurl,jdbcType=VARCHAR}, #{operationid,jdbcType=DECIMAL}, #{operationip,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{statuscode,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.MarkAd" >
+    insert into REC_MARKAD
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="mark != null" >
+        MARK,
+      </if>
+      <if test="goodkindcode != null" >
+        GOODKINDCODE,
+      </if>
+      <if test="picurl != null" >
+        PICURL,
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID,
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP,
+      </if>
+      <if test="createtime != null" >
+        CREATETIME,
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        seq_rec_markad.nextval,
+      </if>
+      <if test="mark != null" >
+        #{mark,jdbcType=VARCHAR},
+      </if>
+      <if test="goodkindcode != null" >
+        #{goodkindcode,jdbcType=VARCHAR},
+      </if>
+      <if test="picurl != null" >
+        #{picurl,jdbcType=VARCHAR},
+      </if>
+      <if test="operationid != null" >
+        #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.MarkAd" >
+    update REC_MARKAD
+    <set >
+      <if test="mark != null" >
+        MARK = #{mark,jdbcType=VARCHAR},
+      </if>
+      <if test="goodkindcode != null" >
+        GOODKINDCODE = #{goodkindcode,jdbcType=VARCHAR},
+      </if>
+      <if test="picurl != null" >
+        PICURL = #{picurl,jdbcType=VARCHAR},
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.MarkAd" >
+    update REC_MARKAD
+    set MARK = #{mark,jdbcType=VARCHAR},
+      GOODKINDCODE = #{goodkindcode,jdbcType=VARCHAR},
+      PICURL = #{picurl,jdbcType=VARCHAR},
+      OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+
+  <!--根据品种获取首页含有图片的两个商品信息-->
+  <select id="queryMarkAdsHasPic" parameterType="java.lang.String" resultType="Map">
+    SELECT id,MARK,PICURL FROM REC_MARKAD
+    WHERE STATUSCODE='001' AND GOODKINDCODE LIKE #{0} AND PICURL IS NOT NULL
+  </select>
+
+  <!--根据品种获取首页8个商品信息-->
+  <select id="queryMarkAdsByType" parameterType="java.lang.String" resultType="Map">
+    SELECT id,MARK FROM REC_MARKAD
+    WHERE STATUSCODE='001' AND GOODKINDCODE LIKE #{0} AND PICURL IS NULL
+  </select>
+</mapper>

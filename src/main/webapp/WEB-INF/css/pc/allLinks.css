@@ -1,0 +1,144 @@
+/* CSS Document */
+
+div.main {
+    width: 1200px;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+div.main-lj {
+    width: 1200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    text-align: left;
+    background: #F5F5F5;
+}
+
+div.LT {
+    width: 240px;
+    height: 35px;
+    margin-right: 10px;
+    padding: 0px;
+    float: left;
+    background: url("../../images/pc/allLinks/yl-1.jpg") no-repeat;
+}
+
+div.RT {
+    width: 900px;
+    float: left;
+    height: 35px;
+    margin: 0px;
+    padding: 0px;
+    background: url("../../images/pc/allLinks/yl-2.jpg") no-repeat;
+}
+
+div.main-L {
+    width: 238px;
+    height: 100%;
+    margin-right: 10px;
+    padding: 0px;
+    float: left;
+    border-left: 1px solid #bec3c6;
+    border-right: 1px solid #bec3c6;
+    border-bottom: 1px solid #bec3c6;
+}
+
+div.qblj {
+    width: 238px;
+    height: 50px;
+    border-bottom: 1px solid #bec3c6;
+    float: left;
+}
+
+div.qblj-ZL1-t {
+    width: 50px;
+    height: 50px;
+    padding-top: 18px;
+    padding-left: 36px;
+    float: left;
+}
+
+div.qblj-ZL1-z {
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    float: left;
+    font-size: 13px;
+}
+
+.qblj-ZL1-z a {
+    color: #FF7519;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.qblj-ZL1-z a:hover {
+    font-size: 14px;
+    color: #FF7519;
+    text-decoration: none;
+}
+
+div.sqlj {
+    width: 238px;
+    height: 50px;
+}
+
+div.sqlj-ZL2-t {
+    width: 50px;
+    height: 30px;
+    padding-top: 20px;
+    padding-left: 36px;
+    float: left;
+}
+
+div.sqlj-ZL2-z {
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    float: left;
+    font-size: 13px; /*background:#009933;*/
+}
+
+.sqlj-ZL2-z a {
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.sqlj-ZL2-z a:hover {
+    font-size: 16px;
+    color: #FF7519;
+    text-decoration: none;
+}
+
+div.main-R {
+    width: 728px;
+    height: 660px;
+    margin-bottom: 100px;
+    padding: 0px;
+    float: left;
+    border-left: 1px solid #bec3c6;
+    border-right: 1px solid #bec3c6;
+    border-bottom: 1px solid #bec3c6;
+}
+
+.yl {
+    width: 150px;
+    height: 50px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.yl a.y-a {
+    color: #3F3F3F;
+    text-decoration: none;
+}
+
+.yl a:hover {
+    color: #FF7519;
+    text-decoration: none;
+}

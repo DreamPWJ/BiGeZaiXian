@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.SellDetMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.SellDet" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="BUYID" property="buyid" jdbcType="DECIMAL" />
+    <result column="GUESTID" property="guestid" jdbcType="DECIMAL" />
+    <result column="LINKMAN" property="linkman" jdbcType="VARCHAR" />
+    <result column="MOBPHONE" property="mobphone" jdbcType="CHAR" />
+    <result column="PHONE" property="phone" jdbcType="VARCHAR" />
+    <result column="PRICE" property="price" jdbcType="DECIMAL" />
+    <result column="OPERATIONID" property="operationid" jdbcType="DECIMAL" />
+    <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="STATUSCODE" property="statuscode" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, BUYID, GUESTID, LINKMAN, MOBPHONE, PHONE, PRICE, OPERATIONID, OPERATIONIP,
+    CREATETIME, STATUSCODE, MEMO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from REC_SELLDET
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from REC_SELLDET
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.SellDet" >
+    insert into REC_SELLDET (ID, BUYID, GUESTID, 
+      LINKMAN, MOBPHONE,
+      PHONE, PRICE, OPERATIONID, 
+      OPERATIONIP, CREATETIME, STATUSCODE, 
+      MEMO)
+    values (#{id,jdbcType=DECIMAL}, #{buyid,jdbcType=DECIMAL}, #{guestid,jdbcType=DECIMAL}, 
+      #{linkman,jdbcType=VARCHAR}, #{mobphone,jdbcType=CHAR},
+      #{phone,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}, #{operationid,jdbcType=DECIMAL}, 
+      #{operationip,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{statuscode,jdbcType=VARCHAR}, 
+      #{memo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.SellDet" >
+    insert into REC_SELLDET
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="buyid != null" >
+        BUYID,
+      </if>
+      <if test="guestid != null" >
+        GUESTID,
+      </if>
+      <if test="linkman != null" >
+        LINKMAN,
+      </if>
+      <if test="mobphone != null" >
+        MOBPHONE,
+      </if>
+      <if test="phone != null" >
+        PHONE,
+      </if>
+      <if test="price != null" >
+        PRICE,
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID,
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP,
+      </if>
+      <if test="createtime != null" >
+        CREATETIME,
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="buyid != null" >
+        #{buyid,jdbcType=DECIMAL},
+      </if>
+      <if test="guestid != null" >
+        #{guestid,jdbcType=DECIMAL},
+      </if>
+      <if test="linkman != null" >
+        #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="mobphone != null" >
+        #{mobphone,jdbcType=CHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="operationid != null" >
+        #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.SellDet" >
+    update REC_SELLDET
+    <set >
+      <if test="buyid != null" >
+        BUYID = #{buyid,jdbcType=DECIMAL},
+      </if>
+      <if test="guestid != null" >
+        GUESTID = #{guestid,jdbcType=DECIMAL},
+      </if>
+      <if test="linkman != null" >
+        LINKMAN = #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="mobphone != null" >
+        MOBPHONE = #{mobphone,jdbcType=CHAR},
+      </if>
+      <if test="phone != null" >
+        PHONE = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        PRICE = #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.SellDet" >
+    update REC_SELLDET
+    set BUYID = #{buyid,jdbcType=DECIMAL},
+      GUESTID = #{guestid,jdbcType=DECIMAL},
+      LINKMAN = #{linkman,jdbcType=VARCHAR},
+      MOBPHONE = #{mobphone,jdbcType=CHAR},
+      PHONE = #{phone,jdbcType=VARCHAR},
+      PRICE = #{price,jdbcType=DECIMAL},
+      OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

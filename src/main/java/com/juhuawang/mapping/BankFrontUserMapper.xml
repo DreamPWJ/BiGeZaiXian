@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.BankFrontUserMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.BankFrontUser" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="前台用户公司ID" property="前台用户公司id" jdbcType="DECIMAL" />
+    <result column="COMPANYID" property="companyid" jdbcType="DECIMAL" />
+    <result column="ACCOUNT" property="account" jdbcType="VARCHAR" />
+    <result column="BANKCODE" property="bankcode" jdbcType="VARCHAR" />
+    <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="STATUSCODE" property="statuscode" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, 前台用户公司ID, COMPANYID, ACCOUNT, BANKCODE, OPERATIONIP, CREATETIME, STATUSCODE, 
+    MEMO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from REC_BANKFRONTUSER
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from REC_BANKFRONTUSER
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.BankFrontUser" >
+    insert into REC_BANKFRONTUSER (ID, 前台用户公司ID, COMPANYID, 
+      ACCOUNT, BANKCODE, OPERATIONIP, 
+      CREATETIME, STATUSCODE, MEMO
+      )
+    values (#{id,jdbcType=DECIMAL}, #{前台用户公司id,jdbcType=DECIMAL}, #{companyid,jdbcType=DECIMAL}, 
+      #{account,jdbcType=VARCHAR}, #{bankcode,jdbcType=VARCHAR}, #{operationip,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{statuscode,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.BankFrontUser" >
+    insert into REC_BANKFRONTUSER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="前台用户公司id != null" >
+        前台用户公司ID,
+      </if>
+      <if test="companyid != null" >
+        COMPANYID,
+      </if>
+      <if test="account != null" >
+        ACCOUNT,
+      </if>
+      <if test="bankcode != null" >
+        BANKCODE,
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP,
+      </if>
+      <if test="createtime != null" >
+        CREATETIME,
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="前台用户公司id != null" >
+        #{前台用户公司id,jdbcType=DECIMAL},
+      </if>
+      <if test="companyid != null" >
+        #{companyid,jdbcType=DECIMAL},
+      </if>
+      <if test="account != null" >
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="bankcode != null" >
+        #{bankcode,jdbcType=VARCHAR},
+      </if>
+      <if test="operationip != null" >
+        #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.BankFrontUser" >
+    update REC_BANKFRONTUSER
+    <set >
+      <if test="前台用户公司id != null" >
+        前台用户公司ID = #{前台用户公司id,jdbcType=DECIMAL},
+      </if>
+      <if test="companyid != null" >
+        COMPANYID = #{companyid,jdbcType=DECIMAL},
+      </if>
+      <if test="account != null" >
+        ACCOUNT = #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="bankcode != null" >
+        BANKCODE = #{bankcode,jdbcType=VARCHAR},
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.BankFrontUser" >
+    update REC_BANKFRONTUSER
+    set 前台用户公司ID = #{前台用户公司id,jdbcType=DECIMAL},
+      COMPANYID = #{companyid,jdbcType=DECIMAL},
+      ACCOUNT = #{account,jdbcType=VARCHAR},
+      BANKCODE = #{bankcode,jdbcType=VARCHAR},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.SellMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.Sell" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="SUPID" property="supid" jdbcType="DECIMAL" />
+    <result column="GOODID" property="goodid" jdbcType="DECIMAL" />
+    <result column="CODENO" property="codeno" jdbcType="VARCHAR" />
+    <result column="TITLE" property="title" jdbcType="VARCHAR" />
+    <result column="CONTENT" property="content" jdbcType="VARCHAR" />
+    <result column="LINKMAN" property="linkman" jdbcType="VARCHAR" />
+    <result column="MOBPHONE" property="mobphone" jdbcType="CHAR" />
+    <result column="PHONE" property="phone" jdbcType="VARCHAR" />
+    <result column="PRICEBEGIN" property="pricebegin" jdbcType="DECIMAL" />
+    <result column="PRICEPER" property="priceper" jdbcType="DECIMAL" />
+    <result column="PRICEONE" property="priceone" jdbcType="DECIMAL" />
+    <result column="PRICESUCC" property="pricesucc" jdbcType="DECIMAL" />
+    <result column="NUM" property="num" jdbcType="DECIMAL" />
+    <result column="OPERATIONID" property="operationid" jdbcType="DECIMAL" />
+    <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR" />
+    <result column="BEGINTIME" property="begintime" jdbcType="TIMESTAMP" />
+    <result column="ENDTIME" property="endtime" jdbcType="TIMESTAMP" />
+    <result column="SUCCTIME" property="succtime" jdbcType="TIMESTAMP" />
+    <result column="DEALCODE" property="dealcode" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, SUPID, GOODID, CODENO, TITLE, CONTENT, LINKMAN, MOBPHONE, PHONE, PRICEBEGIN, 
+    PRICEPER, PRICEONE, PRICESUCC, NUM, OPERATIONID, OPERATIONIP, BEGINTIME, ENDTIME, 
+    SUCCTIME, DEALCODE, MEMO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from REC_SELL
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from REC_SELL
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.Sell" >
+    insert into REC_SELL (ID, SUPID, GOODID, 
+      CODENO, TITLE, CONTENT, 
+      LINKMAN, MOBPHONE, PHONE, 
+      PRICEBEGIN, PRICEPER, PRICEONE, 
+      PRICESUCC, NUM, OPERATIONID, 
+      OPERATIONIP, BEGINTIME, ENDTIME, 
+      SUCCTIME, DEALCODE, MEMO
+      )
+    values (#{id,jdbcType=DECIMAL}, #{supid,jdbcType=DECIMAL}, #{goodid,jdbcType=DECIMAL}, 
+      #{codeno,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, 
+      #{linkman,jdbcType=VARCHAR}, #{mobphone,jdbcType=CHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{pricebegin,jdbcType=DECIMAL}, #{priceper,jdbcType=DECIMAL}, #{priceone,jdbcType=DECIMAL}, 
+      #{pricesucc,jdbcType=DECIMAL}, #{num,jdbcType=DECIMAL}, #{operationid,jdbcType=DECIMAL}, 
+      #{operationip,jdbcType=VARCHAR}, #{begintime,jdbcType=TIMESTAMP}, #{endtime,jdbcType=TIMESTAMP}, 
+      #{succtime,jdbcType=TIMESTAMP}, #{dealcode,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.Sell" >
+    insert into REC_SELL
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="supid != null" >
+        SUPID,
+      </if>
+      <if test="goodid != null" >
+        GOODID,
+      </if>
+      <if test="codeno != null" >
+        CODENO,
+      </if>
+      <if test="title != null" >
+        TITLE,
+      </if>
+      <if test="content != null" >
+        CONTENT,
+      </if>
+      <if test="linkman != null" >
+        LINKMAN,
+      </if>
+      <if test="mobphone != null" >
+        MOBPHONE,
+      </if>
+      <if test="phone != null" >
+        PHONE,
+      </if>
+      <if test="pricebegin != null" >
+        PRICEBEGIN,
+      </if>
+      <if test="priceper != null" >
+        PRICEPER,
+      </if>
+      <if test="priceone != null" >
+        PRICEONE,
+      </if>
+      <if test="pricesucc != null" >
+        PRICESUCC,
+      </if>
+      <if test="num != null" >
+        NUM,
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID,
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP,
+      </if>
+      <if test="begintime != null" >
+        BEGINTIME,
+      </if>
+      <if test="endtime != null" >
+        ENDTIME,
+      </if>
+      <if test="succtime != null" >
+        SUCCTIME,
+      </if>
+      <if test="dealcode != null" >
+        DEALCODE,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="supid != null" >
+        #{supid,jdbcType=DECIMAL},
+      </if>
+      <if test="goodid != null" >
+        #{goodid,jdbcType=DECIMAL},
+      </if>
+      <if test="codeno != null" >
+        #{codeno,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="linkman != null" >
+        #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="mobphone != null" >
+        #{mobphone,jdbcType=CHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="pricebegin != null" >
+        #{pricebegin,jdbcType=DECIMAL},
+      </if>
+      <if test="priceper != null" >
+        #{priceper,jdbcType=DECIMAL},
+      </if>
+      <if test="priceone != null" >
+        #{priceone,jdbcType=DECIMAL},
+      </if>
+      <if test="pricesucc != null" >
+        #{pricesucc,jdbcType=DECIMAL},
+      </if>
+      <if test="num != null" >
+        #{num,jdbcType=DECIMAL},
+      </if>
+      <if test="operationid != null" >
+        #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="begintime != null" >
+        #{begintime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endtime != null" >
+        #{endtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="succtime != null" >
+        #{succtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dealcode != null" >
+        #{dealcode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.Sell" >
+    update REC_SELL
+    <set >
+      <if test="supid != null" >
+        SUPID = #{supid,jdbcType=DECIMAL},
+      </if>
+      <if test="goodid != null" >
+        GOODID = #{goodid,jdbcType=DECIMAL},
+      </if>
+      <if test="codeno != null" >
+        CODENO = #{codeno,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        TITLE = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        CONTENT = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="linkman != null" >
+        LINKMAN = #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="mobphone != null" >
+        MOBPHONE = #{mobphone,jdbcType=CHAR},
+      </if>
+      <if test="phone != null" >
+        PHONE = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="pricebegin != null" >
+        PRICEBEGIN = #{pricebegin,jdbcType=DECIMAL},
+      </if>
+      <if test="priceper != null" >
+        PRICEPER = #{priceper,jdbcType=DECIMAL},
+      </if>
+      <if test="priceone != null" >
+        PRICEONE = #{priceone,jdbcType=DECIMAL},
+      </if>
+      <if test="pricesucc != null" >
+        PRICESUCC = #{pricesucc,jdbcType=DECIMAL},
+      </if>
+      <if test="num != null" >
+        NUM = #{num,jdbcType=DECIMAL},
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="begintime != null" >
+        BEGINTIME = #{begintime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endtime != null" >
+        ENDTIME = #{endtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="succtime != null" >
+        SUCCTIME = #{succtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dealcode != null" >
+        DEALCODE = #{dealcode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.Sell" >
+    update REC_SELL
+    set SUPID = #{supid,jdbcType=DECIMAL},
+      GOODID = #{goodid,jdbcType=DECIMAL},
+      CODENO = #{codeno,jdbcType=VARCHAR},
+      TITLE = #{title,jdbcType=VARCHAR},
+      CONTENT = #{content,jdbcType=VARCHAR},
+      LINKMAN = #{linkman,jdbcType=VARCHAR},
+      MOBPHONE = #{mobphone,jdbcType=CHAR},
+      PHONE = #{phone,jdbcType=VARCHAR},
+      PRICEBEGIN = #{pricebegin,jdbcType=DECIMAL},
+      PRICEPER = #{priceper,jdbcType=DECIMAL},
+      PRICEONE = #{priceone,jdbcType=DECIMAL},
+      PRICESUCC = #{pricesucc,jdbcType=DECIMAL},
+      NUM = #{num,jdbcType=DECIMAL},
+      OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      BEGINTIME = #{begintime,jdbcType=TIMESTAMP},
+      ENDTIME = #{endtime,jdbcType=TIMESTAMP},
+      SUCCTIME = #{succtime,jdbcType=TIMESTAMP},
+      DEALCODE = #{dealcode,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

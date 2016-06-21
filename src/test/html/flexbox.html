@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS3弹性盒子模型flexbox</title>
+    <style>
+
+      #talkbubble{
+          margin:100px ;
+          width:120px;
+          height:80px;
+          background:green;
+          position:relative;
+          border-radius:10px
+       }
+        #talkbubble:before{
+            content:"";
+            position:absolute;
+            right: 100%;
+            top:26px;
+            width:0px;
+            height: 0px;
+            border-right:26px solid green;
+            border-top:13px solid transparent;
+            border-bottom: 13px solid transparent;
+        }
+
+      #talkbubble:after{
+          content:"";
+          position:absolute;
+          left: 100%;
+          top:26px;
+          width:0px;
+          height: 0px;
+          border-left:26px solid green;
+          border-top:13px solid transparent;
+          border-bottom: 13px solid transparent;
+      }
+ /*     .center{
+          width: 200px;
+          height:100px;
+          background-color: #3e8f3e;
+          position:absolute;
+          top:0px;
+          bottom:0px;
+          left:0px;
+          right:0px;
+          margin: auto;
+        }*/
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center{
+            width: 200px;
+            height:100px;
+            background-color: #3e8f3e;
+
+        }
+
+    </style>
+</head>
+<body>
+<!--<div id="talkbubble"></div>-->
+<div class="center"></div>
+</body>
+</html>

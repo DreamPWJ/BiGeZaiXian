@@ -1,0 +1,129 @@
+body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+/*比格金融主图*/
+
+@keyframes loadinghtml {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform:translateX(0px);
+    }
+}
+
+.JRB-t1-1 a, .JRB-t1-1 a:hover {
+    text-decoration: none;
+}
+
+@keyframes loadinghtml1 {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform:translateX(0px);
+    }
+}
+
+.Sqty-1 a {
+    font-size: 20px;
+    
+    color: #FFF;
+    text-decoration: none;
+}
+
+.Sqty-1 a:hover {
+    font-size: 22px;
+    
+    color: #FFEB5E;
+    text-decoration: none;
+}
+/*新修改的样式大图盒子*/
+.main{
+    margin:0 auto;
+    width:100%;
+    animation: loadinghtml2 0.2s;
+}
+
+@keyframes loadinghtml2 {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform:translateX(0px);
+    }
+}
+
+
+div.bottom{
+    position: relative!important;
+}
+
+.it-body{
+    width:1260px;margin:0 auto;
+}
+.it-mb5{
+    margin-bottom: 5px;
+}
+.it-mt16{
+    margin-top: 16px;
+}
+.it-mt50{
+    margin-top: 50px;
+}
+.it-mt100{
+    margin-top: 100px;
+}
+.it-tcenter{
+    text-align: center;
+}
+.it-tright{
+    text-align:right;
+}
+.it-hrbd{
+    border:1px solid #BDBDBD;
+}
+.it-fs14{
+    font-size: 14px;
+}
+.it-fs18{
+    font-size: 18px;
+}
+.it-fs22{
+    font-size: 22px;
+}
+.it-fs24{
+    font-size: 24px;
+}
+.it-bright{
+    border-right: 2px solid #DDD;
+}
+.it-pr{
+    position:relative;
+}
+.it-pa{
+    position:absolute;
+}
+.it-banner{
+    margin:0;padding:0;min-width: 1260px;min-height: 240px;
+}
+.it-text{
+    height:32px;width:270px;padding:7px;border:1px solid #E3E3E3;
+}
+.it-bapply{
+    margin-left: 70%;
+    margin-top: -14%;
+    width:200px;
+    height:165px;
+    background:#fff;
+    -moz-opacity:0.8;
+    opacity: 0.8;
+    border-radius: 10px 10px;
+}
+div.it-fs18 p.it-pcon{
+    font-size: 14px;margin-bottom: 35px;margin-top: 10px;
+}

@@ -1,0 +1,236 @@
+/* CSS Document */
+
+/*头部*/
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.zhongti {
+    width: 100%;
+    height: auto;
+    position: relative;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0px;
+    background-size: 100% 100%;
+    /*border-bottom: 1px solid #FF0000;*/
+}
+
+.v2 {
+    width: 100%;
+    height: 50px;
+    background: #4C9ED9;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    color: #FFFFFF;
+    background-size: 100% 100%;
+    overflow: hidden;
+    letter-spacing: 4px;
+}
+
+.v2-1 {
+    width: 24px;
+    height: 50px;
+    background: #FF0000;
+    margin-left: 18px;
+    padding: 0px;
+    float: left;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon.png) no-repeat scroll 0px -335px;
+}
+
+.v2-3 {
+    width: 24px;
+    height: 50px;
+    background: #FF0000;
+    margin-right: 22px;
+    padding: 0px;
+    float: right;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon.png) no-repeat scroll 0px -382px;
+}
+
+/*头部隐藏菜单栏*/
+.top-dh {
+    width: 100%;
+    height: 58px;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.top-dh-1 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-1-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon2.png) no-repeat scroll 0px 5px;
+}
+
+.top-dh-2 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-2-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon2.png) no-repeat scroll 0px -76px;
+}
+
+.top-dh-3 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-3-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon2.png) no-repeat scroll 0px -156px;
+}
+
+.top-dh-4 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-4-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon2.png) no-repeat scroll 0px -240px;
+}
+
+.too1 {
+    width: 42px;
+    height: 50px;
+}
+
+/*底线*/
+.dx {
+    width: 100%;
+    clear: left;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+/*求购货品*/
+.qghp {
+    width: 100%;
+    height: 48px;
+    margin-top: 30px;
+    clear: left;
+}
+
+.qghp-1 {
+    width: 30%;
+    height: 48px;
+    line-height: 48px;
+    text-align: right;
+    font-size: 16px;
+    float: left;
+    overflow: hidden; /*background:#009999;*/
+}
+
+.qghp-2 {
+    width: 70%;
+    height: 48px;
+    line-height: 48px;
+    text-align: left;
+    float: left;
+    overflow: hidden; /*background:#6699FF;*/
+}
+
+.text1 {
+    margin: auto;
+    font-size: 14px;
+    color: #333333;
+    margin-top: 1px;
+}
+
+/*数量，接受价格*/
+.shul {
+    width: 100%;
+    height: 48px;
+    margin-top: 20px;
+}
+
+.shul-1 {
+    width: 30%;
+    height: 48px;
+    line-height: 48px;
+    text-align: right;
+    font-size: 16px;
+    float: left;
+    overflow: hidden; /*background:#009999;*/
+}
+
+.shul-2 {
+    width: 70%;
+    height: 48px;
+    line-height: 48px;
+    text-align: left;
+    float: left;
+    overflow: hidden; /*background:#6699FF;*/
+}
+
+/*	.shul-3{width:14%; height:48px; line-height:48px; text-align:left; font-size:16px; float:left;}*/
+
+/*底部*/
+.dib {
+    width: auto;
+    height: 170px;
+    padding: 64px 22px 0px 22px;
+    margin-top: 50px;
+    border-top: 1px solid #AAAAAA;
+    background: #F4F4F4;
+}
+
+.tuic {
+    width: auto;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background: #EB6100;
+    margin-bottom: 44px;
+    overflow: hidden;
+    letter-spacing: 8px;
+}
+
+.tuic a {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.tuic a:hover {
+    color: #4C9ED9;
+}
+
+.wz {
+    width: auto;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    background: #E2E2E2;
+    overflow: hidden;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.AuthorityMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.Authority" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="ENABLE" property="enable" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="LEVELCODE" property="levelcode" jdbcType="VARCHAR" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="THEVALUE" property="thevalue" jdbcType="VARCHAR" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+    <result column="MATCHURL" property="matchurl" jdbcType="VARCHAR" />
+    <result column="ITEMICON" property="itemicon" jdbcType="VARCHAR" />
+    <result column="PARENTID" property="parentid" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, VERSION, ENABLE, NAME, LEVELCODE, POSITION, THEVALUE, URL, MATCHURL, ITEMICON, 
+    PARENTID
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from AUTHORITY
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from AUTHORITY
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.Authority" >
+    insert into AUTHORITY (ID, VERSION, ENABLE, 
+      NAME, LEVELCODE, POSITION, 
+      THEVALUE, URL, MATCHURL, 
+      ITEMICON, PARENTID)
+    values (#{id,jdbcType=DECIMAL}, #{version,jdbcType=DECIMAL}, #{enable,jdbcType=DECIMAL}, 
+      #{name,jdbcType=VARCHAR}, #{levelcode,jdbcType=VARCHAR}, #{position,jdbcType=DECIMAL}, 
+      #{thevalue,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{matchurl,jdbcType=VARCHAR}, 
+      #{itemicon,jdbcType=VARCHAR}, #{parentid,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.Authority" >
+    insert into AUTHORITY
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="version != null" >
+        VERSION,
+      </if>
+      <if test="enable != null" >
+        ENABLE,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="levelcode != null" >
+        LEVELCODE,
+      </if>
+      <if test="position != null" >
+        POSITION,
+      </if>
+      <if test="thevalue != null" >
+        THEVALUE,
+      </if>
+      <if test="url != null" >
+        URL,
+      </if>
+      <if test="matchurl != null" >
+        MATCHURL,
+      </if>
+      <if test="itemicon != null" >
+        ITEMICON,
+      </if>
+      <if test="parentid != null" >
+        PARENTID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=DECIMAL},
+      </if>
+      <if test="enable != null" >
+        #{enable,jdbcType=DECIMAL},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="levelcode != null" >
+        #{levelcode,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null" >
+        #{position,jdbcType=DECIMAL},
+      </if>
+      <if test="thevalue != null" >
+        #{thevalue,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="matchurl != null" >
+        #{matchurl,jdbcType=VARCHAR},
+      </if>
+      <if test="itemicon != null" >
+        #{itemicon,jdbcType=VARCHAR},
+      </if>
+      <if test="parentid != null" >
+        #{parentid,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.Authority" >
+    update AUTHORITY
+    <set >
+      <if test="version != null" >
+        VERSION = #{version,jdbcType=DECIMAL},
+      </if>
+      <if test="enable != null" >
+        ENABLE = #{enable,jdbcType=DECIMAL},
+      </if>
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="levelcode != null" >
+        LEVELCODE = #{levelcode,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null" >
+        POSITION = #{position,jdbcType=DECIMAL},
+      </if>
+      <if test="thevalue != null" >
+        THEVALUE = #{thevalue,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        URL = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="matchurl != null" >
+        MATCHURL = #{matchurl,jdbcType=VARCHAR},
+      </if>
+      <if test="itemicon != null" >
+        ITEMICON = #{itemicon,jdbcType=VARCHAR},
+      </if>
+      <if test="parentid != null" >
+        PARENTID = #{parentid,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.Authority" >
+    update AUTHORITY
+    set VERSION = #{version,jdbcType=DECIMAL},
+      ENABLE = #{enable,jdbcType=DECIMAL},
+      NAME = #{name,jdbcType=VARCHAR},
+      LEVELCODE = #{levelcode,jdbcType=VARCHAR},
+      POSITION = #{position,jdbcType=DECIMAL},
+      THEVALUE = #{thevalue,jdbcType=VARCHAR},
+      URL = #{url,jdbcType=VARCHAR},
+      MATCHURL = #{matchurl,jdbcType=VARCHAR},
+      ITEMICON = #{itemicon,jdbcType=VARCHAR},
+      PARENTID = #{parentid,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

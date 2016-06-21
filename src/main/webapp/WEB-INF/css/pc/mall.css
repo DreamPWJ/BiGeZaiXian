@@ -1,0 +1,599 @@
+/* CSS Document */
+
+/*-------������ʽ--------*/
+.content {
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto 50px;
+    animation: loadinghtml 0.3s ease-out;
+}
+
+@keyframes loadinghtml {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform:translateX(0px);
+    }
+}
+
+.content-nav-text span {
+    padding: 90px 50px;
+}
+
+.content-nav-box.span {
+    margin: 10px 0;
+}
+
+.content-nav-box li span {
+    font-size: 14px;
+}
+
+.content-nav-box.span li {
+    float: left;
+    margin: 0 26px;
+}
+
+.box-base {
+    margin-top: 5px;
+    border-top: 0;
+    font-size: 15px;
+    border: solid 1px #e3e3e3
+}
+
+.product-type {
+    background-color: #ffffff;
+    overflow: hidden;
+
+}
+
+.product-type .product-li {
+    /* float:left; */
+    width: 100%; /* margin-left:30px; */
+    font-size: 14px;
+}
+
+.product-li > tbody > tr > td {
+    border: 0;
+}
+
+.product-type .product-li .item {
+    padding: 0 20px;
+    color: #3f3f3f;
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 3px;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.product-type .product-li .item.current {
+    background-color: #1CAAEB;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.product-type-title h3 {
+    display: inline-block;
+    margin: 2px 46px 6px;
+    padding-top: 2px;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    width: 60px;
+    height: 23px;
+    background-color: #f55d12;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.product-type-title h3:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border: 6px solid transparent;
+    border-top-color: #f55d12;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+}
+
+.product-li td {
+    padding: 5px 25px 5px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #D5D5D5;
+    font-size: 12px;
+    position: relative;
+}
+
+.product-li td.title {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.box-basecolor .title {
+    position: relative;
+    padding: 5px 8px;
+}
+
+.box-basecolor .title h3 {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.box-basecolor .title i {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 13px;
+    color: #b5b5b5;
+}
+
+.leftmenu-link .title {
+    padding: 12px 12px 5px;
+    margin: 0 9px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+}
+
+.service-type-strong .title {
+    width: 305px;
+    height: 30px;
+    background-position: -30px -1px;
+}
+
+.product-list-title h3 {
+    padding-left: 12px;
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#data-table > thead > tr > th {
+    padding: 15px;
+    text-align:center;
+    font-size: 15px;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+#tbodymall > tr > td {
+    text-align: center;
+    font-size: 14px;
+    border-right: 0;
+    border-left: 0;
+    vertical-align: middle;
+    line-height: 1;
+    padding: 10px 0 10px 5px;
+    color: rgb(102, 102, 102);
+}
+
+.product-list {
+    width: 1200px;
+    margin-top: 8px;
+}
+
+.product-list.base {
+    width: auto;
+    margin-top: 0;
+}
+
+.service-type.span .item-list {
+    padding: 20px 0;
+}
+
+.service-type.span .item-list {
+    padding: 10px 0 10px 64px;
+}
+
+.ui-tab li.current a, .ui-tab li.tabtext.current a:hover {
+    height: 36px;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    font-weight: bold;
+    color: #117ed2;
+}
+
+.menu-list li.current a, .menu-list li.current a:hover {
+    background-color: #FF7519;
+}
+
+.menu-list li.current a.jrb {
+    background-color: transparent;
+}
+
+.menutype li .text.current {
+    box-shadow: 0 0 6px #666;
+    border-right: 0 solid #ddd;
+}
+
+.tabsmall li.current a {
+    background-color: #fff;
+    color: #000;
+}
+
+.quoted-fy a.current {
+    background-position: -117px -346px;
+}
+
+.flsort .state-up.current {
+    background-position: right -383px;
+    color: #FF7519;
+}
+
+.flsort .state-down.current {
+    background-position: right -405px;
+    color: #FF7519;
+}
+
+.tab-base li a.current {
+    margin-top: -1px;
+    border-right: 0 solid #DDD;
+    border-top: 2px solid #FF7519;
+    position: relative;
+    font-weight: bold;
+    background-color: #FFF8D9;
+    z-index: 1;
+}
+
+.tab-base.sm li a.current {
+    height: 32px;
+    margin-top: 0;
+    border-top: 0;
+    color: #000;
+    font-weight: normal;
+    background-color: #fff;
+}
+
+.tab-base.sm li a.current:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.search-tab li.current a {
+    background-color: #ff9933;
+    color: #fff;
+}
+
+.search-tab li.current a:hover {
+    background-color: #ffb027;
+    color: #fff;
+}
+
+.leftmenu .base li a:hover, .leftmenu .base li.current a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.leftmenu .base li.numb1 a:hover, .leftmenu .base li.numb1.current a {
+    background-position: -8px -92px;
+}
+
+.leftmenu .base li.numb2 a:hover, .leftmenu .base li.numb2.current a {
+    background-position: -8px -975px;
+}
+
+.leftmenu .base li.numb3 a:hover, .leftmenu .base li.numb3.current a {
+    background-position: -8px -126px;
+}
+
+.leftmenu .base li.numb4 a:hover, .leftmenu .base li.numb4.current a {
+    background-position: -8px -160px;
+}
+
+.leftmenu .base li.numb5 a:hover, .leftmenu .base li.numb5.current a {
+    background-position: -8px -1046px;
+}
+
+.leftmenu .base li.numb6 a:hover, .leftmenu .base li.numb6.current a {
+    background-position: -8px -194px;
+}
+
+.leftmenu .base li.numb7 a:hover, .leftmenu .base li.numb7.current a {
+    background-position: -8px -1117px;
+}
+
+.leftmenu .base li.numb8 a:hover, .leftmenu .base li.numb8.current a {
+    background-position: -8px -1188px;
+}
+
+.leftmenu .base li.numb9 a:hover, .leftmenu .base li.numb9.current a {
+    background-position: -8px -1296px;
+}
+
+.leftmenu .service ul li a:hover, .leftmenu .service ul li.current a {
+    background-position: -5px -438px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.order-tab li.current a {
+    height: 42px;
+    background: url("../../images/pc/mall/tabbg.png") center top;
+    color: #fff;
+}
+
+.servicechg .serconli.current i {
+    background-position: 0 -679px;
+}
+
+.ui-tab-disline li.current a {
+    background-color: #fff;
+    border: solid #e0e0e0;
+    border-width: 1px 1px 0 1px;
+}
+
+.ui-tab-disline li.current a:hover {
+    background-color: #fff;
+}
+
+.type-order li.current a {
+    background-color: #efefef;
+    border-radius: 3px;
+}
+
+.sidebar li.current a {
+    color: #3385ff;
+}
+
+.address-list li:hover, .address-list li.current {
+    background-color: #fff0e8;
+}
+
+.tab-base li a.current {
+    margin-top: -1px;
+    border-right: 0 solid #DDD;
+    border-top: 2px solid #FF7519;
+    position: relative;
+    font-weight: bold;
+    background-color: #FFF8D9;
+    z-index: 1;
+}
+
+.tab-base.sm li a.current {
+    height: 32px;
+    margin-top: 0;
+    border-top: 0;
+    color: #000;
+    font-weight: normal;
+    background-color: #fff;
+}
+
+.tab-base.sm li a.current:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.box-span {
+    /*padding: 15px 0;*/
+}
+
+.table-span td {
+    padding: 5px;
+}
+
+.menutype li span {
+    display: block;
+    color: #7d7d7d;
+    font-size: 12px;
+}
+
+.quoted-data .part-con span {
+    float: left;
+    display: block;
+    padding: 10px 5px;
+    width: 39px;
+    text-align: center;
+}
+
+.quoted-data .part-con span.time {
+    width: 30px;
+}
+
+.quoted-data li.down span {
+    position: relative;
+    color: #22ac38;
+}
+
+.quoted-data li.up span {
+    position: relative;
+    color: #ff0000;
+}
+
+.quoted-data li.flat span {
+    position: relative;
+    color: #3385ff;
+}
+
+.quoted-data .full-con-price span {
+    float: left;
+    padding-right: 5px;
+    margin-top: 17px;
+    font-size: 12px;
+}
+
+.infotext li span p {
+    color: #cacaca;
+}
+
+.searchnav span, .searchnavli span {
+    float: left;
+    width: 60px;
+    margin-right: 5px;
+    line-height: 25px;
+    text-align: right;
+}
+
+.textli-b span {
+    float: left;
+    margin-right: 15px;
+}
+
+.error-td span {
+    color: red;
+}
+
+.tab-base {
+    border-top: 2px solid #1CAAEB;
+    position: relative;
+    background-color: #fafafa;
+    font-weight: 600;
+    padding: 6px 60px;
+}
+
+.tab-base ul li a {
+    animation: mymall 1s;
+    -moz-animation: mymall 1s; /* Firefox */
+    -webkit-animation: mymall 1s; /* Safari 和 Chrome */
+    -o-animation: mymall 1s; /* Opera */
+}
+
+@keyframes mymall {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes mymall /* Safari 和 Chrome */
+{
+    0% {
+        -webkit-transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.tab-base ul {
+    display: block;
+    height: 33px;
+}
+
+.tab-base li {
+    float: left;
+    height: 33px;
+    line-height: 33px;
+    border-right: 1px solid #eee;
+}
+
+.tab-base li a {
+    padding: 0 20px;
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1CAAEB;
+    border-radius: 20px;
+}
+
+.tab-base.sm {
+    float: right;
+    border-bottom: 0;
+    background-color: transparent;
+}
+
+.tab-base.sm ul {
+    margin-top: 0;
+    height: 28px;
+}
+
+.tab-base.sm li {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    border-right: 0;
+}
+
+.tab-base.sm li a {
+    padding: 0 15px;
+    color: #fff;
+}
+
+.tab-base.sm li a:hover {
+    background-color: #0558d3;
+    text-decoration: none;
+    color: #fff;
+}
+
+.tab-base .separator {
+    display: inline-block;
+    float: left;
+    *display: inline;
+    *zoom: 1;
+    width: 0;
+    height: 16px;
+    line-height: 16px;
+    position: absolute;
+    top: 7px;
+    left: -11px;
+    font-size: 0;
+    border-right: 1px solid #77a8f1;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.table-bottomline th {
+    padding: 10px;
+    border-bottom: 1px solid #dfdfdf;
+    text-align: left;
+}
+
+.table-bottomline td {
+    padding: 0;
+    border-bottom: 1px solid #dfdfdf;
+    text-align: left;
+}
+
+.tritems:hover {
+    background-color: #e9f0ff;
+}
+
+.table-base td {
+    padding: 6px;
+    border-bottom: 0;
+}
+
+.product-con {
+    float: left;
+    padding: 0 0 10px 0;
+    margin-left: 15px;
+}
+
+.product-con li {
+    float: left;
+    margin-right: 30px;
+}
+
+/*��ҳ��ʽ*/
+
+.gys-feny-u a {
+    color: #000500;
+}
+
+.gys-feny-u a:hover {
+    color: #FF7519;
+}
+
+a {
+    color: #f26604;
+}
+
+#searchmall {
+    background-color: #1CAAEB;
+    border: 1px solid #1CAAEB;
+}
+

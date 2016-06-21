@@ -1,0 +1,271 @@
+/* CSS Document */
+
+.auto-style1 {
+    width: 48px;
+}
+
+body {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*------------����-----------------*/
+.content {
+    margin: 0 auto;
+    width: 1200px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.grid_5 {
+    float: left;
+    width: 140px;
+    margin: 0px;
+}
+
+.header.base {
+    padding-top: 0;
+}
+
+.product-list.base {
+    width: auto;
+    margin-top: 0;
+}
+
+.order-sertype-con .base {
+    padding: 0 20px;
+}
+
+.grid_20 {
+    float: left;
+    width: 1000px;
+    margin-top: 10px;
+    margin-left: 50px;
+    padding-bottom: 20px;
+}
+
+.uibox-head-order {
+    height: 45px;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #1CAAEB;
+
+}
+.btn-color{
+    color: #fff;
+    background-color: #1CAAEB;
+    border-color: #1CAAEB;
+}
+
+.titbase {
+    padding-left: 22px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    color: #1CAAEB;
+}
+
+.titbase.fontsm {
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.titbase.displine {
+    float: left;
+}
+
+.titbase .fb {
+    font-size: 12px;
+    color: #939292;
+    padding-left: 20px;
+}
+
+.uibox-order {
+    float: left;
+    width: 100%;
+}
+
+.formsendcon-f {
+    position: relative;
+    width: 1000px;
+    overflow: hidden;
+}
+
+.formsendcon-f.full {
+    width: 1200px;
+}
+
+
+
+.uibox-con {
+    float: left;
+    width: 1000px;
+    min-height: 398px;
+
+}
+
+.uibox {
+    float: left;
+    width: 99.8%;
+}
+
+.type-search {
+    padding: 12px 0;
+    _height: 25px;
+    overflow: hidden;
+}
+
+.searchnav {
+    float: left;
+    width: 1000px;
+    margin: 0 30px;
+}
+
+.searchnav span, .searchnavli span {
+    float: left;
+    width: 60px;
+    margin-right: 5px;
+    line-height: 25px;
+    text-align: right;
+}
+
+.searchnav select {
+    background-images: none;
+}
+
+.searchnav input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.searchnav input::-moz-placeholder {
+    color: #999;
+}
+
+.searchnav p {
+    float: left;
+    margin: 0 30px 0 0;
+}
+
+.type-order {
+    float: left;
+    width: 718px;
+    padding-bottom: 10px;
+    margin: 0 30px;
+}
+
+.type-order li {
+    float: left;
+    margin-right: 15px;
+}
+
+.type-order li a {
+    display: block;
+    padding: 0 10px;
+    _width: 60px;
+    _text-align: center;
+    height: 24px;
+    line-height: 24px;
+}
+
+.type-order li.current a {
+    background-color: #efefef;
+    border-radius: 3px;
+}
+
+.type-order.sm {
+    width: 80%;
+    margin: 0 5px;
+}
+
+.address-list li:hover, .address-list li.current {
+    background-color: #fff0e8;
+}
+
+.menu-list li.current a, .menu-list li.current a:hover {
+    background-color: #FF7519;
+}
+
+.menu-list li.current a.jrb {
+    background-color: transparent;
+}
+
+.menutype li .text.current {
+    box-shadow: 0 0 6px #666;
+    border-right: 0 solid #ddd;
+}
+
+.text-cen td, .text-cen th, .text-cen-none th, .text-cen-none td {
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.text-cen.nobord td {
+    border: solid #e0e0e0;
+    border-width: 1px;
+}
+
+.text-cen td.textle {
+    text-align: left;
+}
+
+.operation {
+    position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.operation .oper-itme {
+    z-index: 0;
+}
+
+.operation-menu li {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.operation-menu li a {
+    display: block;
+    cursor: pointer;
+    line-height: 21px;
+    height: 21px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.operation-menu li a:hover {
+    background: #ff8a00;
+    color: #fff;
+}
+
+
+
+
+
+.bordertb {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/*��ҳ*/
+
+.gys-feny-u a {
+    color: #000500;
+}
+
+.gys-feny-u a:hover {
+    color: #FF7519;
+}
+
+#data-table thead tr th,#data-table tbody tr td{
+    font-size: 15px;
+    border-left: 0px;
+    border-right: 0px;
+    color: rgb(116, 116, 116);
+}
+
+#data-table thead tr th{
+    border-bottom: 0px;
+    border-top: 0px;
+}

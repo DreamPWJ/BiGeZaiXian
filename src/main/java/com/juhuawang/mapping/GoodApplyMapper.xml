@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.GoodApplyMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.GoodApply" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FRONTUSERID" property="frontuserid" jdbcType="DECIMAL" />
+    <result column="ORDERID" property="orderid" jdbcType="DECIMAL" />
+    <result column="AFFIRMGOODCODE" property="affirmgoodcode" jdbcType="VARCHAR" />
+    <result column="GETGOODCODE" property="getgoodcode" jdbcType="VARCHAR" />
+    <result column="CODENO" property="codeno" jdbcType="VARCHAR" />
+    <result column="CARNO" property="carno" jdbcType="VARCHAR" />
+    <result column="LINKMAN" property="linkman" jdbcType="VARCHAR" />
+    <result column="MOBPHONE" property="mobphone" jdbcType="CHAR" />
+    <result column="MEANUM" property="meanum" jdbcType="DECIMAL" />
+    <result column="MILNUM" property="milnum" jdbcType="DECIMAL" />
+    <result column="PRICE" property="price" jdbcType="DECIMAL" />
+    <result column="OPERATIONID" property="operationid" jdbcType="DECIMAL" />
+    <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="STATUSCODE" property="statuscode" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, FRONTUSERID, ORDERID, AFFIRMGOODCODE, GETGOODCODE, CODENO, CARNO, LINKMAN, MOBPHONE, 
+    MEANUM, MILNUM, PRICE, OPERATIONID, OPERATIONIP, CREATETIME, STATUSCODE, MEMO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from REC_GOODAPPLY
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from REC_GOODAPPLY
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.GoodApply" >
+    insert into REC_GOODAPPLY (ID, FRONTUSERID, ORDERID, 
+      AFFIRMGOODCODE, GETGOODCODE, CODENO, 
+      CARNO, LINKMAN, MOBPHONE, 
+      MEANUM, MILNUM, PRICE, 
+      OPERATIONID, OPERATIONIP, CREATETIME, 
+      STATUSCODE, MEMO)
+    values (#{id,jdbcType=DECIMAL}, #{frontuserid,jdbcType=DECIMAL}, #{orderid,jdbcType=DECIMAL}, 
+      #{affirmgoodcode,jdbcType=VARCHAR}, #{getgoodcode,jdbcType=VARCHAR}, #{codeno,jdbcType=VARCHAR}, 
+      #{carno,jdbcType=VARCHAR}, #{linkman,jdbcType=VARCHAR}, #{mobphone,jdbcType=CHAR}, 
+      #{meanum,jdbcType=DECIMAL}, #{milnum,jdbcType=DECIMAL}, #{price,jdbcType=DECIMAL}, 
+      #{operationid,jdbcType=DECIMAL}, #{operationip,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{statuscode,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.GoodApply" >
+    insert into REC_GOODAPPLY
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <!--<if test="id != null" >
+        ID,
+      </if>-->
+      ID,
+      <if test="frontuserid != 0" >
+        FRONTUSERID,
+      </if>
+      <if test="orderid != 0" >
+        ORDERID,
+      </if>
+      <if test="affirmgoodcode != null" >
+        AFFIRMGOODCODE,
+      </if>
+      <if test="getgoodcode != null" >
+        GETGOODCODE,
+      </if>
+      <if test="codeno != null" >
+        CODENO,
+      </if>
+      <if test="carno != null" >
+        CARNO,
+      </if>
+      <if test="linkman != null" >
+        LINKMAN,
+      </if>
+      <if test="mobphone != null" >
+        MOBPHONE,
+      </if>
+      <if test="meanum != null" >
+        MEANUM,
+      </if>
+      <if test="milnum != null" >
+        MILNUM,
+      </if>
+      <if test="price != null" >
+        PRICE,
+      </if>
+      <if test="operationid != 0" >
+        OPERATIONID,
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP,
+      </if>
+      <if test="createtime != null" >
+        CREATETIME,
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <!--<if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>-->
+      seq_rec_goodApply.nextval,
+      <if test="frontuserid != 0" >
+        #{frontuserid,jdbcType=DECIMAL},
+      </if>
+      <if test="orderid != 0" >
+        #{orderid,jdbcType=DECIMAL},
+      </if>
+      <if test="affirmgoodcode != null" >
+        #{affirmgoodcode,jdbcType=VARCHAR},
+      </if>
+      <if test="getgoodcode != null" >
+        #{getgoodcode,jdbcType=VARCHAR},
+      </if>
+      <if test="codeno != null" >
+        #{codeno,jdbcType=VARCHAR},
+      </if>
+      <if test="carno != null" >
+        #{carno,jdbcType=VARCHAR},
+      </if>
+      <if test="linkman != null" >
+        #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="mobphone != null" >
+        #{mobphone,jdbcType=CHAR},
+      </if>
+      <if test="meanum != null" >
+        #{meanum,jdbcType=DECIMAL},
+      </if>
+      <if test="milnum != null" >
+        #{milnum,jdbcType=DECIMAL},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="operationid != 0" >
+        #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.GoodApply" >
+    update REC_GOODAPPLY
+    <set >
+      <if test="frontuserid != null" >
+        FRONTUSERID = #{frontuserid,jdbcType=DECIMAL},
+      </if>
+      <if test="orderid != null" >
+        ORDERID = #{orderid,jdbcType=DECIMAL},
+      </if>
+      <if test="affirmgoodcode != null" >
+        AFFIRMGOODCODE = #{affirmgoodcode,jdbcType=VARCHAR},
+      </if>
+      <if test="getgoodcode != null" >
+        GETGOODCODE = #{getgoodcode,jdbcType=VARCHAR},
+      </if>
+      <if test="codeno != null" >
+        CODENO = #{codeno,jdbcType=VARCHAR},
+      </if>
+      <if test="carno != null" >
+        CARNO = #{carno,jdbcType=VARCHAR},
+      </if>
+      <if test="linkman != null" >
+        LINKMAN = #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="mobphone != null" >
+        MOBPHONE = #{mobphone,jdbcType=CHAR},
+      </if>
+      <if test="meanum != null" >
+        MEANUM = #{meanum,jdbcType=DECIMAL},
+      </if>
+      <if test="milnum != null" >
+        MILNUM = #{milnum,jdbcType=DECIMAL},
+      </if>
+      <if test="price != null" >
+        PRICE = #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.GoodApply" >
+    update REC_GOODAPPLY
+    set FRONTUSERID = #{frontuserid,jdbcType=DECIMAL},
+      ORDERID = #{orderid,jdbcType=DECIMAL},
+      AFFIRMGOODCODE = #{affirmgoodcode,jdbcType=VARCHAR},
+      GETGOODCODE = #{getgoodcode,jdbcType=VARCHAR},
+      CODENO = #{codeno,jdbcType=VARCHAR},
+      CARNO = #{carno,jdbcType=VARCHAR},
+      LINKMAN = #{linkman,jdbcType=VARCHAR},
+      MOBPHONE = #{mobphone,jdbcType=CHAR},
+      MEANUM = #{meanum,jdbcType=DECIMAL},
+      MILNUM = #{milnum,jdbcType=DECIMAL},
+      PRICE = #{price,jdbcType=DECIMAL},
+      OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

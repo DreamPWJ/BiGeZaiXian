@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.RoleAuthorityMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.RoleAuthority" >
+    <result column="AUTHORITYID" property="authorityid" jdbcType="DECIMAL" />
+    <result column="ROLEID" property="roleid" jdbcType="DECIMAL" />
+  </resultMap>
+  <insert id="insert" parameterType="com.juhuawang.model.RoleAuthority" >
+    insert into ROLE_AUTHORITY (AUTHORITYID, ROLEID)
+    values (#{authorityid,jdbcType=DECIMAL}, #{roleid,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.RoleAuthority" >
+    insert into ROLE_AUTHORITY
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="authorityid != null" >
+        AUTHORITYID,
+      </if>
+      <if test="roleid != null" >
+        ROLEID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="authorityid != null" >
+        #{authorityid,jdbcType=DECIMAL},
+      </if>
+      <if test="roleid != null" >
+        #{roleid,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+</mapper>

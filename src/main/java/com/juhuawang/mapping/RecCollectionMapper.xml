@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.RecCollectionMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.RecCollection" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="GUESTID" property="guestid" jdbcType="DECIMAL" />
+    <result column="VIRTUALACCOUNTID" property="virtualaccountid" jdbcType="DECIMAL" />
+    <result column="ORDERNUMBER" property="ordernumber" jdbcType="VARCHAR" />
+    <result column="MONEY" property="money" jdbcType="DECIMAL" />
+    <result column="BANKNO" property="bankno" jdbcType="VARCHAR" />
+    <result column="ORDERTIME" property="ordertime" jdbcType="TIMESTAMP" />
+    <result column="FUNDCODE" property="fundcode" jdbcType="VARCHAR" />
+    <result column="PAYCODE" property="paycode" jdbcType="VARCHAR" />
+    <result column="BACKUSERID" property="backuserid" jdbcType="DECIMAL" />
+    <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, GUESTID, VIRTUALACCOUNTID, ORDERNUMBER, MONEY, BANKNO, ORDERTIME, FUNDCODE, PAYCODE, 
+    BACKUSERID, OPERATIONIP, CREATETIME, MEMO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from REC_COLLECTION
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from REC_COLLECTION
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.RecCollection" >
+    insert into REC_COLLECTION (ID, GUESTID, VIRTUALACCOUNTID, 
+      ORDERNUMBER, MONEY, BANKNO, 
+      ORDERTIME, FUNDCODE, PAYCODE, 
+      BACKUSERID, OPERATIONIP, CREATETIME, 
+      MEMO)
+    values (#{id,jdbcType=DECIMAL}, #{guestid,jdbcType=DECIMAL}, #{virtualaccountid,jdbcType=DECIMAL}, 
+      #{ordernumber,jdbcType=VARCHAR}, #{money,jdbcType=DECIMAL}, #{bankno,jdbcType=VARCHAR}, 
+      #{ordertime,jdbcType=TIMESTAMP}, #{fundcode,jdbcType=VARCHAR}, #{paycode,jdbcType=VARCHAR}, 
+      #{backuserid,jdbcType=DECIMAL}, #{operationip,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{memo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.RecCollection" >
+    insert into REC_COLLECTION
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="guestid != null" >
+        GUESTID,
+      </if>
+      <if test="virtualaccountid != null" >
+        VIRTUALACCOUNTID,
+      </if>
+      <if test="ordernumber != null" >
+        ORDERNUMBER,
+      </if>
+      <if test="money != null" >
+        MONEY,
+      </if>
+      <if test="bankno != null" >
+        BANKNO,
+      </if>
+      <if test="ordertime != null" >
+        ORDERTIME,
+      </if>
+      <if test="fundcode != null" >
+        FUNDCODE,
+      </if>
+      <if test="paycode != null" >
+        PAYCODE,
+      </if>
+      <if test="backuserid != null" >
+        BACKUSERID,
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP,
+      </if>
+      <if test="createtime != null" >
+        CREATETIME,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="guestid != null" >
+        #{guestid,jdbcType=DECIMAL},
+      </if>
+      <if test="virtualaccountid != null" >
+        #{virtualaccountid,jdbcType=DECIMAL},
+      </if>
+      <if test="ordernumber != null" >
+        #{ordernumber,jdbcType=VARCHAR},
+      </if>
+      <if test="money != null" >
+        #{money,jdbcType=DECIMAL},
+      </if>
+      <if test="bankno != null" >
+        #{bankno,jdbcType=VARCHAR},
+      </if>
+      <if test="ordertime != null" >
+        #{ordertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fundcode != null" >
+        #{fundcode,jdbcType=VARCHAR},
+      </if>
+      <if test="paycode != null" >
+        #{paycode,jdbcType=VARCHAR},
+      </if>
+      <if test="backuserid != null" >
+        #{backuserid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.RecCollection" >
+    update REC_COLLECTION
+    <set >
+      <if test="guestid != null" >
+        GUESTID = #{guestid,jdbcType=DECIMAL},
+      </if>
+      <if test="virtualaccountid != null" >
+        VIRTUALACCOUNTID = #{virtualaccountid,jdbcType=DECIMAL},
+      </if>
+      <if test="ordernumber != null" >
+        ORDERNUMBER = #{ordernumber,jdbcType=VARCHAR},
+      </if>
+      <if test="money != null" >
+        MONEY = #{money,jdbcType=DECIMAL},
+      </if>
+      <if test="bankno != null" >
+        BANKNO = #{bankno,jdbcType=VARCHAR},
+      </if>
+      <if test="ordertime != null" >
+        ORDERTIME = #{ordertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fundcode != null" >
+        FUNDCODE = #{fundcode,jdbcType=VARCHAR},
+      </if>
+      <if test="paycode != null" >
+        PAYCODE = #{paycode,jdbcType=VARCHAR},
+      </if>
+      <if test="backuserid != null" >
+        BACKUSERID = #{backuserid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.RecCollection" >
+    update REC_COLLECTION
+    set GUESTID = #{guestid,jdbcType=DECIMAL},
+      VIRTUALACCOUNTID = #{virtualaccountid,jdbcType=DECIMAL},
+      ORDERNUMBER = #{ordernumber,jdbcType=VARCHAR},
+      MONEY = #{money,jdbcType=DECIMAL},
+      BANKNO = #{bankno,jdbcType=VARCHAR},
+      ORDERTIME = #{ordertime,jdbcType=TIMESTAMP},
+      FUNDCODE = #{fundcode,jdbcType=VARCHAR},
+      PAYCODE = #{paycode,jdbcType=VARCHAR},
+      BACKUSERID = #{backuserid,jdbcType=DECIMAL},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

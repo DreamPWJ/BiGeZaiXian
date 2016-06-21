@@ -1,0 +1,365 @@
+/* CSS Document */
+
+/*头部*/
+body {
+    margin: 0px;
+    padding: 0px;
+    /*font-size: 1005; /!* Font-size:63%;*!/*/
+}
+
+.zhongti {
+    width: 100%;
+    height: auto;
+    position: relative;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0px;
+    background-size: 100% 100%;
+    /*border-bottom: 1px solid #FF0000;*/
+}
+
+.v2 {
+    width: 100%;
+    height: 50px;
+    background: #009fe8;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    color: #FFFFFF;
+    background-size: 100% 100%;
+    overflow: hidden;
+    letter-spacing: 4px;
+}
+
+.v2-1 {
+    width: 24px;
+    height: 50px;
+    background: #FF0000;
+    margin-left: 18px;
+    padding: 0px;
+    float: left;
+    background: transparent url(../personalCenter/icon.png) no-repeat scroll 0px -335px;
+}
+
+.v2-3 {
+    width: 24px;
+    height: 50px;
+    background: #FF0000;
+    margin-right: 22px;
+    padding: 0px;
+    float: right;
+    background: transparent url(../personalCenter/icon.png) no-repeat scroll 0px -382px;
+}
+
+/*头部隐藏菜单栏*/
+.top-dh {
+    width: 100%;
+    height: 58px;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.top-dh-1 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-1-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../personalCenter/icon2.png) no-repeat scroll 0px 5px;
+}
+
+.top-dh-2 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-2-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../personalCenter/icon2.png) no-repeat scroll 0px -76px;
+}
+
+.top-dh-3 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-3-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../personalCenter/icon2.png) no-repeat scroll 0px -156px;
+}
+
+.top-dh-4 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-4-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../personalCenter/icon2.png) no-repeat scroll 0px -240px;
+}
+
+.too1 {
+    width: 42px;
+    height: 50px;
+}
+
+/*底线*/
+.dx {
+    width: 100%;
+    clear: left;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+/*搜索*/
+.shous {
+    width: auto;
+    height: 40px;
+    margin: 20px 22px 20px 22px;
+    overflow: hidden;
+    background: #FFCCCC;
+}
+
+.shous-1 {
+    width: 85%;
+    height: 40px;
+    float: left;
+    background: #33CCFF;
+}
+
+.shous-2 {
+    width: 15%;
+    height: 32px;
+    float: left;
+    padding-top: 8px;
+    min-width: 40px;
+    background: #4C9ED9;
+    cursor: pointer;
+}
+
+.shous-2-t {
+    width: 24px;
+    height: 24px;
+    margin: 0px auto;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon.png) no-repeat scroll 0px -459px;
+}
+
+.xFast_form_btn {
+    width: 100%;
+    background-color: #4C9ED9;
+    border: 0px;
+    cursor: pointer;
+}
+
+/*商品信息显示*/
+.sangp {
+    width: auto;
+    height: 110px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #AAAAAA; /*background:#CCCCFF;*/
+}
+
+.sangp-1 {
+    width: 5%;
+    height: 150px;
+    line-height: 30px;
+    text-align: center;
+    float: left; /*background:#999966;*/
+}
+
+.sangp-2 {
+    width: 75%;
+    height: 150px;
+    text-align: left;
+    float: left; /*background:#66CCFF;*/
+}
+
+.sangp-2-1 {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    font-size: 16px;
+    color: #333;
+    float: left; /*background:#FF9999;*/
+}
+
+.sangp-2-2 {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    font-size: 16px;
+    color: #333;
+    float: left; /*background:#9CC7D1;*/
+}
+
+.sangp-2-3 {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    font-size: 16px;
+    color: #333;
+    float: left; /*background:#FF9999;*/
+}
+
+.sangp-2-4 {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    font-size: 14px;
+    /*font-weight: bold;*/
+    color: #333;
+}
+
+.sangp-2-4-1 {
+    float: left;
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden; /*background:#CC99FF;*/
+}
+
+.sangp-2-4-2 {
+    float: left;
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden; /*background:#0099CC;*/
+}
+
+.samn {
+    font-size: 14px;
+    color: #333;
+    font-weight: normal;
+}
+
+.sangp-2-5 {
+    width: 99%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    font-size: 14px;
+    color: #333;
+    float: left; /*background:#9CC7D1;*/
+}
+
+.samns {
+    font-size: 14px;
+    color: #333;
+}
+
+.sangp-3 {
+    width: 20%;
+    height: 150px;
+    text-align: left;
+    float: left; /*background:#00FF99;*/
+}
+
+.sangp-3-s {
+    width: 100%;
+    height: 75px;
+    float: left; /*background:#FFCC66;*/
+}
+
+.sangp-3-x {
+    width: 100%;
+    height: 75px;
+    float: left;
+}
+
+.sangp-3-s-n {
+    width: 58px;
+    height: 30px;
+    margin: 22px auto;
+    overflow: hidden; /*background:#0033FF;*/
+}
+
+.xq {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #E2E2E2;
+    letter-spacing: 3px;
+    color: #333;
+    border: 0px;
+    cursor: pointer;
+}
+
+.sxj {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #EB6100;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    border: 0px;
+    cursor: pointer;
+}
+
+/*底线4*/
+.dx4 {
+    width: 100%;
+    clear: left;
+    border-bottom: 1px solid #AAAAAA;
+    margin-bottom: 50px;
+}
+
+/*底部*/
+.dib {
+    width: auto;
+    height: 150px;
+    padding: 14px 22px 0px 22px;
+    background: #F4F4F4;
+}
+
+.tuic {
+    width: auto;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background: #EB6100;
+    margin-bottom: 44px;
+    overflow: hidden;
+    letter-spacing: 8px;
+}
+
+.tuic a {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.tuic a:hover {
+    color: #009fe8;
+}
+
+.wz {
+    width: auto;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    background: #E2E2E2;
+    overflow: hidden;
+}

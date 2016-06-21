@@ -1,0 +1,282 @@
+/* CSS Document */
+
+body {
+    min-width: 1200px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*主体*/
+.content {
+    width: 1200px;
+    height: auto;
+    margin: 0px auto;
+}
+
+/*右侧展示*/
+.R-show {
+    width: 1000px;
+    height: auto;
+    margin-top: 10px;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 100px; /*background:#FCF;*/
+}
+
+.R-BT {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #1CAAEB;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #1CAAEB;
+}
+
+.R-BT-1 {
+    width: 50%;
+    height: 40px;
+    text-align: left;
+    float: left;
+    padding-left: 30px; /*background:#C93;*/
+}
+
+.R-BT-1-1 {
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    cursor: pointer;
+    float: left;
+    letter-spacing: 1px;
+}
+
+.R-BT-1-2 {
+    width: 120px;
+    height: 40px;
+    float: left;
+    margin-left: 16px;
+    overflow: hidden;
+    cursor: pointer; /*background:#9CF;*/
+}
+
+.R-BT-1-2-1 {
+    width: 120px;
+    height: 40px;
+    line-height: 43px;
+    text-align: center;
+    float: left;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #1CAAEB;
+}
+
+.R-BT-1-2-2 {
+    width: 120px;
+    height: 40px;
+    line-height: 42px;
+    text-align: center;
+    float: left;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #1CAAEB;
+    border-top: 1px solid #1CAAEB;
+    border-left: 1px solid #1CAAEB;
+    border-right: 1px solid #1CAAEB;
+    background: #FFF;
+}
+
+/*�?*/
+.ZONG {
+    width: 1000px;
+    height: auto;
+    float: left;
+    overflow: hidden; /*background:#CF9;*/
+}
+
+/*浅绿*/
+/*基本资料*/
+.Jbzl {
+    width: 1000px;
+    height: auto;
+    float: left;
+    margin-top: 10px; /*background:#FC9;*/
+}
+
+.Jbzl-1 {
+    width: 1000px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    float: left;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    background: #EEEEEE;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #585858;
+}
+
+.Jbzl-2 {
+    width: 1000px;
+    height: 34px;
+    line-height: 34px;
+    float: left;
+    margin-left: 160px; /*background:#063;*/
+}
+
+.Jbzl-2-1 {
+    width: 84px;
+    height: 34px;
+    line-height: 34px;
+    float: left;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #585858;
+    margin-right: 10px; /*background:#FCF;*/
+}
+
+.Jbzl-2-2 {
+    width: 796px;
+    height: 34px;
+    line-height: 34px;
+    float: left;
+
+}
+
+.Jbzl-sa1 {
+    font-size: 15px;
+    font-family: "微软雅黑";
+    color: #585858;
+}
+
+.Jbzl-3 {
+    width: 1000px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    float: left;
+    padding-left: 30px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    background: #EEEEEE;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #585858;
+}
+
+/*编辑用户资料*/
+.Bjyh {
+    width: 1000px;
+    height: auto;
+    float: left;
+    margin-top: 10px; /*background:#99F;*/
+}
+
+.Bjyh-2 {
+    width: 1000px;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    float: left;
+    margin-left: 260px;
+    margin-bottom: 10px; /*background:#3C3;*/
+}
+
+.Bjyh-2-1 {
+    width: 84px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    text-align: right;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #585858;
+    margin-right: 10px; /*background:#FCF;*/
+}
+
+.Bjyh-2-2 {
+    border: 0;
+    width: 320px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    text-align: left;
+    padding-left: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #585858;
+    border: 1px solid #E0E0E0;
+}
+
+.Bjyh-2-3 {
+    border: 0;
+    width: 320px;
+    height: 40px;
+    float: left;
+    border: 1px solid #E0E0E0;
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #585858;
+}
+
+.Bjyh-2-3 option {
+    height: 30px;
+    padding-left: 14px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #999;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.Bjyh-2-3-1 {
+    border: 0px;
+    width: 160px;
+    height: 40px;
+    float: left;
+    border: 1px solid #E0E0E0;
+    padding-left: 10px;
+    margin-right: 18px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #585858;
+}
+
+.Bjyh-2-3-1 option {
+    padding-left: 14px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #999;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.Bjyh-2-4 {
+    border: 0;
+    width: 114px;
+    height: 40px;
+    float: left;
+    background: #1CAAEB;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #FFF;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+
+}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				

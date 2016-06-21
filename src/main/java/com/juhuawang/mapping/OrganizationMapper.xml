@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.OrganizationMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.Organization" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="LEVELCODE" property="levelcode" jdbcType="VARCHAR" />
+    <result column="PARENTID" property="parentid" jdbcType="DECIMAL" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="THEVALUE" property="thevalue" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="ENABLE" property="enable" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, NAME, LEVELCODE, PARENTID, POSITION, THEVALUE, VERSION, ENABLE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from ORGANIZATION
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from ORGANIZATION
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.Organization" >
+    insert into ORGANIZATION (ID, NAME, LEVELCODE, 
+      PARENTID, POSITION, THEVALUE, 
+      VERSION, ENABLE)
+    values (#{id,jdbcType=DECIMAL}, #{name,jdbcType=VARCHAR}, #{levelcode,jdbcType=VARCHAR}, 
+      #{parentid,jdbcType=DECIMAL}, #{position,jdbcType=DECIMAL}, #{thevalue,jdbcType=VARCHAR}, 
+      #{version,jdbcType=DECIMAL}, #{enable,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.Organization" >
+    insert into ORGANIZATION
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="levelcode != null" >
+        LEVELCODE,
+      </if>
+      <if test="parentid != null" >
+        PARENTID,
+      </if>
+      <if test="position != null" >
+        POSITION,
+      </if>
+      <if test="thevalue != null" >
+        THEVALUE,
+      </if>
+      <if test="version != null" >
+        VERSION,
+      </if>
+      <if test="enable != null" >
+        ENABLE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="levelcode != null" >
+        #{levelcode,jdbcType=VARCHAR},
+      </if>
+      <if test="parentid != null" >
+        #{parentid,jdbcType=DECIMAL},
+      </if>
+      <if test="position != null" >
+        #{position,jdbcType=DECIMAL},
+      </if>
+      <if test="thevalue != null" >
+        #{thevalue,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=DECIMAL},
+      </if>
+      <if test="enable != null" >
+        #{enable,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.Organization" >
+    update ORGANIZATION
+    <set >
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="levelcode != null" >
+        LEVELCODE = #{levelcode,jdbcType=VARCHAR},
+      </if>
+      <if test="parentid != null" >
+        PARENTID = #{parentid,jdbcType=DECIMAL},
+      </if>
+      <if test="position != null" >
+        POSITION = #{position,jdbcType=DECIMAL},
+      </if>
+      <if test="thevalue != null" >
+        THEVALUE = #{thevalue,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null" >
+        VERSION = #{version,jdbcType=DECIMAL},
+      </if>
+      <if test="enable != null" >
+        ENABLE = #{enable,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.Organization" >
+    update ORGANIZATION
+    set NAME = #{name,jdbcType=VARCHAR},
+      LEVELCODE = #{levelcode,jdbcType=VARCHAR},
+      PARENTID = #{parentid,jdbcType=DECIMAL},
+      POSITION = #{position,jdbcType=DECIMAL},
+      THEVALUE = #{thevalue,jdbcType=VARCHAR},
+      VERSION = #{version,jdbcType=DECIMAL},
+      ENABLE = #{enable,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

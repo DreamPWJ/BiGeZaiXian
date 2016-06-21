@@ -1,0 +1,129 @@
+/* CSS Document */
+
+body {
+    min-width: 1200px;
+    margin: 0px ;
+    padding: 0px;
+}
+
+/*主体*/
+.content {
+    width: 1200px;
+    height: auto;
+    margin: 0px auto; /*background:#FCC;*/
+}
+
+/*右侧展示*/
+.R-show {
+    width: 1000px;
+    height: auto;
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 100px; /*background:#FCF;*/
+}
+
+.R-BT {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    padding-left: 30px;
+    border-bottom: 1px solid #1CAAEB;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #1CAAEB;
+    letter-spacing: 1px;
+}
+
+
+/*�?*/
+.ZONG {
+    width: 1000px;
+    height: auto;
+    float: left;
+    overflow: hidden; /*background:#CF9;*/
+}
+
+/*浅绿*/
+.Jif {
+    width: 890px;
+    height: 170px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 18px;
+    border: 1px solid #E7E7E7;
+    background: #F8F8F8;
+}
+
+.Jif-1 {
+    width: 444px;
+    height: 116px;
+    float: left;
+    margin-top: 27px; /*background:#FCC;*/
+}
+
+.Jif-1-1 {
+    width: 444px;
+    height: 34px;
+    line-height: 34px;
+    text-align: left;
+    float: left;
+    padding-left: 200px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #666666;
+}
+
+.Jif-1-2 {
+    width: 444px;
+    height: 46px;
+    line-height: 46px;
+    text-align: left;
+    float: left;
+    padding-left: 220px;
+}
+
+.Jif-sa1 {
+    font-size: 30px;
+    font-family: "微软雅黑";
+    color: #2B8E60;
+}
+
+.Jif-2 {
+    width: 444px;
+    height: 116px;
+    float: left;
+    margin-top: 27px;
+    border-left: 1px solid #E7E7E7; /*background:#0CF;*/
+}
+
+.Jif-2-1 {
+    width: 240px;
+    height: 44px;
+    line-height: 42px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 27px;
+    background: #1CAAEB;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.Jif-2-1 a, .Jif-2-1 a:hover {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #FFF;
+    text-decoration: none;
+}
+				
+				
+				
+				
+				
+				
+				
+				

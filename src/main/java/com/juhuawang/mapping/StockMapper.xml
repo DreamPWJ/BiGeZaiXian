@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.StockMapper">
+    <resultMap id="BaseResultMap" type="com.juhuawang.model.Stock">
+        <id column="ID" property="id" jdbcType="DECIMAL"/>
+        <result column="GOODID" property="goodid" jdbcType="DECIMAL"/>
+        <result column="COMPANYID" property="companyid" jdbcType="DECIMAL"/>
+        <result column="STORAGEID" property="storageid" jdbcType="DECIMAL"/>
+        <result column="FRONTUSERID" property="frontuserid" jdbcType="DECIMAL"/>
+        <result column="AFFIRMSTOCKCODE" property="affirmstockcode" jdbcType="VARCHAR"/>
+        <result column="CODENO" property="codeno" jdbcType="VARCHAR"/>
+        <result column="INITNUM" property="initnum" jdbcType="DECIMAL"/>
+        <result column="AFFIRMNUM" property="affirmnum" jdbcType="DECIMAL"/>
+        <result column="STOCKCODE" property="stockcode" jdbcType="VARCHAR"/>
+        <result column="PRICENOTAX" property="pricenotax" jdbcType="DECIMAL"/>
+        <result column="PRICEHASTAX" property="pricehastax" jdbcType="DECIMAL"/>
+        <result column="AMOUNTNOTAX" property="amountnotax" jdbcType="DECIMAL"/>
+        <result column="TAXMONEY" property="taxmoney" jdbcType="DECIMAL"/>
+        <result column="FINALMONEY" property="finalmoney" jdbcType="DECIMAL"/>
+        <result column="STOCKUSERID" property="stockuserid" jdbcType="DECIMAL"/>
+        <result column="OPERATIONID" property="operationid" jdbcType="DECIMAL"/>
+        <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR"/>
+        <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP"/>
+        <result column="STATUSCODE" property="statuscode" jdbcType="VARCHAR"/>
+        <result column="MEMO" property="memo" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    ID, GOODID, COMPANYID, STORAGEID, FRONTUSERID, AFFIRMSTOCKCODE, CODENO, INITNUM, 
+    AFFIRMNUM, STOCKCODE, PRICENOTAX, PRICEHASTAX,
+    AMOUNTNOTAX, TAXMONEY, FINALMONEY, STOCKUSERID, OPERATIONID, OPERATIONIP, CREATETIME, 
+    STATUSCODE, MEMO
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from REC_STOCK
+        where ID = #{id,jdbcType=DECIMAL}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from REC_STOCK
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+
+    <insert id="insertSelective" parameterType="com.juhuawang.model.Stock">
+        <!-- 获取增加库存的id  -->
+        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="id">
+            SELECT seq_rec_stock.CURRVAL AS id from dual
+        </selectKey>
+
+        insert into REC_STOCK
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            ID,
+            GOODID,
+            COMPANYID,
+            STORAGEID,
+            FRONTUSERID,
+            <if test="affirmstockcode != null">
+                AFFIRMSTOCKCODE,
+            </if>
+            CODENO,
+            INITNUM,
+            <if test="affirmnum != null">
+                AFFIRMNUM,
+            </if>
+            <if test="stockcode != null">
+                STOCKCODE,
+            </if>
+            <if test="pricenotax != null">
+                PRICENOTAX,
+            </if>
+            <if test="pricehastax != null">
+                PRICEHASTAX,
+            </if>
+            <if test="amountnotax != null">
+                AMOUNTNOTAX,
+            </if>
+            <if test="taxmoney != null">
+                TAXMONEY,
+            </if>
+            <if test="finalmoney != null">
+                FINALMONEY,
+            </if>
+            <if test="stockuserid != null">
+                STOCKUSERID,
+            </if>
+            <if test="operationid != null">
+                OPERATIONID,
+            </if>
+            <if test="operationip != null">
+                OPERATIONIP,
+            </if>
+            <if test="createtime != null">
+                CREATETIME,
+            </if>
+            <if test="statuscode != null">
+                STATUSCODE,
+            </if>
+            <if test="memo != null">
+                MEMO,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            seq_rec_stock.nextval,
+            #{goodid,jdbcType=DECIMAL},
+            #{companyid,jdbcType=DECIMAL},
+            #{storageid,jdbcType=DECIMAL},
+            #{frontuserid,jdbcType=DECIMAL},
+            <if test="affirmstockcode != null">
+                #{affirmstockcode,jdbcType=VARCHAR},
+            </if>
+            #{codeno,jdbcType=VARCHAR},
+            #{initnum,jdbcType=DECIMAL},
+            <if test="affirmnum != null">
+                #{affirmnum,jdbcType=DECIMAL},
+            </if>
+            <if test="stockcode != null">
+                #{stockcode,jdbcType=VARCHAR},
+            </if>
+            <if test="pricenotax != null">
+                #{pricenotax,jdbcType=DECIMAL},
+            </if>
+            <if test="pricehastax != null">
+                #{pricehastax,jdbcType=DECIMAL},
+            </if>
+            <if test="amountnotax != null">
+                #{amountnotax,jdbcType=DECIMAL},
+            </if>
+            <if test="taxmoney != null">
+                #{taxmoney,jdbcType=DECIMAL},
+            </if>
+            <if test="finalmoney != null">
+                #{finalmoney,jdbcType=DECIMAL},
+            </if>
+            <if test="stockuserid != null">
+                #{stockuserid,jdbcType=DECIMAL},
+            </if>
+            <if test="operationid != null">
+                #{operationid,jdbcType=DECIMAL},
+            </if>
+            <if test="operationip != null">
+                #{operationip,jdbcType=VARCHAR},
+            </if>
+            <if test="createtime != null">
+                #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="statuscode != null">
+                #{statuscode,jdbcType=VARCHAR},
+            </if>
+            <if test="memo != null">
+                #{memo,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.Stock">
+        update REC_STOCK
+        <set>
+            <if test="goodid != null">
+                GOODID = #{goodid,jdbcType=DECIMAL},
+            </if>
+            <if test="companyid != null">
+                COMPANYID = #{companyid,jdbcType=DECIMAL},
+            </if>
+            <if test="storageid != null">
+                STORAGEID = #{storageid,jdbcType=DECIMAL},
+            </if>
+            <if test="frontuserid != null">
+                FRONTUSERID = #{frontuserid,jdbcType=DECIMAL},
+            </if>
+            <if test="affirmstockcode != null">
+                AFFIRMSTOCKCODE = #{affirmstockcode,jdbcType=VARCHAR},
+            </if>
+            <if test="codeno != null">
+                CODENO = #{codeno,jdbcType=VARCHAR},
+            </if>
+            <if test="initnum != null">
+                INITNUM = #{initnum,jdbcType=DECIMAL},
+            </if>
+            <if test="affirmnum != null">
+                AFFIRMNUM = #{affirmnum,jdbcType=DECIMAL},
+            </if>
+            <if test="stockcode != null">
+                STOCKCODE = #{stockcode,jdbcType=VARCHAR},
+            </if>
+            <if test="pricenotax != null">
+                PRICENOTAX = #{pricenotax,jdbcType=DECIMAL},
+            </if>
+            <if test="pricehastax != null">
+                PRICEHASTAX = #{pricehastax,jdbcType=DECIMAL},
+            </if>
+            <if test="amountnotax != null">
+                AMOUNTNOTAX = #{amountnotax,jdbcType=DECIMAL},
+            </if>
+            <if test="taxmoney != null">
+                TAXMONEY = #{taxmoney,jdbcType=DECIMAL},
+            </if>
+            <if test="finalmoney != null">
+                FINALMONEY = #{finalmoney,jdbcType=DECIMAL},
+            </if>
+            <if test="stockuserid != null">
+                STOCKUSERID = #{stockuserid,jdbcType=DECIMAL},
+            </if>
+            <if test="operationid != null">
+                OPERATIONID = #{operationid,jdbcType=DECIMAL},
+            </if>
+            <if test="operationip != null">
+                OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+            </if>
+            <if test="createtime != null">
+                CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="statuscode != null">
+                STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+            </if>
+            <if test="memo != null">
+                MEMO = #{memo,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=DECIMAL}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.Stock">
+    update REC_STOCK
+    set GOODID = #{goodid,jdbcType=DECIMAL},
+      COMPANYID = #{companyid,jdbcType=DECIMAL},
+      STORAGEID = #{storageid,jdbcType=DECIMAL},
+      FRONTUSERID = #{frontuserid,jdbcType=DECIMAL},
+      AFFIRMSTOCKCODE = #{affirmstockcode,jdbcType=VARCHAR},
+      CODENO = #{codeno,jdbcType=VARCHAR},
+      INITNUM = #{initnum,jdbcType=DECIMAL},
+      AFFIRMNUM = #{affirmnum,jdbcType=DECIMAL},
+      STOCKCODE = #{stockcode,jdbcType=VARCHAR},
+      PRICENOTAX = #{pricenotax,jdbcType=DECIMAL},
+      PRICEHASTAX = #{pricehastax,jdbcType=DECIMAL},
+      AMOUNTNOTAX = #{amountnotax,jdbcType=DECIMAL},
+      TAXMONEY = #{taxmoney,jdbcType=DECIMAL},
+      FINALMONEY = #{finalmoney,jdbcType=DECIMAL},
+      STOCKUSERID = #{stockuserid,jdbcType=DECIMAL},
+      OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+
+
+    <!--  获取库存信息根据商品和公司-->
+    <select id="getStocksByGoodId" resultType="map">
+   select   e.id as storageId,e.NAME,(select name from DIC_REGION where id=e.PROVCODE)
+                                          ||(select name from DIC_REGION where id=e.CITYCODE)||
+                                          (select name from DIC_REGION where id=e.COUNTYCODE) || e.ADDRESS as address,
+  SUM(case when s.stockcode=001  then s.INITNUM end) as INITNUM ,
+  SUM(case when s.stockcode=001  then s.AFFIRMNUM end)  as AFFIRMNUM,
+  SUM(case when s.stockcode=001  then s.AFFIRMNUM end) - nvl(SUM(case when s.stockcode=002  then s.AFFIRMNUM end ),0)
+  + nvl(SUM(case when s.stockcode=003  then s.INITNUM end ),0) + nvl(SUM(case when s.stockcode=005  then s.INITNUM end ),0) as SURPLUSNUM,
+  SUM(case when s.stockcode=002  then s.AFFIRMNUM end) -nvl(SUM(case when s.stockcode=003  then s.INITNUM end ) ,0) -nvl(SUM(case when s.stockcode=004  then s.INITNUM end ) ,0)  as SELLSURPLUSNUM,
+  SUM(case when s.stockcode=004  then s.INITNUM end )  as selloutnum
+     from REC_STOCK S INNER JOIN  DIC_STORAGE e  ON e.ID = S.STORAGEID WHERE s.GOODID=#{goodId} and s.COMPANYID=#{companyId}
+        GROUP BY e.ID,e.NAME,e.PROVCODE,e.CITYCODE,e.COUNTYCODE,e.ADDRESS
+        ORDER  by e.id
+    </select>
+
+
+    <!--根据库存编号查询库存ID-->
+    <select id="getStockIdByCodeNo" parameterType="java.lang.String" resultType="java.lang.Long">
+    SELECT id from REC_STOCK WHERE CODENO=#{0}
+  </select>
+
+    <!--根据companyId、goodId、storageId查询商品入库数量、确认数量列表-->
+    <select id="queryInitNumAndAffirmNum" resultType="Map">
+        SELECT ROWNUM,GOODID,INITNUM,AFFIRMNUM,CREATETIME FROM(
+        SELECT GOODID,INITNUM,AFFIRMNUM,CREATETIME
+        from REC_STOCK
+        WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND STATUSCODE='001' AND STOCKCODE='001'
+        ORDER BY CREATETIME )
+    </select>
+
+    <!--查询商品入库和确认合计-->
+    <select id="getInitSumAndAffirmSum" resultType="Map">
+        SELECT sum(initNum) initSum,sum(affirmNum) affirmSum
+        FROM REC_STOCK
+        WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND STATUSCODE='001' AND STOCKCODE='001'
+    </select>
+
+    <!--查询当前用户下可用上架数-->
+    <select id="getAvailableStockNum" resultType="Map">
+    SELECT DISTINCT (
+    --入库确认
+    (SELECT nvl(sum(AFFIRMNUM),0)from REC_STOCK
+    WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND STATUSCODE='001' AND STOCKCODE='001')-
+    --上架
+    (SELECT nvl(sum(AFFIRMNUM),0)from REC_STOCK
+    WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND STATUSCODE='001' AND STOCKCODE='002')+
+    --下架
+    (SELECT nvl(sum(AFFIRMNUM),0)from REC_STOCK
+    WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND STATUSCODE='001' AND STOCKCODE='003')+
+    --退货
+    (SELECT nvl(sum(AFFIRMNUM),0)from REC_STOCK
+    WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND STATUSCODE='001' AND STOCKCODE='005')-
+    --其他
+    (SELECT nvl(sum(AFFIRMNUM),0)from REC_STOCK
+    WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND STATUSCODE='001' AND STOCKCODE='007')
+    ) stockAvailable
+    from REC_STOCK
+    </select>
+
+    <!--在售总计-->
+    <select id="getOnSellList" resultType="Map">
+        SELECT ROWNUM,a.PRICEHASTAX,a.upSell,nvl(b.downSell,0)downSell,nvl(c.sellOut,0)sellOut FROM
+        (SELECT PRICEHASTAX,sum(AFFIRMNUM) upSell from REC_STOCK
+        WHERE COMPANYID=#{0} and STORAGEID=#{1} AND GOODID=#{2} AND STATUSCODE='001' AND STOCKCODE='002'
+        GROUP BY PRICEHASTAX ORDER BY PRICEHASTAX)a LEFT JOIN
+        (SELECT PRICEHASTAX,sum(AFFIRMNUM) downSell from REC_STOCK
+        WHERE COMPANYID=#{0} and STORAGEID=#{1} AND GOODID=#{2} AND STATUSCODE='001' AND STOCKCODE='003'
+        GROUP BY PRICEHASTAX ORDER BY PRICEHASTAX)b ON a.PRICEHASTAX=b.PRICEHASTAX LEFT JOIN
+        (SELECT PRICEHASTAX,sum(AFFIRMNUM) sellOut from REC_STOCK
+        WHERE COMPANYID=#{0} and STORAGEID=#{1} AND GOODID=#{2} AND STATUSCODE='001' AND STOCKCODE='004'
+        GROUP BY PRICEHASTAX ORDER BY PRICEHASTAX)c ON a.PRICEHASTAX=c.PRICEHASTAX
+    </select>
+
+    <!--获取上架详情-->
+    <select id="getUpSellDetails" resultType="Map">
+        SELECT ROWNUM,INITNUM,AFFIRMNUM,PRICEHASTAX,CREATETIME FROM(
+        SELECT INITNUM,AFFIRMNUM,PRICEHASTAX,CREATETIME FROM REC_STOCK
+        WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND STATUSCODE='001' AND STOCKCODE='002'
+        ORDER BY CREATETIME DESC)
+    </select>
+    <!--下架详情-->
+    <select id="queryDownSellDetails" resultType="Map">
+        SELECT ROWNUM,AFFIRMNUM,CREATETIME FROM(
+        SELECT AFFIRMNUM,CREATETIME from REC_STOCK
+        WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND PRICEHASTAX=#{3} AND STOCKCODE=#{4} AND STATUSCODE='001'
+        ORDER BY CREATETIME DESC)
+    </select>
+    <!--入库记录-->
+    <select id="queryStockInList" resultType="Map">
+        SELECT ROWNUM,t.* FROM(
+        SELECT c.companyId,a.MARK,a.PRODUCINGAREA,b.INITNUM,nvl(b.AFFIRMNUM,0)AFFIRMNUM,d.name storageName,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='affirmStock' AND LEVELCODE=b.AFFIRMSTOCKCODE)AFFIRMSTOCK,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=a.GOODKINDCODE)GOODKIND,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' AND LEVELCODE=a.MEACODE)mea,b.CREATETIME
+        FROM DIC_GOOD a join REC_STOCK b ON a.id=b.GOODID join REC_FRONTUSER c ON b.companyId=c.companyId join DIC_STORAGE d ON b.storageId=d.id
+        WHERE a.STATUSCODE='001' AND b.STATUSCODE='001' AND c.statusCode='001' AND d.STATUSCODE='001' AND c.id=#{0} AND b.STOCKCODE='001'
+        ORDER BY b.CREATETIME DESC)t
+    </select>
+
+    <!--异步获取入库记录用于查询-->
+    <select id="getAjaxStockCenter" resultType="Map">
+        SELECT ROWNUM,t.* FROM(
+        SELECT * FROM(
+        SELECT c.companyId,a.MARK,a.PRODUCINGAREA,b.INITNUM,nvl(b.AFFIRMNUM,0)AFFIRMNUM,d.name storageName,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='affirmStock' AND LEVELCODE=b.AFFIRMSTOCKCODE)AFFIRMSTOCK,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=a.GOODKINDCODE)GOODKIND,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' AND LEVELCODE=a.MEACODE)mea,
+        b.CREATETIME
+        FROM DIC_GOOD a join REC_STOCK b ON a.id=b.GOODID join REC_FRONTUSER c ON b.companyId=c.companyId join DIC_STORAGE d ON b.storageId=d.id
+        WHERE a.STATUSCODE='001' AND b.STATUSCODE='001' AND c.statusCode='001' AND d.STATUSCODE='001' AND c.id=#{0} AND b.STOCKCODE='001'
+        ORDER BY b.CREATETIME DESC
+        )
+        WHERE mark LIKE #{1} OR goodKind LIKE #{1} OR PRODUCINGAREA like #{1}
+        )t
+    </select>
+
+    <!--上架下架记录-->
+    <select id="querySellList" resultType="Map">
+        SELECT a.id goodId,a.MARK,a.PRODUCINGAREA,b.INITNUM,nvl(b.AFFIRMNUM,0)AFFIRMNUM,b.PRICEHASTAX,b.CREATETIME,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=a.GOODKINDCODE)GOODKIND,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' AND LEVELCODE=a.MEACODE)mea
+        FROM DIC_GOOD a join REC_STOCK b ON a.id=b.GOODID LEFT JOIN REC_FRONTUSER c ON b.companyId=c.companyId
+        WHERE b.STOCKCODE IN('002','003') AND c.id=#{0}
+        ORDER BY b.CREATETIME desc
+    </select>
+
+    <!--异步获取上架下架记录-->
+    <select id="getAjaxSellList" resultType="Map">
+        SELECT * FROM(
+        SELECT a.id goodId,a.MARK,a.PRODUCINGAREA,b.INITNUM,nvl(b.AFFIRMNUM,0)AFFIRMNUM,b.PRICEHASTAX,b.CREATETIME,b.STOCKCODE,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=a.GOODKINDCODE)GOODKIND,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' AND LEVELCODE=a.MEACODE)mea
+        FROM DIC_GOOD a join REC_STOCK b ON a.id=b.GOODID LEFT JOIN REC_FRONTUSER c ON b.companyId=c.companyId
+        WHERE b.STOCKCODE IN('002','003') AND c.id=#{0}
+        ORDER BY b.CREATETIME desc)t
+        WHERE t.mark LIKE #{1} OR t.goodKind like #{1} OR t.PRODUCINGAREA LIKE #{1}
+    </select>
+
+    <!--更新购物车中的数量-->
+    <update id="updateCartNum">
+        UPDATE REC_STOCK SET AFFIRMNUM=#{0} WHERE id=(SELECT stockId FROM REC_CART WHERE id=#{1})
+    </update>
+    <!--设置购物车表中没选中的为无效-->
+    <update id="updateCartStatus">
+        UPDATE REC_CART SET STATUSCODE='002' WHERE FRONTUSERID=#{0} AND id NOT IN (#{1})
+    </update>
+
+    <!--   pc商品获取库存上架明细方法-->
+    <select id="getStockDetail" parameterType="map" resultType="map">
+     SELECT  s.CREATETIME,s.CODENO,s.INITNUM,s.AFFIRMNUM, s.PRICEHASTAX
+    FROM REC_STOCK s INNER JOIN  DIC_GOOD g ON g.ID = s.GOODID INNER JOIN DIC_STORAGE e ON e.ID = s.STORAGEID
+    WHERE  g.id=#{goodid} AND e.id=#{storageid} AND  s.STOCKCODE=#{stockcode} AND  s.COMPANYID=#{companyId}
+    ORDER BY  s.CREATETIME desc
+    </select>
+
+    <!-- 获取上架信息是否有更新 用于SEE推送数据 -->
+    <select id="getSSEUpdatePutawayStock" resultType="map">
+
+        SELECT  s.CREATETIME,s.INITNUM,s.PRICEHASTAX,g.mark
+        FROM REC_STOCK s INNER JOIN  DIC_GOOD g ON g.ID = s.GOODID INNER JOIN DIC_STORAGE e ON e.ID = s.STORAGEID
+        WHERE   s.STOCKCODE='002'  and ROUND(TO_NUMBER(sysdate -s.createtime ) * 24 * 60*60 ) &lt;= 6 and rownum &lt;=1
+    </select>
+
+
+</mapper>

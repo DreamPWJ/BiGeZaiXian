@@ -1,0 +1,374 @@
+/* CSS Document */
+
+.auto-style1 {
+    width: 48px;
+}
+
+body {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*------------����-----------------*/
+.content {
+    margin: 0 auto;
+    width: 1200px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.grid_5 {
+    float: left;
+    width: 140px;
+    margin: 0px;
+}
+
+.leftmenu .base li a, .leftmenu .base li.current a, .leftmenu .service ul li a, .leftmenu .service ul li a:hover, .leftmenu .service ul li.current a, .ico-rz, .service-type-con .service-ico {
+    background: url("../../images/pc/A_public/icolist.png") no-repeat;
+}
+
+.leftmenu {
+    min-height: 450px;
+    background-color: #fbfbfb;
+    border: 1px solid #e0e0e0;
+}
+
+.leftmenu .base {
+    padding-bottom: 10px;
+}
+
+.leftmenu .base li {
+    margin-bottom: 5px;
+}
+
+.leftmenu .base li a {
+    display: block;
+    padding-left: 40px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    color: #282828;
+}
+
+.leftmenu .base li.numb1 a {
+    background-position: -8px -228px;
+}
+
+.leftmenu .base li.numb2 a {
+    background-position: -8px -1010px;
+}
+
+.leftmenu .base li.numb3 a {
+    background-position: -8px -262px;
+}
+
+.leftmenu .base li.numb4 a {
+    background-position: -8px -296px;
+}
+
+.leftmenu .base li.numb5 a {
+    background-position: -8px -1081px;
+}
+
+.leftmenu .base li.numb6 a {
+    background-position: -8px -330px;
+}
+
+.leftmenu .base li.numb7 a {
+    background-position: -8px -1151px;
+}
+
+.leftmenu .base li.numb8 a {
+    background-position: -8px -1222px;
+}
+
+.leftmenu .base li.numb9 a {
+    background-position: -8px -1331px;
+}
+
+.leftmenu .base li a:hover, .leftmenu .base li.current a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.leftmenu .base li.numb1 a:hover, .leftmenu .base li.numb1.current a {
+    background-position: -8px -92px;
+}
+
+.leftmenu .base li.numb2 a:hover, .leftmenu .base li.numb2.current a {
+    background-position: -8px -975px;
+}
+
+.leftmenu .base li.numb3 a:hover, .leftmenu .base li.numb3.current a {
+    background-position: -8px -126px;
+}
+
+.leftmenu .base li.numb4 a:hover, .leftmenu .base li.numb4.current a {
+    background-position: -8px -160px;
+}
+
+.leftmenu .base li.numb5 a:hover, .leftmenu .base li.numb5.current a {
+    background-position: -8px -1046px;
+}
+
+.leftmenu .base li.numb6 a:hover, .leftmenu .base li.numb6.current a {
+    background-position: -8px -194px;
+}
+
+.leftmenu .base li.numb7 a:hover, .leftmenu .base li.numb7.current a {
+    background-position: -8px -1117px;
+}
+
+.leftmenu .base li.numb8 a:hover, .leftmenu .base li.numb8.current a {
+    background-position: -8px -1188px;
+}
+
+.leftmenu .base li.numb9 a:hover, .leftmenu .base li.numb9.current a {
+    background-position: -8px -1296px;
+}
+
+.leftmenu .service {
+    padding-bottom: 10px;
+}
+
+.leftmenu .service h1 {
+    position: relative;
+    padding: 10px 8px 0;
+    margin: 0 5px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+}
+
+.leftmenu .service .add {
+    position: absolute;
+    top: 23px;
+    right: 0;
+    width: 13px;
+    height: 16px;
+    background-position: -2px -931px;
+}
+
+.leftmenu .service .add:hover {
+    background-position: -18px -931px;
+}
+
+.leftmenu .service ul {
+    margin-top: 10px;
+}
+
+.leftmenu .service ul li {
+    line-height: 25px;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.leftmenu .service ul li a {
+    display: block;
+    height: 25px;
+    padding-left: 40px;
+    background-position: -5px -366px;
+    color: #282828;
+}
+
+.leftmenu .service ul li a:hover, .leftmenu .service ul li.current a {
+    background-position: -5px -438px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header.base {
+    padding-top: 0;
+}
+
+.product-list.base {
+    width: auto;
+    margin-top: 0;
+}
+
+.order-sertype-con .base {
+    padding: 0 20px;
+}
+
+.grid_20 {
+    float: left;
+    width: 1000px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.uibox {
+    float: left;
+    border: 1px solid #e0e0e0;
+    width: 99.8%;
+}
+
+.uibox-head {
+    height: 45px;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.uibox-head.sm {
+    height: 35px;
+}
+
+.titbase {
+    padding-left: 22px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    color: #000;
+}
+
+.titbase.fontsm {
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.titbase.displine {
+    float: left;
+}
+
+.titbase .fb {
+    font-size: 12px;
+    color: #939292;
+    padding-left: 20px;
+}
+
+.titbase.displine {
+    float: left;
+}
+
+.topsubmit, .toptext {
+    float: right;
+    margin: 10px 10px 0 0;
+}
+
+.toptext {
+    margin-top: 15px;
+}
+
+.type-search {
+    padding: 12px 0;
+    _height: 25px;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.searchnav {
+    float: left;
+    width: 720px;
+    margin: 0 30px;
+}
+
+.searchnav span, .searchnavli span {
+    float: left;
+    width: 60px;
+    margin-right: 5px;
+    line-height: 25px;
+    text-align: right;
+}
+
+.searchnav input, .searchnav select, .searchinpt {
+    padding: 0 5px;
+    margin: 0 5px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #d6d6d6; /* background: url(../../images/pc/lottery_input_bg.jpg) no-repeat; */
+}
+
+.searchnav select {
+    background-images: none;
+}
+
+.searchnav input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.searchnav input::-moz-placeholder {
+    color: #999;
+}
+
+.serbtn, .searchnav .serbtn {
+    display: inline-block;
+    width: 50px;
+    margin: 10px 20px 0 0;
+    padding: 0 15px;
+    width: auto;
+    height: 27px;
+    line-height: 27px;
+    background-color: #eee;
+    color: #282828;
+    border-width: 0;
+    cursor: pointer;
+    font-size: 12px;
+    background-images: none;
+}
+
+.searchnav p {
+    float: left;
+    margin: 0 30px 0 0;
+}
+
+.searchnavli {
+    width: 100%;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.searchnavli.smt {
+    padding-left: 70px;
+}
+
+.serbtn, .searchnav .serbtn {
+    display: inline-block;
+    width: 50px;
+    margin: 10px 20px 0 0;
+    padding: 0 15px;
+    width: auto;
+    height: 27px;
+    line-height: 27px;
+    background-color: #eee;
+    color: #282828;
+    border-width: 0;
+    cursor: pointer;
+    font-size: 12px;
+    background-images: none;
+}
+
+.serbtn.blue {
+    background-color: #0581ce;
+    color: #fff;
+}
+
+.serbtn.blue:hover {
+    background-color: #1190de;
+    color: #fff;
+}
+
+.serbtn:hover {
+    color: #117ed2;
+    background-color: #e5e5e5;
+}
+
+.tabshow1 {
+}
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+

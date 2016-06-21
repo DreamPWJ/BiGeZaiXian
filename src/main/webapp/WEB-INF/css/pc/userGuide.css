@@ -1,0 +1,281 @@
+/* CSS Document */
+
+body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+/*主体*/
+
+.yhzn1 {
+    width: 100%;
+    min-width: 1200px;
+    height: 322px;
+    padding: 0;
+    margin: -4px 0 0;
+    background: #FFFBE8;
+    animation: loadinghtml 0.3s ease-out;
+}
+
+@keyframes loadinghtml {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform:translateY(0px);
+    }
+}
+.yhzn1-1 {
+    width: 1200px;
+    height: 322px;
+    margin: 0 auto;
+    padding-top: 26px;
+}
+
+.yhzn1-2 {
+    width: 1066px;
+    height: 270px;
+    margin: 0 auto;
+    background: #FCC;
+    background: url(../../images/pc/userGuide/dt.png) no-repeat;
+}
+
+.yhzn2 {
+    width: 1200px;
+    height: auto;
+    padding-top: 60px;
+    margin: 0 auto 140px;
+    animation: loadinghtml1 0.4s ease-out;
+}
+
+@keyframes loadinghtml1 {
+    0% {
+        transform: translateY(200px);
+    }
+    100% {
+        transform:translateY(0px);
+    }
+}
+
+.xh {
+    width: 976px;
+    height: 46px;
+    margin: 0 auto 50px;
+    background: url(../../images/pc/userGuide/bt.png) no-repeat;
+    padding-top: 6px; /*background:#FCF;*/
+}
+
+.xh-1 {
+    width: 40px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 24px;
+    color: #FFF;
+    margin-left: 462px;
+}
+
+.zn-1 {
+    width: 780px;
+    height: auto;
+    margin: 0 auto; /*background:#6CF;*/
+}
+
+.zn-1-1 {
+    width: 780px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 46px;
+    color: #475057;
+    margin-bottom: 40px;
+    letter-spacing: 4px;
+}
+
+.zn-1-2 {
+    width: 880px;
+    height: 34px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #475057;
+    letter-spacing: 1px;
+}
+
+.zn-2 {
+    width: 780px;
+    height: 452px;
+    margin: 50px auto;
+    background: url(../../images/pc/userGuide/zw001.jpg) no-repeat;
+}
+
+.zn-3 {
+    width: 780px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #475057;
+    margin: 0 auto 80px;
+    letter-spacing: 1px;
+}
+
+.zn-4 {
+    width: 780px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 46px;
+    color: #475057;
+    margin: 0 auto 40px;
+    letter-spacing: 4px;
+}
+
+.zn-5 {
+    width: 1100px;
+    height: 220px;
+    margin: 0 auto; /*background:#FCF;*/
+}
+
+.zn-5-1 {
+    width: 1100px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    list-style: none; /*background:#3FF;*/
+}
+
+.zn-5-1-1 {
+    width: 267px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    background: #A7A7A7;
+    font-size: 20px;
+    color: #FFF;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.zn-5-1-2 {
+    width: 267px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    float: left;
+    background: #A7A7A7;
+    font-size: 20px;
+    color: #FFF;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ann1 {
+    width: 1100px;
+    height: 160px;
+    line-height: 30px;
+    float: left;
+    padding-top: 30px;
+    font-size: 16px;
+    color: #475057;
+}
+
+.ann2 {
+    width: 1100px;
+    height: 160px;
+    line-height: 30px;
+    float: left;
+    padding-top: 30px;
+    font-size: 16px;
+    color: #475057;
+}
+
+.ann3 {
+    width: 1100px;
+    height: 160px;
+    line-height: 30px;
+    float: left;
+    padding-top: 30px;
+    font-size: 16px;
+    color: #475057;
+}
+
+.ann4 {
+    width: 1100px;
+    height: 160px;
+    line-height: 30px;
+    float: left;
+    padding-top: 30px;
+    font-size: 16px;
+    color: #475057;
+}
+
+.zn-6 {
+    width: 1132px;
+    height: 514px;
+    margin: 0 auto 80px;
+    background: url(../../images/pc/userGuide/zw002.png) no-repeat;
+}
+
+.zn-7 {
+    width: 620px;
+    height: 452px;
+    margin: 60px auto 10px;
+    background: url(../../images/pc/userGuide/zw003.jpg) no-repeat;
+}
+
+.zn-8 {
+    width: 780px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    color: #475057;
+    margin: 0 auto 80px;
+    letter-spacing: 1px;
+}
+
+.zn-9 {
+    width: 200px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    margin: 0 auto;
+    background: #EF991E;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.zn-9 a {
+    font-size: 20px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.zn-9 a:hover {
+    text-decoration: none;
+}
+
+.menu-bg {
+    background: #f26604;
+}
+	
+	
+	
+	
+	
+	
+	

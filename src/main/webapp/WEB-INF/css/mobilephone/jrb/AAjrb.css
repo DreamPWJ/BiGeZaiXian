@@ -1,0 +1,165 @@
+/* CSS Document */
+
+/*头部*/
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.zhongti {
+    width: 100%;
+    height: auto;
+    position: relative;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0px;
+    background-size: 100% 100%;
+    border-bottom: 1px solid #FF0000;
+}
+
+.v2 {
+    width: 100%;
+    height: 50px;
+    background: #009fe8;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    color: #FFFFFF;
+    background-size: 100% 100%;
+    overflow: hidden;
+    letter-spacing: 4px;
+}
+
+.v2-1 {
+    width: 24px;
+    height: 50px;
+    background: #FF0000;
+    margin-left: 18px;
+    padding: 0px;
+    float: left;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon.png) no-repeat scroll 0px -335px;
+}
+
+.v2-3 {
+    width: 24px;
+    height: 50px;
+    background: #FF0000;
+    margin-right: 22px;
+    padding: 0px;
+    float: right;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon.png) no-repeat scroll 0px -382px;
+}
+
+/*头部隐藏菜单栏*/
+.top-dh {
+    width: 100%;
+    height: 58px;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.top-dh-1 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-1-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon2.png) no-repeat scroll 0px 5px;
+}
+
+.top-dh-2 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-2-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon2.png) no-repeat scroll 0px -76px;
+}
+
+.top-dh-3 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-3-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon2.png) no-repeat scroll 0px -156px;
+}
+
+.top-dh-4 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-4-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon2.png) no-repeat scroll 0px -240px;
+}
+
+.too1 {
+    width: 42px;
+    height: 50px;
+}
+
+/*底线*/
+.dx {
+    width: 100%;
+    clear: left;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+/*底部*/
+.dib {
+    width: auto;
+    height: 150px;
+    padding: 14px 22px 0px 22px;
+    background: #F4F4F4;
+}
+
+.tuic {
+    width: auto;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background: #EB6100;
+    margin-bottom: 44px;
+    overflow: hidden;
+    letter-spacing: 8px;
+}
+
+.tuic a {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.tuic a:hover {
+    color: #009fe8;
+}
+
+.wz {
+    width: auto;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    background: #E2E2E2;
+    overflow: hidden;
+}

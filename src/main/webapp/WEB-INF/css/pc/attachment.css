@@ -1,0 +1,168 @@
+/* CSS Document */
+
+.auto-style1 {
+    width: 48px;
+}
+
+body {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*------------����-----------------*/
+.content {
+    margin: 0 auto;
+    width: 1200px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.grid_5 {
+    float: left;
+    width: 140px;
+    margin: 0px;
+}
+
+.header.base {
+    padding-top: 0;
+}
+
+.product-list.base {
+    width: auto;
+    margin-top: 0;
+}
+
+.order-sertype-con .base {
+    padding: 0 20px;
+}
+
+.grid_20 {
+    float: left;
+    width: 1000px;
+    margin-top: 10px;
+    margin-left: 50px;
+    padding-bottom: 20px;
+}
+
+.uibox-head-order {
+    height: 45px;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #1CAAEB;
+
+}
+
+.titbase {
+    padding-left: 22px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    color: #1CAAEB;
+}
+
+.titbase.fontsm {
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.titbase.displine {
+    float: left;
+}
+
+.titbase .fb {
+    font-size: 12px;
+    color: #939292;
+    padding-left: 20px;
+}
+
+.uibox-order {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.formsendcon-f {
+    position: relative;
+    width: 1000px;
+    overflow: hidden;
+}
+
+.formsendcon-f.full {
+    width: 1200px;
+}
+
+
+
+
+.uibox-con {
+    float: left;
+    margin-top: 35px;
+    padding: 20px 0 0px 0;
+    width: 1000px;
+    min-height: 398px;
+
+}
+
+
+#data-table thead tr th ,#data-table tbody tr td{
+    border:0px;
+    font-size: 16px;
+    color: grey;
+}
+
+
+.text-cen {
+    margin-bottom: 20px;
+}
+
+input[name='filepic'] {
+    margin: 0 auto;
+}
+
+.uploadsucess {
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    width: 80px;
+    background-color: #1CAAEB;
+}
+
+.yxyz {
+    width: 950px;
+    height: 30px;
+    float: left;
+    padding-left: 30px;
+    background: #EEEEEE;
+}
+
+.yxyz-1 {
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    float: left;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #585858;
+}
+
+.yxyz-2 {
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    padding-right: 10px;
+    float: left;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #1CAAEB;
+}
+
+#uploader{
+    background-color: #1CAAEB;
+    width: 120px;
+    height: 40px;
+    border: 0px;
+    font-size: 17px;
+}

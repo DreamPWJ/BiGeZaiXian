@@ -1,0 +1,156 @@
+/* CSS Document */
+
+div.zxzx-top{width:1200px;  margin:0px auto; padding:0px; }
+/*xcn*/
+  .xcn {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+    /*xtop_right*/
+    .xtop_right {
+        padding-right: 0px;
+    }
+    .navbar-right a{
+        padding-right: 0px;
+        text-decoration:none;
+    }
+
+/*front*/
+  /*xtop*/
+    .xtop { /*###*/
+      background-color: #3186FF;
+      height: 40px!important;
+      min-height: 40px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    /*xtop_form*/
+      .xtop_form {
+        margin-top: 0px;
+        padding: 0;
+      }
+
+      /*xtop_form_group*/
+        .xtop_form_group {
+          margin-top: 0px;
+      
+        }
+
+      /*xtop_form_group*/
+        .xtop_form_group {
+          margin-top: 0px;
+        }
+
+
+    /*xtop_btn*/
+      .xtop_btn {
+        margin-top: 0px;
+        border-radius: 0px;
+        background-color: #2171E7;
+        border: 0px;
+        width: 100px;
+        height: 38px;
+        color: white;
+
+        font-size: 15px;
+        font-weight: bold;
+      }
+    /*xtop_tele_img*/
+      .xtop_tele_img {
+        background: url(../../../images/pc/A_public/media_tell.png) no-repeat 0 0;  /*???û�����ϵ�*/
+        width: 11px;
+        height: 40px;
+        margin-top: 15px;
+        margin-left: 20px;
+      }
+    /*xtop_tele_text*/
+      .xtop_tele_text {
+        margin-top: 10px;
+        margin-left: 0px;
+        padding-left: 5px;
+        color: white!important;
+
+        font-size: 15px;
+        font-weight: bold;
+      }
+    /*xtop_link*/
+      .xtop_link {
+        color: white!important;
+        font-size: 15px;
+        height: 40px;
+        line-height: 40px;
+      }
+  /*xhead*/
+    .xhead {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      background-color: white;
+      border:0px;
+    }
+
+    /*xhead_form*/
+      .xhead_form {
+       padding-left: 0px;
+       padding-right: 0px;
+      }
+    /*xhead_logo*/
+      .xhead_logo {
+        background: url("../../../images/pc/A_public/media_logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+        width: 260px;
+        height: 45px;
+      }
+    /*xhead_form_search*/
+      .xhead_form_search {
+        min-width: 325px;
+      }
+  /*xnav*/
+    .xnav {
+      margin-bottom: 0px;
+      height: 40px;
+      min-height: 40px;
+    }
+    /*xnav_left*/
+      .xnav_left {
+        background: url(../../../images/pc/A_public/media_dh1.png) no-repeat 0 0;
+        width: 3px;
+        height: 40px;
+      }
+    /*xnav_right*/
+      .xnav_right {
+        background: url(../../../images/pc/A_public/media_dh3.png) no-repeat 0 0;
+        width: 3px;
+        height: 40px;
+      }
+    /*xnav_middle*/
+      .xnav_middle {
+        background: url(../../../images/pc/A_public/media_dh2.png) repeat-x 0 0;
+        width: 972px;
+        height: 40px;
+      }
+    /*xnav_middle_pill*/
+      .xnav_middle_pill {
+        margin-left: 10px;
+      }
+      .xnav_middle_pill a{
+        border-radius: 0px!important;
+        width:140px!important;
+        height: 38px!important;
+        text-align: center;
+      }
+      .xnav_middle_pill a{
+        color: white!important;
+
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 10px;
+      }
+      .xnav_middle_pill .active a{
+        background-color: #EFEFEF!important;
+        color: #525552!important;
+      }
+      .xnav_middle_pill a:hover {
+        background-color: #EFEFEF!important;
+        color: #525552!important;
+      }

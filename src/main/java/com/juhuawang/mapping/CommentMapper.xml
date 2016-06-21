@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.CommentMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.Comment" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="ORDERGOODID" property="ordergoodid" jdbcType="DECIMAL" />
+    <result column="TITLE" property="title" jdbcType="VARCHAR" />
+    <result column="CONTENT" property="content" jdbcType="VARCHAR" />
+    <result column="STARGOODID" property="stargoodid" jdbcType="VARCHAR" />
+    <result column="STARSELL" property="starsell" jdbcType="VARCHAR" />
+    <result column="STARSEND" property="starsend" jdbcType="VARCHAR" />
+    <result column="FRONTUSERID" property="frontuserid" jdbcType="DECIMAL" />
+    <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="STATUSCODE" property="statuscode" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, ORDERGOODID, TITLE, CONTENT, STARGOODID, STARSELL, STARSEND, FRONTUSERID, OPERATIONIP, 
+    CREATETIME, STATUSCODE, MEMO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from REC_COMMENT
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from REC_COMMENT
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.Comment" >
+    insert into REC_COMMENT (ID, ORDERGOODID, TITLE, 
+      CONTENT, STARGOODID, STARSELL, 
+      STARSEND, FRONTUSERID, OPERATIONIP, 
+      CREATETIME, STATUSCODE, MEMO
+      )
+    values (#{id,jdbcType=DECIMAL}, #{ordergoodid,jdbcType=DECIMAL}, #{title,jdbcType=VARCHAR}, 
+      #{content,jdbcType=VARCHAR}, #{stargoodid,jdbcType=VARCHAR}, #{starsell,jdbcType=VARCHAR}, 
+      #{starsend,jdbcType=VARCHAR}, #{frontuserid,jdbcType=DECIMAL}, #{operationip,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{statuscode,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.Comment" >
+    insert into REC_COMMENT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="ordergoodid != null" >
+        ORDERGOODID,
+      </if>
+      <if test="title != null" >
+        TITLE,
+      </if>
+      <if test="content != null" >
+        CONTENT,
+      </if>
+      <if test="stargoodid != null" >
+        STARGOODID,
+      </if>
+      <if test="starsell != null" >
+        STARSELL,
+      </if>
+      <if test="starsend != null" >
+        STARSEND,
+      </if>
+      <if test="frontuserid != null" >
+        FRONTUSERID,
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP,
+      </if>
+      <if test="createtime != null" >
+        CREATETIME,
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="ordergoodid != null" >
+        #{ordergoodid,jdbcType=DECIMAL},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="stargoodid != null" >
+        #{stargoodid,jdbcType=VARCHAR},
+      </if>
+      <if test="starsell != null" >
+        #{starsell,jdbcType=VARCHAR},
+      </if>
+      <if test="starsend != null" >
+        #{starsend,jdbcType=VARCHAR},
+      </if>
+      <if test="frontuserid != null" >
+        #{frontuserid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.Comment" >
+    update REC_COMMENT
+    <set >
+      <if test="ordergoodid != null" >
+        ORDERGOODID = #{ordergoodid,jdbcType=DECIMAL},
+      </if>
+      <if test="title != null" >
+        TITLE = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        CONTENT = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="stargoodid != null" >
+        STARGOODID = #{stargoodid,jdbcType=VARCHAR},
+      </if>
+      <if test="starsell != null" >
+        STARSELL = #{starsell,jdbcType=VARCHAR},
+      </if>
+      <if test="starsend != null" >
+        STARSEND = #{starsend,jdbcType=VARCHAR},
+      </if>
+      <if test="frontuserid != null" >
+        FRONTUSERID = #{frontuserid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.Comment" >
+    update REC_COMMENT
+    set ORDERGOODID = #{ordergoodid,jdbcType=DECIMAL},
+      TITLE = #{title,jdbcType=VARCHAR},
+      CONTENT = #{content,jdbcType=VARCHAR},
+      STARGOODID = #{stargoodid,jdbcType=VARCHAR},
+      STARSELL = #{starsell,jdbcType=VARCHAR},
+      STARSEND = #{starsend,jdbcType=VARCHAR},
+      FRONTUSERID = #{frontuserid,jdbcType=DECIMAL},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

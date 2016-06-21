@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.GoodPicMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.GoodPic" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="GOODID" property="goodid" jdbcType="DECIMAL" />
+    <result column="SELLUSERID" property="selluserid" jdbcType="DECIMAL" />
+    <result column="PICURL" property="picurl" jdbcType="VARCHAR" />
+    <result column="ORD" property="ord" jdbcType="DECIMAL" />
+    <result column="ISTITLE" property="istitle" jdbcType="CHAR" />
+    <result column="OPERATIONID" property="operationid" jdbcType="DECIMAL" />
+    <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR" />
+    <result column="STATUSCODE" property="statuscode" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, GOODID, SELLUSERID, PICURL, ORD, ISTITLE, OPERATIONID, OPERATIONIP, STATUSCODE, 
+    CREATETIME, MEMO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from REC_GOODPIC
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from REC_GOODPIC
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+
+  <insert id="insertSelective" parameterType="com.juhuawang.model.GoodPic" >
+    insert into REC_GOODPIC
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+        ID,
+        GOODID,
+      <if test="selluserid != null" >
+        SELLUSERID,
+      </if>
+      <if test="picurl != null" >
+        PICURL,
+      </if>
+      <if test="ord != null" >
+        ORD,
+      </if>
+      <if test="istitle != null" >
+        ISTITLE,
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID,
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP,
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE,
+      </if>
+      <if test="createtime != null" >
+        CREATETIME,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+        seq_rec_goodpic.nextval,
+        #{goodid,jdbcType=DECIMAL},
+      <if test="selluserid != null" >
+        #{selluserid,jdbcType=DECIMAL},
+      </if>
+      <if test="picurl != null" >
+        #{picurl,jdbcType=VARCHAR},
+      </if>
+      <if test="ord != null" >
+        #{ord,jdbcType=DECIMAL},
+      </if>
+      <if test="istitle != null" >
+        #{istitle,jdbcType=CHAR},
+      </if>
+      <if test="operationid != null" >
+        #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="statuscode != null" >
+        #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.GoodPic" >
+    update REC_GOODPIC
+    <set >
+      <if test="goodid != null" >
+        GOODID = #{goodid,jdbcType=DECIMAL},
+      </if>
+      <if test="selluserid != null" >
+        SELLUSERID = #{selluserid,jdbcType=DECIMAL},
+      </if>
+      <if test="picurl != null" >
+        PICURL = #{picurl,jdbcType=VARCHAR},
+      </if>
+      <if test="ord != null" >
+        ORD = #{ord,jdbcType=DECIMAL},
+      </if>
+      <if test="istitle != null" >
+        ISTITLE = #{istitle,jdbcType=CHAR},
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.GoodPic" >
+    update REC_GOODPIC
+    set GOODID = #{goodid,jdbcType=DECIMAL},
+      SELLUSERID = #{selluserid,jdbcType=DECIMAL},
+      PICURL = #{picurl,jdbcType=VARCHAR},
+      ORD = #{ord,jdbcType=DECIMAL},
+      ISTITLE = #{istitle,jdbcType=CHAR},
+      OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

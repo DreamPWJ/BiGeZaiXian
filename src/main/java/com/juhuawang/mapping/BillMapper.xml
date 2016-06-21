@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.BillMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.Bill" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="ORDERID" property="orderid" jdbcType="DECIMAL" />
+    <result column="FRONTUSERID" property="frontuserid" jdbcType="DECIMAL" />
+    <result column="CODENO" property="codeno" jdbcType="VARCHAR" />
+    <result column="TOTALMONEY" property="totalmoney" jdbcType="DECIMAL" />
+    <result column="TAXMONEY" property="taxmoney" jdbcType="DECIMAL" />
+    <result column="FINALMONEY" property="finalmoney" jdbcType="DECIMAL" />
+    <result column="OPERATIONID" property="operationid" jdbcType="DECIMAL" />
+    <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="STATUSCODE" property="statuscode" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, ORDERID, FRONTUSERID, CODENO, TOTALMONEY, TAXMONEY, FINALMONEY, OPERATIONID, 
+    OPERATIONIP, CREATETIME, STATUSCODE, MEMO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from REC_BILL
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from REC_BILL
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.Bill" >
+    insert into REC_BILL (ID, ORDERID, FRONTUSERID, 
+      CODENO, TOTALMONEY, TAXMONEY, 
+      FINALMONEY, OPERATIONID, OPERATIONIP, 
+      CREATETIME, STATUSCODE, MEMO
+      )
+    values (#{id,jdbcType=DECIMAL}, #{orderid,jdbcType=DECIMAL}, #{frontuserid,jdbcType=DECIMAL}, 
+      #{codeno,jdbcType=VARCHAR}, #{totalmoney,jdbcType=DECIMAL}, #{taxmoney,jdbcType=DECIMAL}, 
+      #{finalmoney,jdbcType=DECIMAL}, #{operationid,jdbcType=DECIMAL}, #{operationip,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{statuscode,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.Bill" >
+    insert into REC_BILL
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="orderid != null" >
+        ORDERID,
+      </if>
+      <if test="frontuserid != null" >
+        FRONTUSERID,
+      </if>
+      <if test="codeno != null" >
+        CODENO,
+      </if>
+      <if test="totalmoney != null" >
+        TOTALMONEY,
+      </if>
+      <if test="taxmoney != null" >
+        TAXMONEY,
+      </if>
+      <if test="finalmoney != null" >
+        FINALMONEY,
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID,
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP,
+      </if>
+      <if test="createtime != null" >
+        CREATETIME,
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="orderid != null" >
+        #{orderid,jdbcType=DECIMAL},
+      </if>
+      <if test="frontuserid != null" >
+        #{frontuserid,jdbcType=DECIMAL},
+      </if>
+      <if test="codeno != null" >
+        #{codeno,jdbcType=VARCHAR},
+      </if>
+      <if test="totalmoney != null" >
+        #{totalmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="taxmoney != null" >
+        #{taxmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="finalmoney != null" >
+        #{finalmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="operationid != null" >
+        #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.Bill" >
+    update REC_BILL
+    <set >
+      <if test="orderid != null" >
+        ORDERID = #{orderid,jdbcType=DECIMAL},
+      </if>
+      <if test="frontuserid != null" >
+        FRONTUSERID = #{frontuserid,jdbcType=DECIMAL},
+      </if>
+      <if test="codeno != null" >
+        CODENO = #{codeno,jdbcType=VARCHAR},
+      </if>
+      <if test="totalmoney != null" >
+        TOTALMONEY = #{totalmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="taxmoney != null" >
+        TAXMONEY = #{taxmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="finalmoney != null" >
+        FINALMONEY = #{finalmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.Bill" >
+    update REC_BILL
+    set ORDERID = #{orderid,jdbcType=DECIMAL},
+      FRONTUSERID = #{frontuserid,jdbcType=DECIMAL},
+      CODENO = #{codeno,jdbcType=VARCHAR},
+      TOTALMONEY = #{totalmoney,jdbcType=DECIMAL},
+      TAXMONEY = #{taxmoney,jdbcType=DECIMAL},
+      FINALMONEY = #{finalmoney,jdbcType=DECIMAL},
+      OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

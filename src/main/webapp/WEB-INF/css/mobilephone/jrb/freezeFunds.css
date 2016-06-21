@@ -1,0 +1,345 @@
+/* CSS Document */
+
+/*头部*/
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.zhongti {
+    width: 100%;
+    height: auto;
+    position: relative;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0px;
+    background-size: 100% 100%; /*border-bottom:1px solid #FF0000;*/
+}
+
+.v2 {
+    width: 100%;
+    height: 50px;
+    background: #171B27;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    color: #FFFFFF;
+    background-size: 100% 100%;
+    overflow: hidden;
+    letter-spacing: 4px;
+}
+
+.v2-1 {
+    width: 24px;
+    height: 50px;
+    background: #FF0000;
+    margin-left: 18px;
+    padding: 0px;
+    float: left;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon.png) no-repeat scroll 0px -335px;
+}
+
+.v2-3 {
+    width: 24px;
+    height: 50px;
+    background: #FF0000;
+    margin-right: 22px;
+    padding: 0px;
+    float: right;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon.png) no-repeat scroll 0px -382px;
+}
+
+/*头部隐藏菜单�?*/
+.top-dh {
+    width: 100%;
+    height: 58px;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.top-dh-1 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-1-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon2.png) no-repeat scroll 0px 5px;
+}
+
+.top-dh-2 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-2-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon2.png) no-repeat scroll 0px -76px;
+}
+
+.top-dh-3 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-3-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon2.png) no-repeat scroll 0px -156px;
+}
+
+.top-dh-4 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-4-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon2.png) no-repeat scroll 0px -240px;
+}
+
+.too1 {
+    width: 42px;
+    height: 50px;
+}
+
+/*底线*/
+.dx {
+    width: 100%;
+    clear: left;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+/*搜索*/
+.shsu {
+    width: 100%;
+    height: 90px;
+    float: left;
+    background: #F3F3F3;
+}
+
+.shous {
+    width: auto;
+    height: 40px;
+    margin: 25px 22px 20px 22px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden; /* box-shadow:0px 0px 2px 1px #CCC; background:#FFCCCC;*/
+}
+
+.shous-1 {
+    width: 85%;
+    height: 40px;
+    float: left;
+    background: #33CCFF;
+}
+
+.shous-2 {
+    width: 15%;
+    height: 40px;
+    padding: 0px;
+    float: left;
+    min-width: 40px;
+    background: #FA5B21;
+    cursor: pointer;
+}
+
+.shous-2-1 {
+    width: 100%;
+    height: 40px;
+    padding: 0px;
+    margin: 0px;
+    background: #FA5B21;
+    cursor: pointer;
+}
+
+.xFast_form_btn {
+    width: 100%;
+    height: 40px;
+    background-color: #FA5B21;
+    padding: 0px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.shous-2-1-1 {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background: url(../../../images/mobilephone/jrb/Apublic/cz.png) no-repeat;
+    cursor: pointer;
+}
+
+/*订单示例*/
+.HD-dd {
+    width: 100%;
+    height: auto;
+    float: left;
+    max-height: 144px; /*background:#FCC;*/
+}
+
+.HD-dd-1 {
+    width: 100%;
+    height: 50px;
+    float: left;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC; /*background:#F9F;*/
+}
+
+.HD-dd-1 a {
+    text-decoration: none;
+}
+
+.HD-dd-1 a:hover {
+    text-decoration: none;
+}
+
+.HD-dd-1-t {
+    height: 30px;
+    border-left: 3px solid #EB6100;
+    float: left;
+    margin-top: 10px;
+}
+
+.HD-dd-1-z {
+    width: auto;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 8px;
+    text-align: left;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #5A99FF;
+    overflow: hidden;
+}
+
+.HD-sam1 {
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #5A99FF;
+}
+
+.HD-dd-1-z-1 {
+    width: 70px;
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    margin-right: 3%;
+    float: right;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #EB6100;
+    overflow: hidden;
+}
+
+.HD-sam2 {
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #EB6100;
+}
+
+/*订单展现信息*/
+.HD-dd-2 {
+    width: 100%;
+    height: auto;
+    max-height: 90px;
+    float: left;
+    padding: 0px; /*background:#999;*/
+}
+
+.HD-dd-2-1 {
+    width: 94%;
+    height: 44px;
+    line-height: 44px;
+    text-align: left;
+    float: left;
+    margin: 0px 3%;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #333;
+    border-bottom: 1px dashed #CCC;
+}
+
+.HD-dd-2-2 {
+    width: 94%;
+    height: 44px;
+    line-height: 44px;
+    text-align: left;
+    float: left;
+    padding: 0px 3%;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #333;
+    border-bottom: 1px solid #CCC;
+}
+
+.HD-sam3 {
+    font-size: 13px;
+    font-family: "微软雅黑";
+    color: #333;
+}
+
+.HD-dd-2-1-1 {
+    width: 150px;
+    height: 44px;
+    line-height: 44px;
+    text-align: right;
+    float: right;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #333;
+    overflow: hidden; /*background:#0CF;*/
+}
+
+.HD-dd-2-1-2 {
+    width: 150px;
+    height: 44px;
+    line-height: 44px;
+    text-align: right;
+    float: right;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #EB6100;
+    overflow: hidden; /*background:#0CF;*/
+}
+
+.HD-sam4 {
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #333;
+}
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

@@ -1,0 +1,49 @@
+/* CSS Document */
+
+        /*--main--*/
+        div.zxzx-main{width:1200px;  margin:0px auto; padding:0px; border-left:1px solid #bec3c6; border-right:1px solid #bec3c6; border-bottom:1px solid #bec3c6; margin-bottom:50px;}
+/*--��---------------------------------------------*/
+            div.zxzx-L{width:650px; margin:0px; padding:24px; float:left; border-right:1px solid #bec3c6; /*background:#e5cee6;*/}
+                /*--����--*/
+                div.zxzx-jr{width:602px; height:30px; line-height:30px; text-align:left; font-size:18px; font-weight:bold; margin:0px; padding:0px; /*background:#ff0000;*/}
+                    div.zxzx-dx1{width:62px; border:2px solid #ff6a00; float:left;}
+                    div.zxzx-dx2{width:540px; border:2px solid #fff; float:left;}
+
+                div.zxzx-xw1{width:602px; height:120px; margin-top:20px; padding:0px; clear:left; /*background:#dbb3a1;*/ }
+                    div.zxzx-xw1-1{overflow:hidden; width:502px;height:30px; line-height:30px; font-size:16px; font-weight:bold; text-align:left; float:left; margin:0px; padding:0px; /*background:#ff6a00;*/}
+                    div.zxzx-xw1-2{width:100px;height:30px; line-height:30px; font-size:14px; text-align:right; float:left; color:#bec3c6; margin:0px; padding:0px; /*background:#6cd554;*/}
+                    p.zxzx-xw1-3{overflow:hidden; width:602px; height:80px; line-height:20px; font-size:14px; text-align:left; color:#808080; clear:left; margin:0px; padding:0px; /*background:#ff0000;*/}
+                div.zxzx-xw2{width:602px; height:150px; margin-top:10px; padding-top:30px; clear:left;  border-top:1px solid #bec3c6; /*background:#dbb3a1;*/}
+
+                div.zxzx-zdgd{width:602px; height:20px; line-height:20px; margin-top:24px; padding:0px; /*background:#dbb3a1;*/}
+                    div.V_gd{width:28px; height:20px; margin-left:252px; padding:0px; float:left; /*background:#6cd554;*/}
+                    div.zsgd{width:70px; height:20px; line-height:20px; font-size:14px; margin:0px auto; padding:0px; float:left; /*background:#ff6a00;*/}
+                        .zsgd a{text-decoration:none; color:#A2A1A1;}
+                        .zsgd a:hover{color:#ff6a00; cursor:pointer; font-weight:bold;}
+                /*--����--*/
+                div.zxzx-qs{width:602px; height:30px; line-height:30px; text-align:left; font-size:18px; font-weight:bold; margin-top:40px; padding:0px; /*background:#ff0000;*/ }
+                div.zxzx-qs-1{width:602px; height:120px; margin-top:20px; padding:0px; clear:left; /*background:#dbb3a1;*/ }
+                    div.zxzx-qs-1-1{width:20px; height:20px; line-height:20px; font-size:18px; text-align:center; margin:0px; padding:0px; float:left; color:#ff6a00;  /*background:#6cd554;*/ }
+                    div.zxzx-qs-1-2{overflow:hidden; width:482px; height:20px; line-height:20px; margin:0px; font-size:14px; color:#040404; text-align:left; padding:0px; float:left; /*background:#6cd554;*/ }
+                    div.zxzx-qs-1-3{width:100px; height:20px; line-height:20px; margin:0px; padding:0px; float:left; color:#bec3c6; font-size:14px; text-align:right; /*background:#6cd554;*/ }
+                    p.zxzx-qs-1-4{overflow:hidden; width:602px; height:80px; line-height:20px; font-size:14px; text-align:left; color:#808080; clear:left; margin:0px; padding-left:20px; /*background:#ff0000;*/ }
+                div.zxzx-qs-2{width:602px; height:150px; margin-top:10px; padding-top:30px; clear:left;  border-top:1px dashed #bec3c6; /* background:#dbb3a1;*/ }
+
+/*--��-----------------------------------------------------*/
+            div.zxzx-R{width:327px; margin:0px; padding:20px; float:left;  /*background:#bec3c6;*/}
+                div.zxzx-R-zjt{width:287px; height:30px; line-height:30px; text-align:left; font-size:16px; margin:0px; padding:0px; /*background:#6cd554;*/ }
+                    div.zxzx-R-dx1{width:95px; border:2px solid #ff6a00; float:left;}
+                    div.zxzx-R-dx2{width:192px; border:2px solid #fff; float:left;}
+
+                div.zxzx-R-zjt1{width:287px; margin-top:20px; margin-bottom:210px; padding:0px; /*background:#c3d6dd;*/}
+                    div.zxzx-R-zjt1-1{width:287px; height:67px; margin:0px; padding:0px;  }
+                        div.zxzx-R-zjt1-1-t{width:76px; height:67px; float:left; }
+                        div.zxzx-R-zjt1-1-z{width:211px; height:67px; float:left; padding-left:10px; border-bottom:1px solid #bec3c6;/* background:#ff6a00;*/}
+                            div.zxzx-R-zjt1-1-z-s{width:201px; height:26px; line-height:26px; text-align:left; font-size:16px; /*background:#c3d6dd;*/}
+                            div.zxzx-R-zjt1-1-z-x{overflow:hidden; width:201px; height:41px; line-height:18px; text-align:left; font-size:12px; color:#808080;  /*background:#ff6a00;*/}
+                    div.zxzx-R-zjt1-2{width:287px; height:67px; margin-top:20px; padding:0px;  }
+
+                div.zxzx-R-wxewm{width:231px; height:254px;  padding:0px; margin:0px auto; border:1px dashed #bec3c6;}
+
+
+            div.zxzx-M{width:1200px;height:0px; margin:0px auto; padding:0px; clear:both; background:#bec3c6;}

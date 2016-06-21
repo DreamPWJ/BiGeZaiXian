@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.AccountMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.Account" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="ROLEID" property="roleid" jdbcType="DECIMAL" />
+    <result column="ORGANIZATIONID" property="organizationid" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="PASSWORD" property="password" jdbcType="VARCHAR" />
+    <result column="CODENO" property="codeno" jdbcType="VARCHAR" />
+    <result column="IC" property="ic" jdbcType="CHAR" />
+    <result column="BEGINTIME" property="begintime" jdbcType="TIMESTAMP" />
+    <result column="ENDTIME" property="endtime" jdbcType="TIMESTAMP" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="REGISTERTIME" property="registertime" jdbcType="TIMESTAMP" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="ENABLE" property="enable" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, ROLEID, ORGANIZATIONID, NAME, USERNAME, PASSWORD, CODENO, IC, BEGINTIME, ENDTIME, 
+    EMAIL, REGISTERTIME, VERSION, ENABLE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from ACCOUNT
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from ACCOUNT
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.Account" >
+    insert into ACCOUNT (ID, ROLEID, ORGANIZATIONID, 
+      NAME, USERNAME, PASSWORD, 
+      CODENO, IC, BEGINTIME, 
+      ENDTIME, EMAIL, REGISTERTIME, 
+      VERSION, ENABLE)
+    values (#{id,jdbcType=DECIMAL}, #{roleid,jdbcType=DECIMAL}, #{organizationid,jdbcType=DECIMAL}, 
+      #{name,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{codeno,jdbcType=VARCHAR}, #{ic,jdbcType=CHAR}, #{begintime,jdbcType=TIMESTAMP}, 
+      #{endtime,jdbcType=TIMESTAMP}, #{email,jdbcType=VARCHAR}, #{registertime,jdbcType=TIMESTAMP}, 
+      #{version,jdbcType=DECIMAL}, #{enable,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.Account" >
+    insert into ACCOUNT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="roleid != null" >
+        ROLEID,
+      </if>
+      <if test="organizationid != null" >
+        ORGANIZATIONID,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="username != null" >
+        USERNAME,
+      </if>
+      <if test="password != null" >
+        PASSWORD,
+      </if>
+      <if test="codeno != null" >
+        CODENO,
+      </if>
+      <if test="ic != null" >
+        IC,
+      </if>
+      <if test="begintime != null" >
+        BEGINTIME,
+      </if>
+      <if test="endtime != null" >
+        ENDTIME,
+      </if>
+      <if test="email != null" >
+        EMAIL,
+      </if>
+      <if test="registertime != null" >
+        REGISTERTIME,
+      </if>
+      <if test="version != null" >
+        VERSION,
+      </if>
+      <if test="enable != null" >
+        ENABLE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="roleid != null" >
+        #{roleid,jdbcType=DECIMAL},
+      </if>
+      <if test="organizationid != null" >
+        #{organizationid,jdbcType=DECIMAL},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="codeno != null" >
+        #{codeno,jdbcType=VARCHAR},
+      </if>
+      <if test="ic != null" >
+        #{ic,jdbcType=CHAR},
+      </if>
+      <if test="begintime != null" >
+        #{begintime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endtime != null" >
+        #{endtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="registertime != null" >
+        #{registertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=DECIMAL},
+      </if>
+      <if test="enable != null" >
+        #{enable,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.Account" >
+    update ACCOUNT
+    <set >
+      <if test="roleid != null" >
+        ROLEID = #{roleid,jdbcType=DECIMAL},
+      </if>
+      <if test="organizationid != null" >
+        ORGANIZATIONID = #{organizationid,jdbcType=DECIMAL},
+      </if>
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        USERNAME = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        PASSWORD = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="codeno != null" >
+        CODENO = #{codeno,jdbcType=VARCHAR},
+      </if>
+      <if test="ic != null" >
+        IC = #{ic,jdbcType=CHAR},
+      </if>
+      <if test="begintime != null" >
+        BEGINTIME = #{begintime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endtime != null" >
+        ENDTIME = #{endtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="email != null" >
+        EMAIL = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="registertime != null" >
+        REGISTERTIME = #{registertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null" >
+        VERSION = #{version,jdbcType=DECIMAL},
+      </if>
+      <if test="enable != null" >
+        ENABLE = #{enable,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.Account" >
+    update ACCOUNT
+    set ROLEID = #{roleid,jdbcType=DECIMAL},
+      ORGANIZATIONID = #{organizationid,jdbcType=DECIMAL},
+      NAME = #{name,jdbcType=VARCHAR},
+      USERNAME = #{username,jdbcType=VARCHAR},
+      PASSWORD = #{password,jdbcType=VARCHAR},
+      CODENO = #{codeno,jdbcType=VARCHAR},
+      IC = #{ic,jdbcType=CHAR},
+      BEGINTIME = #{begintime,jdbcType=TIMESTAMP},
+      ENDTIME = #{endtime,jdbcType=TIMESTAMP},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      REGISTERTIME = #{registertime,jdbcType=TIMESTAMP},
+      VERSION = #{version,jdbcType=DECIMAL},
+      ENABLE = #{enable,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

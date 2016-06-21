@@ -1,0 +1,469 @@
+/* CSS Document */
+
+body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+}
+
+/*主体*/
+.content {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 0 100px;
+}
+
+/*确认冻结保证�?*/
+.QrDj {
+    width: 1198px;
+    height: 230px;
+    margin-top: 20px;
+    clear: left;
+    border-top: 2px solid #FF6600;
+}
+
+.QrDj-1 {
+    width: 1108px;
+    height: 48px;
+    float: left;
+    margin-top: 20px;
+    padding-left: 90px;
+}
+
+.QrDj-1-t {
+    width: 30px;
+    height: 24px;
+    float: left;
+    margin-top: 12px;
+    background: url(../../../images/pc/account/qr.png) no-repeat;
+    margin-right: 18px;
+}
+
+.QrDj-1-1 {
+    width: 900px;
+    height: 48px;
+    line-height: 48px;
+    text-align: left;
+    float: left;
+    font-size: 20px;
+    font-family: "微软雅黑";
+    letter-spacing: 2px;
+}
+
+.QrDj-2 {
+    width: 1060px;
+    height: 56px;
+    line-height: 40px;
+    float: left;
+    text-align: left;
+    font-size: 17px;
+    font-family: "微软雅黑";
+    color: #1F2420;
+    letter-spacing: 1px;
+    padding-left: 138px;
+}
+
+.QrDj-sa1 {
+    font-size: 17px;
+    font-family: "微软雅黑";
+    color: #FF6600;
+}
+
+.QrDj-3 {
+    width: 1190px;
+    height: 32px;
+    float: left;
+    padding-left: 138px;
+}
+
+.QrDj-3-t {
+    width: 13px;
+    height: 13px;
+    float: left;
+    margin-top: 9px;
+    margin-right: 14px;
+    background: url(../../../images/pc/account/ts.png) no-repeat;
+}
+
+.QrDj-3-1 {
+    width: 1000px;
+    height: 32px;
+    line-height: 32px;
+    text-align: left;
+    font-size: 15px;
+    font-family: "微软雅黑";
+    color: #333;
+    float: left;
+}
+
+.QrDj-4 {
+    width: 1100px;
+    height: 32px;
+    line-height: 32px;
+    float: left;
+    padding-left: 165px;
+    text-align: left;
+    font-size: 15px;
+    font-family: "微软雅黑";
+    color: #333;
+}
+
+.QrDj-sa2 {
+    font-size: 15px;
+    font-family: "微软雅黑";
+    color: #FF6600;
+}
+
+.ZiFu label {
+    font-weight: 500;
+}
+
+input[type=radio] {
+    margin: 22px 20px;
+}
+
+/*支付*/
+.ZiFu {
+    width: 1198px;
+    height: auto;
+    clear: left;
+    min-height: 400px;
+    border-top: 2px solid #FF6600;
+
+}
+
+.ZiFu-1 {
+    width: 1192px;
+    height: 54px;
+    float: left;
+    margin-left: 28px;
+    margin-top: 12px;
+    padding-left: 68px; /*border:2px solid #B4C5E3;*/
+}
+
+.ZiFu-1-x {
+    margin-top: 26px;
+    float: left;
+    cursor: pointer;
+    margin-right: 26px;
+}
+
+#balancepay {
+    float: left;
+}
+
+#otherpay {
+    margin-left: 68px;
+}
+
+.ZiFu-1-1 {
+    width: auto;
+    min-width: 150px;
+    height: 54px;
+    line-height: 54px;
+    float: left;
+    text-align: left;
+    margin-right: 24px;
+    font-size: 17px;
+    font-family: "微软雅黑";
+    color: #333; /*background:#C9F;*/
+    display: inline-block;
+}
+
+.ZiFu-sa1 {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #FF6600;
+}
+
+.ZiFu-1-2 {
+    width: 500px;
+    height: 54px;
+    float: left;
+    overflow: hidden; /*background:#C9F;*/
+}
+
+.ZiFu-1-2-1 {
+    width: 500px;
+    height: 54px;
+    float: left;
+}
+
+.ZiFu-1-2-2 {
+    width: 500px;
+    height: 54px;
+    float: left;
+}
+
+.ZiFu-1v-t {
+    width: 13px;
+    height: 13px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 14px;
+    background: url(../../../images/pc/account/ts.png) no-repeat;
+}
+
+.ZiFu-1v-z {
+    width: 473px;
+    height: 54px;
+    line-height: 54px;
+    float: left;
+    text-align: left;
+    font-size: 15px;
+    font-family: "微软雅黑";
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.ZiFu-1v-z a {
+    font-size: 15px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #FF5B59;
+    text-decoration: none;
+}
+
+.ZiFu-1v-z a:hover {
+    font-size: 15px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.ZiFu-2 {
+    width: 1140px;
+    height: auto;
+    min-height: 54px;
+    float: left;
+    margin-left: 28px;
+    margin-top: 2px; /* border:2px solid #B4C5E3;*/
+    /*background:#9C9;*/
+}
+
+.ZiFu-2v {
+    width: 1140px;
+    height: auto;
+    float: left; /*background:#0C0;*/
+}
+
+.ZiFu-1-x1 {
+    margin-top: 20px;
+    float: left;
+    cursor: pointer;
+    margin-right: 27px;
+    margin-left: 68px;
+}
+
+.ZiFu-2-1 {
+    width: 1004px;
+    height: auto;
+    float: left;
+    margin-left: 68px;
+}
+
+.ZiFu-2-1-v1 {
+    width: 1004px;
+    height: 48px;
+    line-height: 48px;
+    float: left;
+    text-align: left;
+    border-top: 3px solid #B4C5E3;
+    font-size: 15px;
+    font-family: "微软雅黑";
+    color: #333; /*background:#FF6;*/
+}
+
+/*黄色*/
+.ZiFu-2-1-v1 a {
+    font-size: 15px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #FF5B59;
+    text-decoration: none;
+}
+
+.ZiFu-2-1-v1 a:hover {
+    font-size: 15px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.ZiFu-2-1-v2 {
+    width: 1004px;
+    height: auto;
+    float: left;
+    padding-bottom: 24px; /*background:#F6F;*/
+}
+
+/*粉色*/
+.v2-1 {
+    width: 220px;
+    height: 45px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid #B4C5E3;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.v2-1:hover{
+    border: 1px solid #f26604;
+}
+    /*ѡ�жԺ�*/
+.v2-1-pigeon {
+    background: url(../../../images/pc/pay/pigeon.png) no-repeat top right;
+    background-size: 30px 30px;
+    border: 1px solid #f26604;
+}
+
+/*输入密码*/
+.SrMm {
+    width: 1198px;
+    height: 180px;
+    clear: both; /* background:#F6F;*/
+    margin-top: 80px;
+
+}
+
+.SrMm-1 {
+    width: 1160px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 17px;
+    font-family: "微软雅黑";
+    color: #333;
+    padding-top: 30px;
+    padding-left: 400px;
+}
+
+.SrMm-1-1 {
+    width: 86px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+    font-size: 17px;
+    color: grey;
+    font-weight: bolder;
+}
+
+.in-SrMm {
+    width: 220px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    border: 2px solid #0099FF;
+    font-size: 30px;
+    font-family: "微软雅黑";
+    color: #0099FF;
+    margin: 0 16px;
+    padding-left: 25px;
+    letter-spacing: 15px;
+}
+
+.SrMm-1-1 a {
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #0099FF;
+    text-decoration: none;
+}
+
+.SrMm-1-1 a:hover {
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #d43f3a;
+    text-decoration: none;
+}
+
+input[class="in-SrMm"]:hover {
+    border: 2px solid #d43f3a;
+}
+
+input[class="in-SrMm"]:focus {
+    border: 2px solid #d43f3a;
+    color: #FF6600;
+}
+
+.SrMm-2 {
+    width: 970px;
+    height: 32px;
+    line-height: 32px;
+    float: left;
+    margin-left: 430px;
+    padding-left: 88px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: grey; /*background:#360;*/
+}
+
+/*确定/取消*/
+.QdQx {
+    width: 1158px;
+    height: 112px;
+    margin: 0 auto;
+    border-top: 1px solid #E2E2E2;
+}
+
+.QdQx-1 {
+    width: 456px;
+    height: 48px;
+    margin: 30px auto;
+}
+
+.QdQx-1-1 {
+    border: 0;
+    width: 170px;
+    height: 45px;
+    float: left;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #FFF;
+    background: #FF6600;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.QdQx-1-2 {
+    border: 0;
+    width: 170px;
+    height: 45px;
+    float: right;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #FFF;
+    background: #3285FF;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.QdQx-1-1:hover {
+    background: #d43f3a;
+
+}
+
+.QdQx-1-2:hover {
+    background: #009FE8;
+
+}
+
+
+				
+				
+ 
+				
+				
+				
+				
+				
+				

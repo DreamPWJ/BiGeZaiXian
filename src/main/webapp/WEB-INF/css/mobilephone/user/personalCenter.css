@@ -1,0 +1,633 @@
+/*头部*/
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.zhongti {
+    width: 100%;
+    height: auto;
+    position: relative;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0px;
+    background-size: 100% 100%;
+    /*border-bottom: 1px solid #FF0000;*/
+}
+
+.v2 {
+    width: 100%;
+    height: 50px;
+    background: #4C9ED9;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    color: #FFFFFF;
+    background-size: 100% 100%;
+    overflow: hidden;
+    letter-spacing: 4px;
+}
+
+.v2-1 {
+    width: 24px;
+    height: 50px;
+    background: #FF0000;
+    margin-left: 18px;
+    padding: 0px;
+    float: left;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon.png) no-repeat scroll 0px -335px;
+}
+
+.v2-3 {
+    width: 24px;
+    height: 50px;
+    background: #FF0000;
+    margin-right: 22px;
+    padding: 0px;
+    float: right;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon.png) no-repeat scroll 0px -382px;
+}
+
+/*头部隐藏菜单栏*/
+.top-dh {
+    width: 100%;
+    height: 58px;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.top-dh-1 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-1-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon2.png) no-repeat scroll 0px 5px;
+}
+
+.top-dh-2 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-2-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon2.png) no-repeat scroll 0px -76px;
+}
+
+.top-dh-3 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-3-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon2.png) no-repeat scroll 0px -156px;
+}
+
+.top-dh-4 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-4-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon2.png) no-repeat scroll 0px -240px;
+}
+
+.too1 {
+    width: 42px;
+    height: 50px;
+}
+
+/*底线*/
+.dx {
+    width: 100%;
+    clear: left;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+/*头像导航条*/
+.v3 {
+    width: 100%;
+    height: 126px;
+    margin: 0px;
+    clear: left;
+    padding-top: 10px;
+    background: url(../../../images/mobilephone/personalCenter/back.jpg) 0 0 no-repeat scroll transparent;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.v3-1 {
+    width: 100%;
+    height: 90px;
+}
+
+.v3-2 {
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    margin: 0px auto; /*border:1px solid #000000;*/
+}
+
+.v3-3 {
+    width: 46px;
+    height: 46px;
+    background: url(../../../images/mobilephone/personalCenter/wycg.png) no-repeat;
+    float: right;
+    margin-top: -100px;
+    margin-right: 24px;
+    border: 1px solid #000000;
+}
+
+.v3-4 {
+    width: 100px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    float: right;
+    margin-top: -50px;
+    border: 1px solid #000000;
+}
+
+.v3-4 a {
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.v3-4 a:hover {
+    color: #4C9ED9;
+}
+
+.v4 {
+    width: 190px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 6px;
+    overflow: hidden; /*border:1px solid #000000;*/
+}
+
+.v4 a {
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.v4 a:hover {
+    color: #4C9ED9;
+}
+
+/*全部订单*/
+.z1 {
+    width: 100%;
+    height: 52px;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px solid #AAAAAA;
+    overflow: hidden;
+}
+
+.z1-1 {
+    width: 100px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 18px;
+    float: left;
+    margin-left: 22px; /*background:#669933;*/
+}
+
+.z1-1 a {
+    font-size: 18px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.z1-1 a:hover {
+    color: #FF6D00;
+}
+
+.z1-1-1 {
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-top: 18px;
+    margin-right: 10px;
+    background-size: 100% 100%;
+}
+
+.z1-2 {
+    width: 108px;
+    height: 52px;
+    line-height: 52px;
+    float: right;
+    margin-right: 22px;
+    text-align: left; /*background:#669933;*/
+}
+
+.z1-2-1 {
+    width: 86px;
+    height: 52;
+    line-height: 52px;
+    font-size: 14px;
+    float: left; /*background:#CCCCFF;*/
+}
+
+.z1-2-1 a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.z1-2-1 a:hover {
+    color: #FF6D00;
+}
+
+.z1-2-2 {
+    width: 12px;
+    height: 16px;
+    margin-top: 19px;
+    float: right;
+    margin-left: 10px;
+    background: transparent url(../personalCenter/icon.png) no-repeat scroll 0px -622px; /*background:#00CCFF;*/
+}
+
+/*功能导航栏1*/
+.gndh1 {
+    width: 100%;
+    height: 92px;
+    border-bottom: 1px solid #AAAAAA;
+    overflow: hidden; /*background:#FF9966;*/
+}
+
+.gndh1 a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.gndh1 a:hover {
+    color: #FF6D00;
+}
+
+.gndh1-1 {
+    width: 20%;
+    height: 74px;
+    float: left;
+    padding-top: 18px;
+    background-size: 100% 100%;
+}
+
+.gndh1-1-1 {
+    width: 38px;
+    height: 30px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon1.png) no-repeat scroll 0px -420px;
+}
+
+.gndh1-1-2 {
+    width: 44px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center; /*background:#6666CC;*/
+}
+
+.gndh1-2 {
+    width: 20%;
+    height: 74px;
+    float: left;
+    padding-top: 18px;
+    background-size: 100% 100%;
+}
+
+.gndh1-2-1 {
+    width: 38px;
+    height: 34px;
+    margin: 0 auto;
+    margin-bottom: 6px;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon1.png) no-repeat scroll 0px -373px;
+}
+
+.gndh1-2-2 {
+    width: 44px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center; /*background:#6666CC;*/
+}
+
+.gndh1-3 {
+    width: 20%;
+    height: 74px;
+    float: left;
+    padding-top: 18px;
+    background-size: 100% 100%;
+}
+
+.gndh1-3-1 {
+    width: 38px;
+    height: 34px;
+    margin: 0 auto;
+    margin-bottom: 6px;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon1.png) no-repeat scroll 0px -326px;
+}
+
+.gndh1-3-2 {
+    width: 44px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center; /*background:#6666CC;*/
+}
+
+.gndh1-4 {
+    width: 20%;
+    height: 74px;
+    float: left;
+    padding-top: 18px;
+    background-size: 100% 100%;
+}
+
+.gndh1-4-1 {
+    width: 38px;
+    height: 34px;
+    margin: 0 auto;
+    margin-bottom: 6px;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon1.png) no-repeat scroll 0px -280px;
+}
+
+.gndh1-4-2 {
+    width: 44px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center; /*background:#6666CC;*/
+}
+
+.gndh1-5 {
+    width: 20%;
+    height: 74px;
+    float: left;
+    padding-top: 18px;
+    background-size: 100% 100%;
+}
+
+.gndh1-5-1 {
+    width: 38px;
+    height: 36px;
+    margin: 0 auto;
+    margin-bottom: 4px;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon1.png) no-repeat scroll 0px -232px;
+}
+
+.gndh1-5-2 {
+    width: 44px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 8px; /*background:#6666CC;*/
+}
+
+/*间隔条*/
+.jg {
+    width: auto;
+    height: 14px;
+    border-bottom: 1px solid #AAAAAA;
+    background: #F4F4F4;
+}
+
+/*账号管理*/
+.zhgl {
+    width: 100%;
+    height: 52px;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px solid #AAAAAA;
+    overflow: hidden;
+}
+
+.jt {
+    width: 12px;
+    height: 16px;
+    margin-top: 19px;
+    margin-right: 22px;
+    float: right;
+    background: transparent url(../personalCenter/icon.png) no-repeat scroll 0px -622px;
+}
+
+/*功能导航栏2*/
+.gndh2 {
+    width: 100%;
+    height: 92px;
+    border-bottom: 1px solid #AAAAAA;
+    overflow: hidden; /*background:#FF9966;*/
+}
+
+.gndh2 a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.gndh2 a:hover {
+    color: #FF6D00;
+}
+
+.gndh2-1 {
+    width: 20%;
+    height: 74px;
+    float: left;
+    padding-top: 18px;
+    background-size: 100% 100%;
+}
+
+.gndh2-1-1 {
+    width: 38px;
+    height: 30px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon1.png) no-repeat scroll 0px -140px;
+}
+
+.gndh2-1-2 {
+    width: 56px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center; /*background:#6666CC;*/
+}
+
+.gndh2-2 {
+    width: 20%;
+    height: 74px;
+    float: left;
+    padding-top: 18px;
+    background-size: 100% 100%;
+}
+
+.gndh2-2-1 {
+    width: 38px;
+    height: 34px;
+    margin: 0 auto;
+    margin-bottom: 6px;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon1.png) no-repeat scroll 0px -94px;
+}
+
+.gndh2-2-2 {
+    width: 56px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center; /*background:#6666CC;*/
+}
+
+.gndh2-3 {
+    width: 20%;
+    height: 74px;
+    float: left;
+    padding-top: 18px;
+    background-size: 100% 100%;
+}
+
+.gndh2-3-1 {
+    width: 38px;
+    height: 34px;
+    margin: 0 auto;
+    margin-bottom: 6px;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon1.png) no-repeat scroll 0px -49px;
+}
+
+.gndh2-3-2 {
+    width: 56px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center; /*background:#6666CC;*/
+}
+
+.gndh2-4 {
+    width: 20%;
+    height: 74px;
+    float: left;
+    padding-top: 20px;
+    background-size: 100% 100%;
+}
+
+.gndh2-4-1 {
+    width: 38px;
+    height: 34px;
+    margin: 0 auto;
+    margin-bottom: 4px;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon1.png) no-repeat scroll 0px -188px;
+}
+
+.gndh2-4-2 {
+    width: 56px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center; /*background:#6666CC;*/
+}
+
+.gndh2-5 {
+    width: 20%;
+    height: 74px;
+    float: left;
+    padding-top: 18px;
+    background-size: 100% 100%;
+}
+
+.gndh2-5-1 {
+    width: 38px;
+    height: 36px;
+    margin: 0 auto;
+    margin-bottom: 4px;
+    background: transparent url(../../../images/mobilephone/personalCenter/icon1.png) no-repeat scroll 0px -0px;
+}
+
+.gndh2-5-2 {
+    width: 56px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center; /*background:#6666CC;*/
+}
+
+/*底部*/
+.dib {
+    width: auto;
+    height: 170px;
+    padding: 64px 22px 0px 22px;
+    background: #F4F4F4;
+}
+
+.tuic {
+    width: auto;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background: #EB6100;
+    margin-bottom: 44px;
+    overflow: hidden;
+    letter-spacing: 8px;
+}
+
+.tuic a {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.tuic a:hover {
+    color: #4C9ED9;
+}
+
+.wz {
+    width: auto;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    background: #E2E2E2;
+    overflow: hidden;
+}
+.gndh1-1-0 {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    float: right;
+    font-size: 11px;
+    color: #FF0000;
+    text-align: center;
+    margin-right: 26px;
+    margin-top: -12px;
+    background: url(../../../images/mobilephone/sellerCenter/gr1.png) no-repeat;
+}
+
+
+

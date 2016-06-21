@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.RecOrderMapper">
+    <resultMap id="BaseResultMap" type="com.juhuawang.model.RecOrder">
+        <id column="ID" property="id" jdbcType="DECIMAL"/>
+        <result column="ORDERNO" property="orderno" jdbcType="VARCHAR"/>
+        <result column="GUESTID" property="guestid" jdbcType="DECIMAL"/>
+        <result column="ORDERSTATUSCODE" property="orderstatuscode" jdbcType="VARCHAR"/>
+        <result column="COLLECTIONID" property="collectionid" jdbcType="DECIMAL"/>
+        <result column="PAYCODE" property="paycode" jdbcType="VARCHAR"/>
+        <result column="OPERATIONID" property="operationid" jdbcType="DECIMAL"/>
+        <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR"/>
+        <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP"/>
+        <result column="SRCCODE" property="srccode" jdbcType="VARCHAR"/>
+        <result column="MEMO" property="memo" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    ID, ORDERNO, GUESTID, ORDERSTATUSCODE, COLLECTIONID, PAYCODE, OPERATIONID, OPERATIONIP, 
+    CREATETIME, SRCCODE, MEMO
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from REC_ORDER
+        where ID = #{id,jdbcType=DECIMAL}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from REC_ORDER
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+
+
+    <insert id="insertSelective" parameterType="com.juhuawang.model.RecOrder">
+        <!-- 获取增加订单的id  -->
+        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="id">
+            SELECT seq_rec_order.CURRVAL AS id from dual
+        </selectKey>
+
+        insert into REC_ORDER
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            ID,
+            ORDERNO,
+            GUESTID,
+            <if test="orderstatuscode != null">
+                ORDERSTATUSCODE,
+            </if>
+            <if test="collectionid != 0">
+                COLLECTIONID,
+            </if>
+            <if test="paycode != null">
+                PAYCODE,
+            </if>
+            <if test="operationid != 0">
+                OPERATIONID,
+            </if>
+            <if test="operationip != null">
+                OPERATIONIP,
+            </if>
+            <if test="createtime != null">
+                CREATETIME,
+            </if>
+            SRCCODE,
+            <if test="memo != null">
+                MEMO,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            seq_rec_order.nextval,
+            #{orderno,jdbcType=VARCHAR},
+            #{guestid,jdbcType=DECIMAL},
+            <if test="orderstatuscode != null">
+                #{orderstatuscode,jdbcType=VARCHAR},
+            </if>
+            <if test="collectionid != 0">
+                #{collectionid,jdbcType=DECIMAL},
+            </if>
+            <if test="paycode != null">
+                #{paycode,jdbcType=VARCHAR},
+            </if>
+            <if test="operationid != 0">
+                #{operationid,jdbcType=DECIMAL},
+            </if>
+            <if test="operationip != null">
+                #{operationip,jdbcType=VARCHAR},
+            </if>
+            <if test="createtime != null">
+                #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            #{srccode,jdbcType=VARCHAR},
+            <if test="memo != null">
+                #{memo,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.RecOrder">
+        update REC_ORDER
+        <set>
+            <if test="orderno != null">
+                ORDERNO = #{orderno,jdbcType=VARCHAR},
+            </if>
+            <if test="guestid != null">
+                GUESTID = #{guestid,jdbcType=DECIMAL},
+            </if>
+            <if test="orderstatuscode != null">
+                ORDERSTATUSCODE = #{orderstatuscode,jdbcType=VARCHAR},
+            </if>
+            <if test="collectionid != null">
+                COLLECTIONID = #{collectionid,jdbcType=DECIMAL},
+            </if>
+            <if test="paycode != null">
+                PAYCODE = #{paycode,jdbcType=VARCHAR},
+            </if>
+            <if test="operationid != null">
+                OPERATIONID = #{operationid,jdbcType=DECIMAL},
+            </if>
+            <if test="operationip != null">
+                OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+            </if>
+            <if test="createtime != null">
+                CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="srccode != null">
+                SRCCODE = #{srccode,jdbcType=VARCHAR},
+            </if>
+            <if test="memo != null">
+                MEMO = #{memo,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=DECIMAL}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.RecOrder">
+    update REC_ORDER
+    set ORDERNO = #{orderno,jdbcType=VARCHAR},
+      GUESTID = #{guestid,jdbcType=DECIMAL},
+      ORDERSTATUSCODE = #{orderstatuscode,jdbcType=VARCHAR},
+      COLLECTIONID = #{collectionid,jdbcType=DECIMAL},
+      PAYCODE = #{paycode,jdbcType=VARCHAR},
+      OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      SRCCODE = #{srccode,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+    <!--根据订单编号获取订单ID-->
+    <select id="getIdByOrderNo" resultType="Long" parameterType="java.lang.String">
+    SELECT id from REC_ORDER where ORDERNO=#{0}
+  </select>
+    <select id="queryOrderByUidAndStatus" resultType="Map">
+    SELECT dg.mark,(SELECT name from VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=dg.goodKindCode)goodKind,
+    dg.producingArea,dg.producer,rs.priceHasTax,rs.affirmNum,(SELECT name from VIEW_DICTYPE where ENG='mea' AND LEVELCODE=dg.meaCode)mea,
+    rgp.picUrl,RO.ORDERNO,RO.CREATETIME
+    from REC_ORDER ro LEFT JOIN REC_ORDER_STOCK ros ON RO.id=ROS.ORDERID
+    LEFT JOIN REC_STOCK rs ON ros.stockId=rs.id
+    LEFT JOIN DIC_GOOD dg ON rs.goodId=dg.id
+    LEFT JOIN (SELECT goodId,picUrl FROM REC_GOODPIC WHERE isTitle=1 AND statusCode='001') rgp ON dg.id=rgp.goodId
+    WHERE RO.GUESTID=#{0} AND RO.ORDERSTATUSCODE=#{1}
+    AND ROS.STATUSCODE='001' AND dg.statusCode='001' ORDER BY RO.CREATETIME DESC
+  </select>
+    <!-- 根据用户ID获取待支付的订单数量 -->
+    <select id="getCountByUidAndStatus" resultType="Long">
+    SELECT count(*) from REC_ORDER WHERE GUESTID=#{0} and ORDERSTATUSCODE=#{1}
+  </select>
+    <!-- 根据用户ID获取待提货的订单数量 -->
+    <select id="getNoTakeGood" resultType="Long" parameterType="java.lang.Long">
+    SELECT count(*) from REC_ORDER ro join REC_GOODAPPLY rg on RO.id=RG.ORDERID join REC_GOODCHECK rgc on rg.id=rgc.goodApplyId WHERE
+RO.ORDERSTATUSCODE IN ('002001','003002') and RG.GETGOODCODE='001' AND rgc.affirmStatusCode='003' and RO.GUESTID=#{0}
+  </select>
+
+    <!--根据供应商ID查询全部订单-->
+    <select id="querySellerOrders" resultType="Map">
+        SELECT ROWNUM,orderNo,createTime,total,orderStatus FROM(
+        SELECT ro.orderNo,ro.createTime,rs.priceHasTax*rs.affirmNum total,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='orderStatus' AND LEVELCODE=ro.orderStatusCode)orderStatus FROM
+        (SELECT * FROM REC_STOCK WHERE COMPANYID=(SELECT COMPANYID FROM REC_FRONTUSER WHERE id=#{0})
+        AND STATUSCODE=001 AND STOCKCODE=004) rs LEFT JOIN
+        REC_ORDER_STOCK ros ON rs.id=ros.stockId LEFT JOIN
+        REC_ORDER ro ON ros.orderId=ro.id WHERE ros.STATUSCODE='001' ORDER BY createTime DESC)
+    </select>
+    <!--根据订单状态查询订单列表-->
+    <select id="queryOrdersByStatus" resultType="Map">
+        SELECT ROWNUM,orderNo,createTime,total,
+(SELECT name FROM VIEW_DICTYPE WHERE ENG='orderStatus' AND LEVELCODE=orderStatusCode)orderStatus FROM(
+SELECT ro.orderNo,ro.createTime,RS.PRICEHASTAX * RS.AFFIRMNUM total,ro.orderStatusCode
+from REC_STOCK rs join REC_FRONTUSER rf ON RS.FRONTUSERID=RF.id
+join REC_ORDER_STOCK ros ON rs.id=ros.stockId
+join REC_ORDER ro ON ros.orderId=ro.id
+WHERE RF.id=#{0} AND RS.STOCKCODE='004' AND ro.orderStatusCode=#{1}
+ORDER BY ro.createTime DESC)
+    </select>
+
+
+    <!-- PC 获取订单详情-->
+    <select id="getOrderDetail" parameterType="long" resultType="map">
+   select o.ORDERNO,o.ORDERSTATUSCODE,o.PAYCODE,g.PRODUCER,g.MARK,
+   (select name from VIEW_DICTYPE where eng='goodKind' and LEVELCODE=g.GOODKINDCODE) as goodKindName,
+  s.PRICEHASTAX,s.INITNUM,s.FINALMONEY
+  from REC_ORDER o INNER JOIN  REC_ORDER_STOCK os ON o.ID = os.ORDERID
+  INNER JOIN  REC_STOCK s ON s.ID = os.STOCKID INNER JOIN  DIC_GOOD g ON g.ID = s.GOODID
+  where o.ID=#{orderId}
+    </select>
+
+    <!--PC 获取订单支付详情-->
+    <select id="getOrderPayDetail" parameterType="long" resultType="map">
+        select o.ORDERNO,o.ORDERSTATUSCODE,o.PAYCODE,g.PRODUCER,g.MARK,
+        s.PRICEHASTAX,s.INITNUM,s.FINALMONEY
+        from REC_ORDER o INNER JOIN  REC_ORDER_STOCK os ON o.ID = os.ORDERID
+        INNER JOIN  REC_STOCK s ON s.ID = os.STOCKID INNER JOIN  DIC_GOOD g ON g.ID = s.GOODID
+        where o.ID=#{orderId}
+    </select>
+
+    <!--Hybrid APP订单图表数据查询-->
+    <select id="getOrderData" resultType="map">
+        select  distinct  count(*)  over (partition by to_char(createtime,'yyyymmdd') ) as counts,
+        to_char(createtime,'dd')  as days
+        from  rec_order
+        where  to_char(sysdate,'yyyymm')=to_char(createtime,'yyyymm')
+        order by to_char(createtime,'dd')
+    </select>
+
+    <!--支付货款页面数据查询-->
+    <select id="getPayMoneyDetail" resultType="map">
+        SELECT g.id  AS goodid,g.mark,
+        (SELECT name
+        FROM view_dictype
+        WHERE eng = 'goodKind' AND levelcode = g.goodkindcode)  AS goodkindname,
+        g.producer,
+        g.producingarea,
+        (SELECT name
+        FROM view_dictype
+        WHERE eng = 'packType' AND levelcode = g.packtypecode)   AS packtypename,
+        (SELECT name
+        FROM view_dictype
+        WHERE eng = 'packageMemo' AND levelcode = g.packcontent) AS packcontentname,
+        f.name,f.MOBPHONE
+        FROM dic_good g, REC_FRONTUSER f
+        WHERE g.id =#{goodId}  and f.id=#{userId}
+    </select>
+</mapper>

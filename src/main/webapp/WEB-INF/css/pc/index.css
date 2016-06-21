@@ -1,0 +1,849 @@
+/* 聚化网首页样式css */
+
+.xcn {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.xmain_left {
+    position: relative;
+    top: -10px;
+    padding-right: 0;
+    z-index: 10;
+}
+
+/*处理宽度小时位置bug*/
+@media all and (max-width: 1236px) {
+    .xmain_left {
+        margin-left: 30px;
+    }
+}
+
+.xmain-left-lbx-item {
+    padding: 18px 5px;
+    text-align: right;
+    transition: all 0.6s;
+}
+
+.xmain-left-lbx-item a {
+    color: #1caaeb;
+    text-decoration: none;
+
+}
+
+.xmain-left-lbx-item:hover {
+    background-color: #fff1f1;
+
+}
+
+
+
+.ximain-left-lbx-item {
+    height: 19px;
+    padding-left: 8px;
+    float: left;
+}
+
+.ximain-left-lbx-item-num {
+    color: #ffffff;
+    font-size: 13px;
+    padding: 2px 10px;
+    background-color: #1caaeb;
+    position: relative;
+    text-align: right;
+}
+
+.ximain-left-lbx-item-num:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-right-color: #1caaeb;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.xweek {
+    position: relative;
+    background-color: #1caaeb;
+    color: #FFFFFF;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 15px;
+}
+
+.xweek_table {
+    display: block;
+    font-size: 14px;
+    border: none;
+    height: 185px;
+    color: rgb(102, 102, 102);
+    position: relative;
+}
+
+.xweek_table > tbody > tr > td {
+    border: none;
+}
+
+.xweek_table > tbody > tr > td:nth-child(2) {
+    width: 100px;
+    text-align: right;
+}
+
+.xweek_table span {
+    color: #3e8f3e;
+}
+
+.circle, .border {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+
+}
+
+.circle {
+    position: absolute;
+    display: block;
+    margin: 30px 14px;
+
+}
+
+.mask, .border {
+    position: absolute;
+
+}
+
+.mask {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1em;
+    z-index: 10;
+    transition: all 2s;
+    top: 10px;
+    left: 10px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.mask h3 {
+    font-size: 1.5em;
+}
+
+.border {
+    background-color: #1caaeb;
+    border: 10px solid #3e8f3e;
+    border-left-color: #009FE8;
+    border-top-color: #009FE8;
+    box-sizing: border-box; /*width为加上边框的宽度*/
+    animation: loading 3s infinite linear;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.info {
+    margin-top: 50px;
+}
+
+.circle:hover .mask {
+    background-color: rgba(0, 0, 0, .5); /*透明度0.5*/
+
+}
+
+.xmain_middle {
+    position: static;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.bannerbase {
+    margin-top: -653px;
+    line-height: 350px;
+    cursor: pointer;
+    width: 100%;
+    height: 350px;
+    /*    box-shadow: 0 5px 10px rgba(28, 170, 235,0.8);*/
+}
+
+.xpower {
+    position: relative;
+    height: 160px;
+    width: 320px;
+    border: none;
+    margin-top: -350px;
+    float: right;
+    z-index: 1000;
+}
+
+.xpower_top {
+    margin-top: 10px;
+    padding-left: 10px;
+    background-color: #1caaeb;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bolder;
+    height: 42px;
+    text-align: center;
+}
+
+.xpower_lbl {
+    line-height: 42px;
+    height: 42px;
+    position: relative;
+}
+
+.xpower_lbl_right {
+    margin-left: 22px;
+}
+
+.xpower_table {
+    background-color: #ffffff;
+    font-size: 13px;
+    color: rgb(102, 102, 102);
+    text-align: center;
+}
+
+.xpower_table > tbody > tr:first-child > th:first-child, .xpower_table > tbody > tr:first-child > td:first-child {
+    width: 70px;
+}
+
+.xpower_table > tbody > tr > th, .xpower_table > tbody > tr > td {
+    border: none;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.xmain_right {
+    margin-left: 960px;
+    width: 280px;
+    position: absolute;
+    z-index: 10;
+    opacity: 0.9;
+
+}
+
+.xiReg a, .xiLog a {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 18px;
+    padding-top: 2px;
+    outline: none;
+}
+
+.xFast_form_btn {
+    margin-top: 3px;
+    margin-right: 2px;
+    background-color: #1caaeb;
+    border: none;
+    font-size: 14px;
+}
+
+.xInfo_item_cnt_out li {
+    padding-top: 5px;
+}
+
+.xPdt_line {
+    border-bottom: solid 4px #1caaeb;
+}
+
+.xPdt_head {
+    margin-left: 15px;
+    padding-top: 10px;
+    color: #FFFFFF;
+    background-color: #1caaeb;
+    font-size: 18px;
+    font-weight: 500;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+
+}
+
+.xPdt_head_right {
+    float: right;
+    font-size: 2.2rem;
+    background-color: #1caaeb;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 4px 3px rgba(28, 170, 235, 0.8);
+    transform: translateX(90px);
+}
+
+.xPdt_head_right:hover {
+    background-color: #0099FF;
+}
+
+.xpdt_nav_right {
+    text-align: center;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: bold;
+    width: 200px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #1caaeb;
+    line-height: 40px;
+}
+
+.xPdt_table_head th {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.xPdt_table_cnt td {
+    text-align: center;
+    font-size: 14px;
+}
+
+.xban3 {
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-family: STXingkai;
+    background: linear-gradient(to right, #1caaeb, #3e8f3e);
+    color: #ffffff;
+    text-align: center;
+}
+
+.xban3_left {
+    font-size: 40px;
+    line-height: 76px;
+}
+
+.xban3_lbl {
+    font-size: 32px;
+    line-height: 76px;
+
+}
+
+.xMedia_out {
+    padding: 10px 0 5px;
+    overflow: hidden;
+    width: 1200px;
+}
+
+.xMedia_his_col {
+    height: 190px;
+    margin-left: 36px;
+}
+
+.xMedia {
+    padding-right: 0;
+
+}
+
+.xMedia_col {
+    height: 190px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.xMedia_title_left {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 10px 5px;
+    float: left;
+    color: #1caaeb;
+    width: 100%;
+    border-bottom: 2px solid #1caaeb;
+    margin-bottom: 15px;
+}
+
+.xMedia_title_left + img {
+    padding-left: 10px;
+    width: 260px;
+    height: 150px;
+}
+
+.xMedia_list {
+    padding-left: 30px;
+    clear: both;
+    padding-bottom: 16px;
+}
+
+.xMedia_list li {
+    padding-top: 5px;
+}
+
+.xMedia_list a {
+    font-size: 13px;
+}
+
+.xRemark .row {
+    text-align: center;
+}
+
+.xRemark_title_border + .row {
+    color: grey;
+}
+
+.xRemark p {
+    line-height: 33px;
+}
+
+#pe {
+    height: auto;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+#pe ul {
+    width: 100%;
+    height: 30px;
+    list-style-type: none;
+    line-height: 30px;
+}
+
+#pp {
+    height: auto;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+#pp ul {
+    width: 100%;
+    height: 30px;
+    list-style-type: none;
+    line-height: 30px;
+}
+
+#pvc {
+    height: auto;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+#pvc ul {
+    width: 100%;
+    height: 30px;
+    list-style-type: none;
+    line-height: 30px;
+}
+
+.xfk {
+    border: none;
+    width: 300px;
+    height: 347px;
+    float: left;
+    padding: 0;
+    margin-top: -43px;
+    margin-left: 15px;
+    color: #5e5e5e;
+}
+
+.xzxbj {
+    border: none;
+    width: 880px;
+    height: 347px;
+    float: left;
+    padding: 0;
+    margin-left: 16px;
+    color: #5e5e5e;
+}
+
+.xzxbj table > tbody > tr > td {
+    border: none;
+}
+
+.chengjiao-table {
+    margin-bottom: 0;
+}
+
+.chengjiao-table > tbody > tr > th {
+    font-size: 15px;
+    font-weight: bolder;
+    border-top: 2px solid #1caaeb;
+
+}
+
+#slider {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#slider li {
+    min-width: 1220px;
+    width: 100%;
+    height: 350px;
+    display: none;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+#slider li:first-of-type {
+    display: block;
+}
+
+#slider li a {
+    display: block;
+    width: 100%;
+    height: 350px;
+}
+
+.naviSlider {
+    position: relative;
+    top: -30px;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.naviSlider ul {
+    list-style: none;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 3px auto 0;
+
+}
+
+.naviSlider ul li {
+    display: inline-block;
+    background-color: #3dbb2b;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 8px;
+    border: 2px solid #ffffff;
+
+}
+
+.naviSlider ul li.on {
+    background-color: #1caaeb;
+
+}
+
+.text-overflow {
+    display: block; /*内联对象需加*/
+    width: 85px;
+    word-break: keep-all; /* 不换行 */
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis; /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+
+.text-overflow_news {
+    display: block; /*内联对象需加*/
+    width: 200px;
+    word-break: keep-all; /* 不换行 */
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis; /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+    color: grey;
+}
+
+.text-overflow_news:hover {
+    color: #1caaeb;
+}
+
+.price {
+    color: #C72015;
+    font-weight: bolder;
+}
+
+.up, .up:before {
+    content: "↑";
+    color: #ff0000;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.down, .down:before {
+    content: "↓";
+    color: #3e8f3e;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+a {
+    color: #1caaeb;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #1caaeb;
+}
+
+.xPdt_table_cnt .btn-danger {
+    background-color: #1caaeb;
+    border: none;
+    width: 60px;
+    height: 25px;
+    font-size: 14px;
+}
+
+.xPdt_table_cnt .btn-danger:hover {
+    background-color: #1caaeb;
+}
+
+.list-group-item:first-child {
+    border-radius: 0;
+}
+
+.xpower .fa, .xnext .fa {
+    color: #1caaeb;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.xmain_right_top .fa, .xweek .fa, .xFast_title .fa, .xPdt_head .fa, .xMedia_title_left .fa, .xRemark_title .fa, .xpdt_nav_right .fa, #company .fa {
+    font-size: 2rem;
+    margin-right: 8px;
+}
+
+.xpower_lbl .fa, .xpower_lbl_right .fa {
+    color: inherit;
+    vertical-align: middle;
+    font-size: 2rem;
+    margin-right: 8px;
+}
+
+.xpdt_nav_right .fa {
+    font-size: 2.5rem;
+    margin-left: 10px;
+}
+
+.ximain-left-lbx-item .fa {
+    font-size: 2rem;
+    margin-right: 15px;
+    width: 26px;
+    text-align: center;
+    transition: all 0.6s;
+    vertical-align: middle;
+}
+
+.ximain-left-lbx-item .fa:hover {
+    color: #f70503;
+    transform: rotate(360deg);
+}
+
+#company {
+    position: absolute;
+    width: 950px;
+    height: 180px;
+    margin: 50px 250px;
+}
+
+#company h2 {
+    font-size: 1.8rem;
+    font-weight: bolder;
+    color: #1caaeb;
+    padding: 5px 2px;
+}
+
+#company img {
+    display: block;
+    margin: 10px auto;
+    width: 99%;
+    height: 90%;
+    border: 6px ridge #1caaeb;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#company img:hover {
+    width: 100%;
+    height: 91%;
+}
+
+.chengjiao-table {
+    border-bottom: 2px solid #ddd;
+}
+
+#findgood {
+    border-top: 1px dashed #1caaeb;
+    margin-top: -22px;
+    width: 320px;
+    height: 170px;
+    background-color: #ffffff;
+}
+
+.findgood-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.findgood-content-wrap input, textarea {
+    border: 1px solid #1caaeb;
+    display: block;
+    margin: 10px auto;
+    font-size: 1.5rem;
+    padding-left: 3px;
+}
+
+#findgood-content {
+    width: 300px;
+    height: 70px;
+}
+
+#findgood-phone {
+    margin-left: 10px;
+    width: 175px;
+    height: 30px;
+    display: inline-block;
+}
+
+#findgood-btn {
+    width: 100px;
+    height: 30px;
+    background-color: #1caaeb;
+    color: #ffffff;
+    border: none;
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+#findgood-btn:hover {
+    background-color: #0099FF;
+}
+
+.fa-trophy {
+    font-size: 2.8rem !important;
+    float: right;
+}
+
+.findgood-title .fa-truck {
+    -webkit-animation: fingood-truck 10s infinite linear;
+    animation: fingood-truck 10s infinite linear;
+}
+
+@keyframes fingood-truck {
+    50% {
+        transform: translateX(-80px);
+    }
+    55% {
+        transform: translateX(-80px) rotateY(180deg);
+
+    }
+    100% {
+        transform: translateX(0px) rotateY(180deg);
+    }
+
+}
+
+@-webkit-keyframes fingood-truck {
+    50% {
+        -webkit-transform: translateX(-80px);
+    }
+    55% {
+        -webkit-transform: translateX(-80px) rotateY(180deg);
+
+    }
+    100% {
+        -webkit-transform: translateX(0px) rotateY(180deg);
+    }
+
+}
+
+.mark-goodkind a{
+    display: inline-block;
+    width: 100%;
+    height: 26px;
+    background-color:#1caaeb;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bolder;
+    border-radius: 12px;
+    line-height: 26px;
+    box-shadow: 0 5px 0 #079AEB ,0 5px 25px rgba(0,0,0,0.6);
+    transition: all 0.2s ease;
+}
+
+.mark-goodkind a:hover,.xPdt_table_cnt .btn-danger:hover{
+    box-shadow: 0 3px 0 #079AEB, 0 3px 6px rgba(0, 0, 0, .9);
+    background-color:#0099FF;
+}
+
+.text-overflow-1 {
+    display: block; /*内联对象需加*/
+    width: 55px;
+    word-break: keep-all; /* 不换行 */
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis; /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+
+#sidebar {
+    position: fixed;
+    right: 6px;
+    top: 80%;
+    z-index: 2000;
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar ul li {
+    position: relative;
+}
+
+#sidebar ul li a.side-btn {
+    display: block;
+    padding: 6px;
+    background-color: #1caaeb;
+    color: #ffffff;
+}
+
+#sidebar ul li:not(:last-of-type)> a.side-btn{
+    border-bottom: 1px solid #ffffff;
+}
+
+#sidebar ul li a.side-btn:hover {
+    background-color: #FF8000;
+}
+
+#sidebar ul li a.side-btn:hover + a.side-info {
+    display: block;
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+#sidebar ul li a.side-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    z-index: -10;
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    background-color: #FF8000;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: STKaiti;
+    border-radius: 5px 0 0 5px;
+    transition: all 0.5s;
+    transform: translateX(32px);
+}

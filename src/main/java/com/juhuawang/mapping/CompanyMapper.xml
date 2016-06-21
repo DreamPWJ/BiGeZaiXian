@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.CompanyMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.Company" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="GUESTCODE" property="guestcode" jdbcType="VARCHAR" />
+    <result column="UNITNO" property="unitno" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="LINKMAN" property="linkman" jdbcType="VARCHAR" />
+    <result column="PHONE" property="phone" jdbcType="VARCHAR" />
+    <result column="MOBPHONE" property="mobphone" jdbcType="CHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="COMPANYTYPECODE" property="companytypecode" jdbcType="VARCHAR" />
+    <result column="AFFIRMREGCODE" property="affirmregcode" jdbcType="VARCHAR" />
+    <result column="BACKUSERID" property="backuserid" jdbcType="DECIMAL" />
+    <result column="AGENTID" property="agentid" jdbcType="DECIMAL" />
+    <result column="TAXNO" property="taxno" jdbcType="VARCHAR" />
+    <result column="OPERATIONID" property="operationid" jdbcType="DECIMAL" />
+    <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="STATUSCODE" property="statuscode" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, GUESTCODE, UNITNO, NAME, LINKMAN, PHONE, MOBPHONE, EMAIL, ADDRESS, COMPANYTYPECODE, 
+    AFFIRMREGCODE, BACKUSERID, AGENTID, TAXNO, OPERATIONID, OPERATIONIP, CREATETIME, 
+    STATUSCODE, MEMO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from REC_COMPANY
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from REC_COMPANY
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.Company" >
+    insert into REC_COMPANY (ID, GUESTCODE, UNITNO, 
+      NAME, LINKMAN, PHONE, 
+      MOBPHONE, EMAIL, ADDRESS, 
+      COMPANYTYPECODE, AFFIRMREGCODE, BACKUSERID, 
+      AGENTID, TAXNO, OPERATIONID, 
+      OPERATIONIP, CREATETIME, STATUSCODE, 
+      MEMO)
+    values (#{id,jdbcType=DECIMAL}, #{guestcode,jdbcType=VARCHAR}, #{unitno,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{linkman,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{mobphone,jdbcType=CHAR}, #{email,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{companytypecode,jdbcType=VARCHAR}, #{affirmregcode,jdbcType=VARCHAR}, #{backuserid,jdbcType=DECIMAL}, 
+      #{agentid,jdbcType=DECIMAL}, #{taxno,jdbcType=VARCHAR}, #{operationid,jdbcType=DECIMAL}, 
+      #{operationip,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{statuscode,jdbcType=VARCHAR}, 
+      #{memo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.Company" >
+    insert into REC_COMPANY
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="guestcode != null" >
+        GUESTCODE,
+      </if>
+      <if test="unitno != null" >
+        UNITNO,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="linkman != null" >
+        LINKMAN,
+      </if>
+      <if test="phone != null" >
+        PHONE,
+      </if>
+      <if test="mobphone != null" >
+        MOBPHONE,
+      </if>
+      <if test="email != null" >
+        EMAIL,
+      </if>
+      <if test="address != null" >
+        ADDRESS,
+      </if>
+      <if test="companytypecode != null" >
+        COMPANYTYPECODE,
+      </if>
+      <if test="affirmregcode != null" >
+        AFFIRMREGCODE,
+      </if>
+      <if test="backuserid != null" >
+        BACKUSERID,
+      </if>
+      <if test="agentid != null" >
+        AGENTID,
+      </if>
+      <if test="taxno != null" >
+        TAXNO,
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID,
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP,
+      </if>
+      <if test="createtime != null" >
+        CREATETIME,
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="guestcode != null" >
+        #{guestcode,jdbcType=VARCHAR},
+      </if>
+      <if test="unitno != null" >
+        #{unitno,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="linkman != null" >
+        #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="mobphone != null" >
+        #{mobphone,jdbcType=CHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="companytypecode != null" >
+        #{companytypecode,jdbcType=VARCHAR},
+      </if>
+      <if test="affirmregcode != null" >
+        #{affirmregcode,jdbcType=VARCHAR},
+      </if>
+      <if test="backuserid != null" >
+        #{backuserid,jdbcType=DECIMAL},
+      </if>
+      <if test="agentid != null" >
+        #{agentid,jdbcType=DECIMAL},
+      </if>
+      <if test="taxno != null" >
+        #{taxno,jdbcType=VARCHAR},
+      </if>
+      <if test="operationid != null" >
+        #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.Company" >
+    update REC_COMPANY
+    <set >
+      <if test="guestcode != null" >
+        GUESTCODE = #{guestcode,jdbcType=VARCHAR},
+      </if>
+      <if test="unitno != null" >
+        UNITNO = #{unitno,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="linkman != null" >
+        LINKMAN = #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        PHONE = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="mobphone != null" >
+        MOBPHONE = #{mobphone,jdbcType=CHAR},
+      </if>
+      <if test="email != null" >
+        EMAIL = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        ADDRESS = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="companytypecode != null" >
+        COMPANYTYPECODE = #{companytypecode,jdbcType=VARCHAR},
+      </if>
+      <if test="affirmregcode != null" >
+        AFFIRMREGCODE = #{affirmregcode,jdbcType=VARCHAR},
+      </if>
+      <if test="backuserid != null" >
+        BACKUSERID = #{backuserid,jdbcType=DECIMAL},
+      </if>
+      <if test="agentid != null" >
+        AGENTID = #{agentid,jdbcType=DECIMAL},
+      </if>
+      <if test="taxno != null" >
+        TAXNO = #{taxno,jdbcType=VARCHAR},
+      </if>
+      <if test="operationid != null" >
+        OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.Company" >
+    update REC_COMPANY
+    set GUESTCODE = #{guestcode,jdbcType=VARCHAR},
+      UNITNO = #{unitno,jdbcType=VARCHAR},
+      NAME = #{name,jdbcType=VARCHAR},
+      LINKMAN = #{linkman,jdbcType=VARCHAR},
+      PHONE = #{phone,jdbcType=VARCHAR},
+      MOBPHONE = #{mobphone,jdbcType=CHAR},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      ADDRESS = #{address,jdbcType=VARCHAR},
+      COMPANYTYPECODE = #{companytypecode,jdbcType=VARCHAR},
+      AFFIRMREGCODE = #{affirmregcode,jdbcType=VARCHAR},
+      BACKUSERID = #{backuserid,jdbcType=DECIMAL},
+      AGENTID = #{agentid,jdbcType=DECIMAL},
+      TAXNO = #{taxno,jdbcType=VARCHAR},
+      OPERATIONID = #{operationid,jdbcType=DECIMAL},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <!-- 根据用户ID查询公司名、联系人、联系电话、地址等 -->
+  <select id="getByFrontUserId" parameterType="java.lang.Long" resultType="com.juhuawang.model.Company">
+    select RC.id,RC.LINKMAN,RC.MOBPHONE,RC.name companyName,RC.ADDRESS from REC_FRONTUSER rf join REC_COMPANY rc on RF.COMPANYID=RC.id WHERE RF.id=#{0}
+  </select>
+</mapper>

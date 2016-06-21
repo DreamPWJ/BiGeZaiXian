@@ -1,0 +1,128 @@
+/* CSS Document */
+
+.content {
+    margin: 0 auto;
+    width: 1200px;
+    overflow: hidden;
+}
+
+.order-sertype {
+    margin-top: 20px;
+}
+
+.ordershow {
+    position: relative;
+    margin-top: 15px;
+    background-color: #ffffff;
+    border: 1px solid #fddabe;
+    padding: 15px 20px 5px;
+}
+
+.ordershow .orshow-head {
+    padding-bottom: 5px;
+    height: 25px;
+
+}
+
+.ordershow .tylist li {
+    float: left;
+    margin: 0 30px 15px 0;
+}
+
+.ordershow .tylist li a {
+    padding-left: 20px;
+    background-position: -42px -930px;
+    color: #f97f3d;
+}
+
+.ordershow .tylist li a:hover {
+    color: #f76c20;
+}
+
+.orshow-head .ornmb {
+    float: left;
+    font-size: 14px;
+    padding-top: 3px;
+    font-weight: bold;
+    color: #000;
+}
+
+.orshow-head .ornmb b {
+    color: #4dca14;
+}
+
+.orshow-head .ornmb .tyfont {
+    padding-left: 30px;
+}
+
+.orshow-con {
+    padding: 15px 0;
+}
+
+.order-sertype-head {
+    background-color: #fbfbfb;
+    border: 1px solid #e0e0e0;
+    height: 36px;
+    position: relative;
+}
+
+.serhead-type {
+    float: left;
+    padding: 7px 0 5px 22px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.back-button {
+    padding: 7px 80px 5px 22px;
+}
+
+.order-sertype-con {
+    padding: 15px 0;
+    background-color: #fff;
+    border: solid #e0e0e0;
+    border-width: 0 1px 1px 1px;
+}
+
+.order-sertype-con .base {
+    padding: 0 20px;
+}
+
+.zl-base {
+    padding: 0 22px;
+    overflow: hidden;
+}
+
+.zl-base td {
+    padding: 5px 0;
+}
+
+#data-table th, #data-table td {
+    font-size: 13px;
+    text-align: center;
+}
+
+.title {
+    font-size: 20px;
+    text-align: center;
+}
+
+table.outofstockpage > tbody > tr > td {
+    border-top: 0px;
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+#detailname {
+    font-size: 20px;
+    text-align: center;
+}
+
+#stockDetail > tbody > tr > td {
+    text-align: center;
+}
+
+div.bottom{
+    position: relative;
+    bottom: 0;
+}

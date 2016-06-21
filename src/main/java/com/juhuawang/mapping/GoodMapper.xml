@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.juhuawang.dao.interfaces.GoodMapper">
+    <resultMap id="BaseResultMap" type="com.juhuawang.model.Good">
+        <id column="ID" jdbcType="DECIMAL" property="id"/>
+        <result column="MARK" jdbcType="VARCHAR" property="mark"/>
+        <result column="GOODKINDCODE" jdbcType="VARCHAR" property="goodkindcode"/>
+        <result column="USECODE" jdbcType="VARCHAR" property="usecode"/>
+        <result column="MACCODE" jdbcType="VARCHAR" property="maccode"/>
+        <result column="GOODTYPECODE" jdbcType="VARCHAR" property="goodtypecode"/>
+        <result column="RATE" jdbcType="DECIMAL" property="rate"/>
+        <result column="PRODUCINGAREA" jdbcType="VARCHAR" property="producingarea"/>
+        <result column="PRODUCER" jdbcType="VARCHAR" property="producer"/>
+        <result column="PACKTYPECODE" jdbcType="VARCHAR" property="packtypecode"/>
+        <result column="PACKCONTENT" jdbcType="VARCHAR" property="packcontent"/>
+        <result column="PACKAGECODE" jdbcType="VARCHAR" property="packagecode"/>
+        <result column="MEACODE" jdbcType="VARCHAR" property="meacode"/>
+        <result column="CONVERTNUM" jdbcType="DECIMAL" property="convertnum"/>
+        <result column="FRONTUSERID" jdbcType="DECIMAL" property="frontuserid"/>
+        <result column="OPERATIONIP" jdbcType="VARCHAR" property="operationip"/>
+        <result column="STATUSCODE" jdbcType="VARCHAR" property="statuscode"/>
+        <result column="CREATETIME" jdbcType="TIMESTAMP" property="createtime"/>
+        <result column="MEMO" jdbcType="VARCHAR" property="memo"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        ID, MARK, GOODKINDCODE, USECODE, MACCODE, GOODTYPECODE, RATE, PRODUCINGAREA, PRODUCER,
+        PACKTYPECODE, PACKCONTENT, PACKAGECODE, MEACODE, CONVERTNUM, FRONTUSERID, OPERATIONIP,
+        STATUSCODE, CREATETIME, MEMO
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from DIC_GOOD
+        where ID = #{id,jdbcType=DECIMAL}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        DELETE FROM DIC_GOOD
+        WHERE ID = #{id,jdbcType=DECIMAL}
+    </delete>
+
+    <insert id="insertSelective" parameterType="com.juhuawang.model.Good">
+        <!--  seq_dic_good.CURRVAL 获取增加商品的id 任何对 CURRVAL 的引用返回指定序列的当前值，该值是最后一次对 NEXTVAL 的引用所返回的值。用 NEXTVAL 生成一个新值以后，可以继续使用 CURRVAL 访问这个值-->
+        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="id">
+            SELECT g.id AS id
+            FROM DIC_GOOD g
+            WHERE g.MARK = #{mark,jdbcType=VARCHAR}   AND
+            g.GOODKINDCODE = #{goodkindcode,jdbcType=VARCHAR}
+            AND g.USECODE = #{usecode,jdbcType=VARCHAR} AND nvl(g.MACCODE, 0) = nvl(#{maccode,jdbcType=VARCHAR}, 0)
+            AND nvl(g.GOODTYPECODE, 0) = nvl(#{goodtypecode,jdbcType=VARCHAR}, 0)
+            AND nvl(g.RATE, 0) = nvl(#{rate,jdbcType=DECIMAL}, 0)
+            AND nvl(g.PRODUCINGAREA, 0) = nvl(#{producingarea,jdbcType=VARCHAR}, 0)
+            AND nvl(g.PRODUCER, 0) = nvl(#{producer,jdbcType=VARCHAR}, 0)
+            AND nvl(g.PACKCONTENT, 0) = nvl(#{packcontent,jdbcType=VARCHAR}, 0)
+            AND nvl(g.PACKTYPECODE, 0) = nvl(#{packtypecode,jdbcType=VARCHAR}, 0) AND
+            nvl(g.MEACODE, 0) = nvl(#{meacode,jdbcType=VARCHAR}, 0) AND  rownum =1
+
+        </selectKey>
+
+        <!--   商品已存在不增加 未存在增加-->
+        merge into DIC_GOOD g
+        using dual on(g.MARK = #{mark,jdbcType=VARCHAR}   AND
+        g.GOODKINDCODE = #{goodkindcode,jdbcType=VARCHAR}
+        AND g.USECODE = #{usecode,jdbcType=VARCHAR} AND nvl(g.MACCODE, 0) = nvl(#{maccode,jdbcType=VARCHAR}, 0)
+        AND nvl(g.GOODTYPECODE, 0) = nvl(#{goodtypecode,jdbcType=VARCHAR}, 0)
+        AND nvl(g.RATE, 0) = nvl(#{rate,jdbcType=DECIMAL}, 0)
+        AND nvl(g.PRODUCINGAREA, 0) = nvl(#{producingarea,jdbcType=VARCHAR}, 0)
+        AND nvl(g.PRODUCER, 0) = nvl(#{producer,jdbcType=VARCHAR}, 0)
+        AND nvl(g.PACKCONTENT, 0) = nvl(#{packcontent,jdbcType=VARCHAR}, 0)
+        AND nvl(g.PACKTYPECODE, 0) = nvl(#{packtypecode,jdbcType=VARCHAR}, 0) AND
+        nvl(g.MEACODE, 0) = nvl(#{meacode,jdbcType=VARCHAR}, 0) AND  rownum =1
+        )
+        when not matched then
+        insert
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            ID,
+            MARK,
+            GOODKINDCODE,
+            <if test="usecode != null">
+                USECODE,
+            </if>
+            <if test="maccode != null">
+                MACCODE,
+            </if>
+            <if test="goodtypecode != null">
+                GOODTYPECODE,
+            </if>
+            <if test="rate != null">
+                RATE,
+            </if>
+            <if test="producingarea != null">
+                PRODUCINGAREA,
+            </if>
+            <if test="producer != null">
+                PRODUCER,
+            </if>
+            <if test="packtypecode != null">
+                PACKTYPECODE,
+            </if>
+            <if test="packcontent != null">
+                PACKCONTENT,
+            </if>
+            <if test="packagecode != null">
+                PACKAGECODE,
+            </if>
+            <if test="meacode != null">
+                MEACODE,
+            </if>
+            <if test="convertnum != null">
+                CONVERTNUM,
+            </if>
+            <if test="frontuserid != null">
+                FRONTUSERID,
+            </if>
+            <if test="operationip != null">
+                OPERATIONIP,
+            </if>
+            <if test="statuscode != null">
+                STATUSCODE,
+            </if>
+            <if test="createtime != null">
+                CREATETIME,
+            </if>
+            <if test="memo != null">
+                MEMO,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            seq_dic_good.nextval,
+            #{mark,jdbcType=VARCHAR},
+            #{goodkindcode,jdbcType=VARCHAR},
+            <if test="usecode != null">
+                #{usecode,jdbcType=VARCHAR},
+            </if>
+            <if test="maccode != null">
+                #{maccode,jdbcType=VARCHAR},
+            </if>
+            <if test="goodtypecode != null">
+                #{goodtypecode,jdbcType=VARCHAR},
+            </if>
+            <if test="rate != null">
+                #{rate,jdbcType=DECIMAL},
+            </if>
+            <if test="producingarea != null">
+                #{producingarea,jdbcType=VARCHAR},
+            </if>
+            <if test="producer != null">
+                #{producer,jdbcType=VARCHAR},
+            </if>
+            <if test="packtypecode != null">
+                #{packtypecode,jdbcType=VARCHAR},
+            </if>
+            <if test="packcontent != null">
+                #{packcontent,jdbcType=VARCHAR},
+            </if>
+            <if test="packagecode != null">
+                #{packagecode,jdbcType=VARCHAR},
+            </if>
+            <if test="meacode != null">
+                #{meacode,jdbcType=VARCHAR},
+            </if>
+            <if test="convertnum != null">
+                #{convertnum,jdbcType=DECIMAL},
+            </if>
+            <if test="frontuserid != null">
+                #{frontuserid,jdbcType=DECIMAL},
+            </if>
+            <if test="operationip != null">
+                #{operationip,jdbcType=VARCHAR},
+            </if>
+            <if test="statuscode != null">
+                #{statuscode,jdbcType=VARCHAR},
+            </if>
+            <if test="createtime != null">
+                #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="memo != null">
+                #{memo,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.Good">
+        update DIC_GOOD
+        <set>
+            <if test="mark != null">
+                MARK = #{mark,jdbcType=VARCHAR},
+            </if>
+            <if test="goodkindcode != null">
+                GOODKINDCODE = #{goodkindcode,jdbcType=VARCHAR},
+            </if>
+            <if test="usecode != null">
+                USECODE = #{usecode,jdbcType=VARCHAR},
+            </if>
+            <if test="maccode != null">
+                MACCODE = #{maccode,jdbcType=VARCHAR},
+            </if>
+            <if test="goodtypecode != null">
+                GOODTYPECODE = #{goodtypecode,jdbcType=VARCHAR},
+            </if>
+            <if test="rate != null">
+                RATE = #{rate,jdbcType=DECIMAL},
+            </if>
+            <if test="producingarea != null">
+                PRODUCINGAREA = #{producingarea,jdbcType=VARCHAR},
+            </if>
+            <if test="producer != null">
+                PRODUCER = #{producer,jdbcType=VARCHAR},
+            </if>
+            <if test="packtypecode != null">
+                PACKTYPECODE = #{packtypecode,jdbcType=VARCHAR},
+            </if>
+            <if test="packcontent != null">
+                PACKCONTENT = #{packcontent,jdbcType=VARCHAR},
+            </if>
+            <if test="packagecode != null">
+                PACKAGECODE = #{packagecode,jdbcType=VARCHAR},
+            </if>
+            <if test="meacode != null">
+                MEACODE = #{meacode,jdbcType=VARCHAR},
+            </if>
+            <if test="convertnum != null">
+                CONVERTNUM = #{convertnum,jdbcType=DECIMAL},
+            </if>
+            <if test="frontuserid != null">
+                FRONTUSERID = #{frontuserid,jdbcType=DECIMAL},
+            </if>
+            <if test="operationip != null">
+                OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+            </if>
+            <if test="statuscode != null">
+                STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+            </if>
+            <if test="createtime != null">
+                CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="memo != null">
+                MEMO = #{memo,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=DECIMAL}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.Good">
+        UPDATE DIC_GOOD
+        SET MARK          = #{mark,jdbcType=VARCHAR},
+            GOODKINDCODE  = #{goodkindcode,jdbcType=VARCHAR},
+            USECODE       = #{usecode,jdbcType=VARCHAR},
+            MACCODE       = #{maccode,jdbcType=VARCHAR},
+            GOODTYPECODE  = #{goodtypecode,jdbcType=VARCHAR},
+            RATE          = #{rate,jdbcType=DECIMAL},
+            PRODUCINGAREA = #{producingarea,jdbcType=VARCHAR},
+            PRODUCER      = #{producer,jdbcType=VARCHAR},
+            PACKTYPECODE  = #{packtypecode,jdbcType=VARCHAR},
+            PACKCONTENT   = #{packcontent,jdbcType=VARCHAR},
+            PACKAGECODE   = #{packagecode,jdbcType=VARCHAR},
+            MEACODE       = #{meacode,jdbcType=VARCHAR},
+            CONVERTNUM    = #{convertnum,jdbcType=DECIMAL},
+            FRONTUSERID   = #{frontuserid,jdbcType=DECIMAL},
+            OPERATIONIP   = #{operationip,jdbcType=VARCHAR},
+            STATUSCODE    = #{statuscode,jdbcType=VARCHAR},
+            CREATETIME    = #{createtime,jdbcType=TIMESTAMP},
+            MEMO          = #{memo,jdbcType=VARCHAR}
+        WHERE ID = #{id,jdbcType=DECIMAL}
+    </update>
+
+    <!--通过goodId查询商品信息-->
+    <select id="getByGoodId" resultType="Map">
+      SELECT MARK,PRODUCINGAREA,PRODUCER,
+(SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' and LEVELCODE=MEACODE)mea,
+(SELECT name FROM VIEW_DICTYPE WHERE ENG='goodKind' and LEVELCODE=GOODKINDCODE)GOODKIND,
+(SELECT name FROM VIEW_DICTYPE WHERE ENG='package' and LEVELCODE=PACKAGECODE)PACKAGE,
+(SELECT name FROM VIEW_DICTYPE WHERE ENG='use' and LEVELCODE=USECODE)USECODE,
+(SELECT name FROM VIEW_DICTYPE WHERE ENG='packType' and LEVELCODE=PACKTYPECODE)PACKTYPE,
+(SELECT name FROM VIEW_DICTYPE WHERE ENG='packageMemo' and LEVELCODE=PACKCONTENT)PACKCONTENT
+FROM DIC_GOOD
+WHERE id=#{0}
+    </select>
+
+    <!--根据商品牌号查询商品列表页面商品信息-->
+    <select id="queryGoodsByMark" resultType="Map" parameterType="java.lang.String">
+        SELECT DISTINCT DG.id goodId,rc.id companyId,rc.name,DG.PRODUCINGAREA,GP.picUrl,rs.minPrice,DG.MARK,
+(SELECT name from VIEW_DICTYPE WHERE ENG='mea' AND LEVELCODE=DG.MEACODE)MEA,
+(SELECT name from VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=DG.GOODKINDCODE)GOODKIND
+from (SELECT GOODID,COMPANYID,min(PRICEHASTAX)minPrice from REC_STOCK
+WHERE STOCKCODE='002' AND STATUSCODE='001' GROUP BY COMPANYID,GOODID)rs LEFT JOIN
+DIC_GOOD dg ON dg.id=rs.goodId LEFT JOIN (SELECT goodId,picUrl from REC_GOODPIC WHERE ISTITLE=1 AND STATUSCODE='001') gp ON DG.id=GP.goodId
+LEFT JOIN(SELECT id,name from REC_COMPANY)rc ON rs.companyId=rc.id
+WHERE DG.MARK=#{0} AND dg.statusCode='001' ORDER BY dg.id,rs.minPrice
+    </select>
+
+    <!--根据商品牌号查询商品列表页面商品信息-->
+    <select id="searchGoodByMark" resultType="Map" parameterType="java.lang.String">
+      SELECT DISTINCT DG.id goodId,rc.id companyId,rc.name,DG.PRODUCINGAREA,GP.picUrl,rs.minPrice,DG.MARK,
+(SELECT name from VIEW_DICTYPE WHERE ENG='mea' AND LEVELCODE=DG.MEACODE)MEA,
+(SELECT name from VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=DG.GOODKINDCODE)GOODKIND
+from (SELECT GOODID,COMPANYID,min(PRICEHASTAX)minPrice from REC_STOCK
+WHERE STOCKCODE='002' AND STATUSCODE='001' GROUP BY COMPANYID,GOODID)rs LEFT JOIN
+DIC_GOOD dg ON dg.id=rs.goodId LEFT JOIN (SELECT goodId,picUrl from REC_GOODPIC WHERE ISTITLE=1 AND STATUSCODE='001') gp ON DG.id=GP.goodId
+LEFT JOIN(SELECT id,name from REC_COMPANY)rc ON rs.companyId=rc.id
+WHERE DG.MARK LIKE #{0} AND dg.statusCode='001' ORDER BY dg.id,rs.minPrice
+    </select>
+
+    <!--获取当前商品的在售数量-->
+    <select id="getOnSellCount" resultType="BigDecimal">
+      SELECT DISTINCT (
+--上架
+nvl(sum(CASE WHEN stockCode='002' then affirmnum END) over(partition BY COMPANYID,STORAGEID,GOODID,PRICEHASTAX),0)-
+--下架
+nvl(sum(CASE WHEN STOCKCODE='003' THEN AFFIRMNUM END) over(partition BY COMPANYID,STORAGEID,GOODID,PRICEHASTAX),0)-
+--售出
+nvl(sum(CASE WHEN STOCKCODE='004' THEN AFFIRMNUM END) over(partition BY COMPANYID,STORAGEID,GOODID,PRICEHASTAX),0))onSell
+FROM REC_STOCK
+WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND PRICEHASTAX=#{3}
+    </select>
+
+    <!--根据库存ID查询商品信息-->
+    <select id="getByStockId" parameterType="java.lang.Long" resultType="Map">
+        SELECT
+        DG.MARK,
+        (SELECT name
+        FROM VIEW_DICTYPE
+        WHERE ENG = 'goodKind' AND LEVELCODE = DG.GOODKINDCODE) goodKind,
+        DG.PRODUCINGAREA,
+        RS.SELLSURPLUSNUM,
+        (SELECT name
+        FROM VIEW_DICTYPE
+        WHERE ENG = 'mea' AND LEVELCODE = DG.MEACODE)           MEA,
+        RS.PRICEHASTAX
+        FROM REC_STOCK rs JOIN DIC_GOOD dg
+        ON RS.GOODID = DG.id
+        WHERE RS.id = #{0}
+    </select>
+
+    <!--根据库存ID查询商品图片-->
+    <select id="queryGoodPicsByGoodId" parameterType="java.lang.Long" resultType="Map">
+        SELECT picUrl,ord from REC_GOODPIC WHERE GOODID=#{0} AND (isTitle=0 OR isTitle IS NULL) ORDER BY ord
+    </select>
+    <!--根据库存ID获取订单确认页面商品数据-->
+    <select id="getByStockIdToOrderAffirmPage" resultType="Map" parameterType="java.lang.Long">
+        SELECT (SELECT name from VIEW_DICTYPE where ENG='goodKind' AND LEVELCODE=DG.GOODKINDCODE)GOODKIND,
+        DG.MARK,DG.PRODUCINGAREA,rgp.picUrl,rc.name,RS.PRICEHASTAX
+        from REC_STOCK rs join DIC_GOOD dg on RS.GOODID=DG.id join REC_GOODPIC rgp ON rgp.goodId=dg.id join REC_COMPANY rc ON rs.companyId=rc.id
+        WHERE RS.id=#{0} AND DG.STATUSCODE='001' AND rgp.isTitle=1 AND rgp.statusCode='001' AND rc.affirmRegCode='003' AND rc.statusCode='001'
+    </select>
+
+    <!--根据牌号查询上架商品信息-->
+    <select id="queryByMark" resultType="Map" parameterType="java.lang.String">
+        SELECT
+        dg.mark,
+        dg.producingArea,
+        rs.sellSurplusNum,
+        rs.priceHasTax
+        FROM DIC_GOOD dg JOIN REC_STOCK rs ON dg.id = rs.goodId
+        WHERE dg.id IN (SELECT id
+        FROM DIC_GOOD
+        WHERE mark = #{0}) AND rs.stockCode = '002' AND DG.STATUSCODE = '001' AND RS.STATUSCODE = '001'
+    </select>
+
+    <!--根据用户ID查询商品信息-->
+    <select id="getGoodByFrontUserId" resultType="Map">
+        SELECT ROWNUM,goodId,COMPANYID,goodKind,mark,producingArea,producer,stockIn,affirm,onSell,sellOut,stock,other,mea,createTime FROM(
+        SELECT DISTINCT RS.GOODID,RF.COMPANYID,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=dg.goodKindCode)goodKind,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' AND LEVELCODE=dg.meaCode)mea,
+        dg.mark,dg.producingArea,dg.producer,dg.createTime,
+        nvl(sum(CASE WHEN rs.STOCKCODE='001' THEN rs.INITNUM END) over(partition BY rs.GOODID),0)stockIn,
+        nvl(sum(CASE WHEN rs.STOCKCODE='001' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)affirm,
+        nvl(sum(CASE WHEN rs.STOCKCODE='002' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)onSell,
+        nvl(sum(CASE WHEN rs.STOCKCODE='004' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)sellOut,
+        --现在的库存（入库确认总数-上架总数+下架总数+退货总数）
+        (nvl(sum(CASE WHEN rs.STOCKCODE='001' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)-
+        nvl(sum(CASE WHEN rs.STOCKCODE='002' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)+
+        nvl(sum(CASE WHEN rs.STOCKCODE='003' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)+
+        nvl(sum(CASE WHEN rs.STOCKCODE='005' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)
+        )stock,
+        nvl(sum(CASE WHEN rs.STOCKCODE='006' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)other
+        FROM REC_FRONTUSER rf LEFT JOIN REC_STOCK rs ON RF.COMPANYID=RS.COMPANYID
+        LEFT JOIN DIC_GOOD dg ON rs.goodId=dg.id
+        WHERE RF.id=#{0} AND rf.statusCode='001' AND rs.statusCode='001' AND dg.statusCode='001'
+        AND RS.COMPANYID=RF.COMPANYID order BY createTime DESC)
+    </select>
+
+    <!--根据uid或者mark或者goodkind获取商品信息-->
+    <select id="queryByUidAndMarkOrGoodKind" resultType="Map">
+        SELECT ROWNUM,goodId,COMPANYID,goodKind,mark,producingArea,producer,stockIn,affirm,onSell,sellOut,stock,other,mea,createTime FROM(
+        SELECT DISTINCT RS.GOODID,RF.COMPANYID,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=dg.goodKindCode)goodKind,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' AND LEVELCODE=dg.meaCode)mea,
+        dg.mark,dg.producingArea,dg.producer,dg.createTime,
+        nvl(sum(CASE WHEN rs.STOCKCODE='001' THEN rs.INITNUM END) over(partition BY rs.GOODID),0)stockIn,
+        nvl(sum(CASE WHEN rs.STOCKCODE='001' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)affirm,
+        nvl(sum(CASE WHEN rs.STOCKCODE='002' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)onSell,
+        nvl(sum(CASE WHEN rs.STOCKCODE='004' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)sellOut,
+        --现在的库存（入库确认总数-上架总数+下架总数+退货总数）
+        (
+        nvl(sum(CASE WHEN rs.STOCKCODE='001' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)-
+        nvl(sum(CASE WHEN rs.STOCKCODE='002' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)+
+        nvl(sum(CASE WHEN rs.STOCKCODE='003' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)+
+        nvl(sum(CASE WHEN rs.STOCKCODE='005' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)
+        )stock,
+        nvl(sum(CASE WHEN rs.STOCKCODE='006' THEN rs.AFFIRMNUM END) over(partition BY rs.GOODID),0)other
+        FROM REC_FRONTUSER rf LEFT JOIN REC_STOCK rs ON RF.COMPANYID=RS.COMPANYID
+        LEFT JOIN DIC_GOOD dg ON rs.goodId=dg.id
+        WHERE RF.id=#{0} AND (dg.goodKindCode=#{1} OR dg.mark=#{1} OR dg.goodKindCode IN (SELECT LEVELCODE from VIEW_DICTYPE WHERE ENG='goodKind' AND name=#{1}))
+        AND rf.statusCode='001' AND rs.statusCode='001' AND dg.statusCode='001'
+        AND RS.COMPANYID=RF.COMPANYID order BY createTime DESC)
+    </select>
+
+    <!--根据商品ID获取商品信息-->
+    <select id="getGoodContentByGoodId" parameterType="java.lang.Long" resultType="Map">
+        SELECT a.MARK,a.PRODUCINGAREA,a.PRODUCER,b.content,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='packageMemo' AND LEVELCODE=a.PACKCONTENT)PACKCONTENT,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=a.GOODKINDCODE)GOODKIND,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='use' AND LEVELCODE=a.USECODE)USE,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='mac' AND LEVELCODE=a.MACCODE)MAC,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='goodType' AND LEVELCODE=a.GOODTYPECODE)GOODTYPE,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='packType' AND LEVELCODE=a.PACKTYPECODE)PACKTYPE,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='package' AND LEVELCODE=a.PACKAGECODE)PACKAGE,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='mea' AND LEVELCODE=a.MEACODE)MEA
+        from DIC_GOOD a LEFT JOIN(
+        SELECT * FROM REC_GOODDESC WHERE createTime=
+        (SELECT max(createTime) FROM REC_GOODDESC WHERE GOODID=#{0} AND SELLUSERID=#{1})
+        )
+        b ON a.id=b.goodId
+        WHERE a.id=#{0} AND b.SELLUSERID=#{1}
+    </select>
+
+    <!--提交订单页面商品信息-->
+    <select id="getToOrderGoodContent" resultType="Map">
+        SELECT DG.MARK,DG.PRODUCINGAREA,DG.PRODUCER,PIC.PICURL,DG.RATE,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='mea' AND LEVELCODE=DG.MEACODE)MEA,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=DG.GOODKINDCODE)GOODKIND
+        FROM DIC_GOOD dg LEFT JOIN (SELECT goodId,picUrl from REC_GOODPIC WHERE ISTITLE=1 AND STATUSCODE='001') pic on DG.id=PIC.GOODID
+        WHERE DG.id=#{0} AND DG.STATUSCODE='001'
+    </select>
+
+    <!--根据公司ID、商品ID查询仓库列表-->
+    <select id="queryStoragesBycompanyIdAndGoodId" resultType="Map">
+        SELECT ROWNUM,goodId,companyId,storageId,address,stockInSum,stockAffirm,upSell,downSell,sellOut,stockBack,other FROM(
+        SELECT DISTINCT RS.GOODID,RS.COMPANYID,RS.STORAGEID,
+        ((SELECT name from DIC_REGION WHERE id=ds.provCode)||(SELECT name from DIC_REGION WHERE id=ds.cityCode)||
+        (SELECT name from DIC_REGION WHERE id=ds.countyCode)||ds.address)address,
+        --入库初始数量(同一公司、同一仓库、同一商品)
+        nvl(SUM(CASE WHEN RS.STOCKCODE='001' THEN RS.INITNUM END) over(partition BY RS.COMPANYID,RS.STORAGEID,RS.GOODID),0)stockInSum,
+        --入库确认数量(同一公司、同一仓库、同一商品)
+        nvl(SUM(CASE WHEN RS.STOCKCODE='001' THEN RS.AFFIRMNUM END) over(partition BY RS.COMPANYID,RS.STORAGEID,RS.GOODID),0)stockAffirm,
+        --上架(同一公司、同一仓库、同一商品)
+        nvl(SUM(CASE WHEN RS.STOCKCODE='002' THEN RS.AFFIRMNUM END) over(partition BY RS.COMPANYID,RS.STORAGEID,RS.GOODID),0) upSell,
+        --下架(同一公司、同一仓库、同一商品)
+        nvl(SUM(CASE WHEN RS.STOCKCODE='003' THEN RS.AFFIRMNUM END) over(partition BY RS.COMPANYID,RS.STORAGEID,RS.GOODID),0) downSell,
+        --售出(同一公司、同一仓库、同一商品)
+        nvl(SUM(CASE WHEN RS.STOCKCODE='004' THEN RS.AFFIRMNUM END) over(partition BY RS.COMPANYID,RS.STORAGEID,RS.GOODID),0)sellOut,
+        --退货(同一公司、同一仓库、同一商品)
+        nvl(SUM(CASE WHEN RS.STOCKCODE='005' THEN RS.AFFIRMNUM END) over(partition BY RS.COMPANYID,RS.STORAGEID,RS.GOODID),0)stockBack,
+        --其他(同一公司、同一仓库、同一商品)
+        nvl(SUM(CASE WHEN RS.STOCKCODE='007' THEN RS.AFFIRMNUM END) over(partition BY RS.COMPANYID,RS.STORAGEID,RS.GOODID),0)other
+        from REC_STOCK rs LEFT JOIN DIC_STORAGE ds ON rs.storageId=ds.id
+        WHERE RS.COMPANYID=#{0} AND RS.GOODID=#{1} AND RS.STATUSCODE='001' AND ds.statusCode='001')
+    </select>
+
+    <!--查询所有的商品品种-->
+    <select id="queryGoodKindList" parameterType="java.lang.String" resultType="Map">
+        SELECT DISTINCT GOODKINDCODE,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=GOODKINDCODE)goodKind
+        FROM DIC_GOOD
+    </select>
+
+    <!--查询所有的商品用途-->
+    <select id="queryGoodUseList" parameterType="java.lang.String" resultType="Map">
+        SELECT DISTINCT USECODE,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='use' AND LEVELCODE=USECODE)USE
+        FROM DIC_GOOD
+    </select>
+
+    <!--根据商品种类查询商品列表-->
+    <select id="queryDefalultGoods" resultType="Map">
+        SELECT * FROM(
+        SELECT ROWNUM rn,tt.*FROM(
+        SELECT * FROM(
+        SELECT DISTINCT a.COMPANYID,a.GOODID,b.MARK,b.PRODUCINGAREA,a.PRICEHASTAX,c.picUrl,
+        (SELECT name FROM REC_COMPANY WHERE id=a.COMPANYID)companyName,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' and LEVELCODE=b.MEACODE)MEA,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=b.GOODKINDCODE)GOODKIND,(
+        --在售数量
+        --上架
+        nvl((sum(CASE WHEN a.STOCKCODE='002' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0)-
+        --下架
+        nvl((sum(CASE WHEN a.STOCKCODE='003' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0)-
+        --售出
+        nvl((sum(CASE WHEN a.STOCKCODE='004' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0))onSell,
+        --最新的上架日期
+        max(CASE WHEN a.STOCKCODE='002' THEN a.CREATETIME END)over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX) maxDate
+        FROM REC_STOCK a LEFT JOIN DIC_GOOD b ON a.GOODID=b.id
+        LEFT JOIN (SELECT goodId,picUrl FROM REC_GOODPIC WHERE ISTITLE=1 AND STATUSCODE='001') c
+        ON a.goodId=c.goodId
+        WHERE a.STATUSCODE='001' and b.STATUSCODE='001' AND a.stockCode IN ('002','003','004') AND b.GOODKINDCODE LIKE #{0}
+        )t
+        WHERE t.priceHasTax > 0 AND t.onSell > 0
+        ORDER BY t.maxDate DESC)tt) ttt
+        WHERE TTT.rn BETWEEN #{1} AND #{2}
+    </select>
+
+    <!--根据goodId查询所有供应商列表-->
+    <select id="queryCompanyList" resultType="Map" parameterType="long">
+        SELECT * FROM (
+        SELECT DISTINCT b.name sellerName,a.goodId,a.COMPANYID,
+        (SELECT name from VIEW_DICTYPE WHERE ENG='mea' AND LEVELCODE=c.meaCode)mea,
+        --最低价格
+        min(CASE WHEN a.STOCKCODE='002' THEN a.PRICEHASTAX END) over(partition BY a.COMPANYID,a.GOODID) minPrice,
+        (
+        --在售数量
+        --上架确认
+        nvl((sum(CASE WHEN a.stockCode='002' THEN a.affirmNum END) over(partition BY a.COMPANYID,a.goodId)),0) -
+        --下架
+        nvl((sum(CASE WHEN a.stockCode='003' THEN a.affirmNum END) over(partition BY a.COMPANYID,a.goodId)),0)-
+        --售出
+        nvl((sum(CASE WHEN a.stockCode='004' THEN a.affirmNum END) over(partition BY a.COMPANYID,a.goodId)),0)
+        ) onSell,
+        --最新时间
+        max(case WHEN a.STOCKCODE='002' THEN a.CREATETIME END) over(partition BY a.COMPANYID,a.goodId) maxDate
+        from REC_STOCK a LEFT JOIN REC_COMPANY b ON a.COMPANYID=b.id
+        LEFT JOIN DIC_GOOD c ON a.goodId=c.id
+        --LEFT JOIN DIC_GOOD d ON a.goodId=d.id
+        WHERE a.goodId=#{0} AND a.STATUSCODE='001' AND b.STATUSCODE='001' AND c.statusCode='001'
+        AND a.STOCKCODE IN('002','003','004') AND c.goodKindCode LIKE '001%'
+        ORDER BY maxDate DESC)cm
+        WHERE CM.ONSELL > 0
+    </select>
+
+    <!--根据类型获取PE、PP、PVC商品列表按价格排序-->
+    <select id="getAjaxComPanyListByPrice" resultType="Map">
+        SELECT * FROM (
+        SELECT ROWNUM rn,tt.* FROM(
+        SELECT * FROM(
+        SELECT DISTINCT a.COMPANYID,a.GOODID,b.MARK,b.PRODUCINGAREA,a.PRICEHASTAX,c.picUrl,
+        (SELECT name FROM REC_COMPANY WHERE id=a.COMPANYID)companyName,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' and LEVELCODE=b.MEACODE)MEA,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=b.GOODKINDCODE)GOODKIND,(
+        --在售数量
+        --上架
+        nvl((sum(CASE WHEN a.STOCKCODE='002' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0)-
+        --下架
+        nvl((sum(CASE WHEN a.STOCKCODE='003' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0)-
+        --售出
+        nvl((sum(CASE WHEN a.STOCKCODE='004' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0))onSell
+        FROM REC_STOCK a LEFT JOIN DIC_GOOD b ON a.GOODID=b.id
+        LEFT JOIN (SELECT goodId,picUrl FROM REC_GOODPIC WHERE ISTITLE=1 AND STATUSCODE='001') c
+        ON a.goodId=c.goodId
+        WHERE a.STATUSCODE='001' and b.STATUSCODE='001' AND a.stockCode IN ('002','003','004') AND b.GOODKINDCODE LIKE #{0}
+        )t
+        WHERE t.priceHasTax > 0 AND t.onSell > 0
+        ORDER BY t.priceHasTax)tt)ttt
+        WHERE TTT.rn BETWEEN #{1} AND #{2}
+    </select>
+
+    <!--根据类型获取PE、PP、PVC商品列表按销量排序-->
+    <select id="getAjaxComPanyListByNumber" resultType="Map">
+        SELECT * FROM (
+        SELECT ROWNUM rn,tt.* FROM (
+        SELECT * FROM(
+        SELECT DISTINCT a.COMPANYID,a.GOODID,b.MARK,b.PRODUCINGAREA,a.PRICEHASTAX,c.picUrl,
+        (SELECT name FROM REC_COMPANY WHERE id=a.COMPANYID)companyName,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' and LEVELCODE=b.MEACODE)MEA,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=b.GOODKINDCODE)GOODKIND,(
+        --在售数量
+        --上架
+        nvl((sum(CASE WHEN a.STOCKCODE='002' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0)-
+        --下架
+        nvl((sum(CASE WHEN a.STOCKCODE='003' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0)-
+        --售出
+        nvl((sum(CASE WHEN a.STOCKCODE='004' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0))onSell,
+        --售出
+        nvl((sum(CASE WHEN a.STOCKCODE='004' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0)sellOut
+        FROM REC_STOCK a LEFT JOIN DIC_GOOD b ON a.GOODID=b.id
+        LEFT JOIN (SELECT goodId,picUrl FROM REC_GOODPIC WHERE ISTITLE=1 AND STATUSCODE='001') c
+        ON a.goodId=c.goodId
+        WHERE a.STATUSCODE='001' and b.STATUSCODE='001' AND a.stockCode IN ('002','003','004') AND b.GOODKINDCODE LIKE #{0}
+        )t
+        WHERE t.priceHasTax > 0 AND t.onSell > 0
+        ORDER BY t.sellOut DESC)tt)ttt
+        WHERE TTT.rn BETWEEN #{1} AND #{2}
+    </select>
+
+    <!--获取满足条件的商品列表-->
+    <select id="getAjaxComPanyListByCondition" resultType="Map">
+        SELECT * FROM(
+        SELECT DISTINCT a.COMPANYID,a.GOODID,b.MARK,b.PRODUCINGAREA,a.PRICEHASTAX,c.picUrl,
+        (SELECT name FROM REC_COMPANY WHERE id=a.COMPANYID)companyName,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' and LEVELCODE=b.MEACODE)MEA,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=b.GOODKINDCODE)GOODKIND,(
+        --在售数量
+        --上架
+        nvl((sum(CASE WHEN a.STOCKCODE='002' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0)-
+        --下架
+        nvl((sum(CASE WHEN a.STOCKCODE='003' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0)-
+        --售出
+        nvl((sum(CASE WHEN a.STOCKCODE='004' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0))onSell,
+        --售出
+        nvl((sum(CASE WHEN a.STOCKCODE='004' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0)sellOut
+        FROM REC_STOCK a LEFT JOIN DIC_GOOD b ON a.GOODID=b.id
+        LEFT JOIN (SELECT goodId,picUrl FROM REC_GOODPIC WHERE ISTITLE=1 AND STATUSCODE='001') c
+        ON a.goodId=c.goodId
+        WHERE a.STATUSCODE='001' and b.STATUSCODE='001' AND a.stockCode IN ('002','003','004') AND b.GOODKINDCODE LIKE #{0}
+        AND (b.GOODKINDCODE=#{1} OR b.USECODE=#{1})
+        )t
+        WHERE t.priceHasTax > 0 AND t.onSell > 0
+        ORDER BY t.priceHasTax
+    </select>
+
+    <!--根据品种、牌号、厂商进行模糊查询-->
+    <select id="getAjaxSearch" resultType="Map" parameterType="java.lang.String">
+        SELECT * FROM(
+        SELECT DISTINCT a.COMPANYID,a.GOODID,b.MARK,b.PRODUCINGAREA,a.PRICEHASTAX,c.picUrl,
+        (SELECT name FROM REC_COMPANY WHERE id=a.COMPANYID)companyName,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' and LEVELCODE=b.MEACODE)MEA,
+        (SELECT name FROM VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=b.GOODKINDCODE)GOODKIND,(
+        --在售数量
+        --上架
+        nvl((sum(CASE WHEN a.STOCKCODE='002' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0)-
+        --下架
+        nvl((sum(CASE WHEN a.STOCKCODE='003' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0)-
+        --售出
+        nvl((sum(CASE WHEN a.STOCKCODE='004' THEN a.AFFIRMNUM END) over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX)),0))onSell,
+        --最新的上架日期
+        max(CASE WHEN a.STOCKCODE='002' THEN a.CREATETIME END)over(partition BY a.COMPANYID,a.GOODID,a.PRICEHASTAX) maxDate
+        FROM REC_STOCK a LEFT JOIN DIC_GOOD b ON a.GOODID=b.id
+        LEFT JOIN (SELECT goodId,picUrl FROM REC_GOODPIC WHERE ISTITLE=1 AND STATUSCODE='001') c
+        ON a.goodId=c.goodId
+        WHERE a.STATUSCODE='001' and b.STATUSCODE='001' AND a.stockCode IN ('002','003','004') AND
+
+        (b.MARK LIKE #{0} OR b.PRODUCER LIKE #{0} OR b.GOODKINDCODE LIKE #{0} OR
+        b.GOODKINDCODE IN (SELECT LEVELCODE FROM VIEW_DICTYPE WHERE name LIKE #{0}) OR
+        b.MARK IN (SELECT LEVELCODE FROM VIEW_DICTYPE WHERE name LIKE #{0}) OR
+        b.PRODUCER IN (SELECT LEVELCODE FROM VIEW_DICTYPE WHERE name LIKE #{0}))
+        )t
+        WHERE t.priceHasTax > 0 AND t.onSell > 0
+        ORDER BY t.maxDate DESC
+    </select>
+
+    <!-- 商品详情查询-->
+    <select id="getGoodById" parameterType="long" resultType="map">
+        SELECT g.id  AS goodid,g.mark,g.rate,
+        (SELECT name
+        FROM view_dictype
+        WHERE eng = 'goodKind' AND levelcode = g.goodkindcode)  AS goodkindname,
+        (SELECT name
+        FROM view_dictype
+        WHERE eng = 'use' AND levelcode = g.usecode)    AS usedname,
+        g.producer,
+        g.producingarea,
+        (SELECT name
+        FROM view_dictype
+        WHERE eng = 'packType' AND levelcode = g.packtypecode)   AS packtypename,
+        (SELECT name
+        FROM view_dictype
+        WHERE eng = 'packageMemo' AND levelcode = g.packcontent) AS packcontentname,
+        (SELECT name
+        FROM view_dictype
+        WHERE eng = 'mea' AND levelcode = g.MEACODE)             AS meaname,
+        (SELECT name
+        FROM view_dictype
+        WHERE eng = 'package' AND levelcode = g.PACKAGECODE)     AS packagename,
+        g.CONVERTNUM
+        FROM dic_good g
+        WHERE g.id = #{goodId}
+    </select>
+
+    <!-- 订单详情页面数据查询-->
+    <select id="getOrderDetail" parameterType="map" resultType="map">
+        select   g.ID as goodId,s.id as stockId,s.companyid,c.name as companyname,s.STORAGEID,g.rate, gp.PICURL, g.MARK,  (select name from VIEW_DICTYPE where eng='goodKind' and LEVELCODE=g.GOODKINDCODE) as goodKindName,
+        s.PRICEHASTAX,  (select name from VIEW_DICTYPE where eng='mea' and LEVELCODE=g.MEACODE) as MEACODENAME , g.PRODUCER,g.PRODUCINGAREA,
+        (select name from DIC_REGION where id=e.PROVCODE)
+        ||(select name from DIC_REGION where id=e.CITYCODE)||
+        (select name from DIC_REGION where id=e.COUNTYCODE) || e.ADDRESS as address,gd.CONTENT
+        from  DIC_GOOD g INNER JOIN  REC_STOCK s ON g.ID = s.GOODID INNER JOIN  DIC_STORAGE e ON e.ID = s.STORAGEID INNER JOIN rec_company c on c.id=s.companyid
+        LEFT JOIN   REC_GOODPIC gp ON g.ID = gp.GOODID and s.FRONTUSERID=gp.SELLUSERID
+        LEFT JOIN  REC_GOODDESC gd on g.ID = gd.GOODID and s.FRONTUSERID=gd.SELLUSERID
+        where g.id=#{goodId} and s.ID=#{stockId}  and s.companyid=#{companyId} and  rownum = 1
+    </select>
+
+    <!--根据companyId、goodId获取storageIds-->
+    <select id="queryGoods" resultType="Map">
+        SELECT ROWNUM,companyId,storageId,goodId,priceHasTax,upSell,downSell,sellout,
+        (SELECT name FROM DIC_STORAGE WHERE id=storageId)storageName FROM(
+        SELECT DISTINCT a.companyId,a.storageId,a.goodId,a.priceHasTax,a.UPSELL,nvl(b.downSell,0)downSell,nvl(c.sellOut,0)sellOut from(
+        --上架
+        SELECT COMPANYID,STORAGEID,GOODID,PRICEHASTAX,sum(AFFIRMNUM)upSell FROM REC_STOCK
+        WHERE STOCKCODE='002' AND STATUSCODE='001' AND COMPANYID=#{0} AND GOODID=#{1}
+        GROUP BY COMPANYID,STORAGEID,GOODID,PRICEHASTAX
+        )a LEFT JOIN(--下架
+        SELECT COMPANYID,STORAGEID,GOODID,PRICEHASTAX,sum(AFFIRMNUM)downSell FROM REC_STOCK
+        WHERE STOCKCODE='003' AND STATUSCODE='001'
+        GROUP BY COMPANYID,STORAGEID,GOODID,PRICEHASTAX
+        )b ON a.companyId=b.COMPANYID AND a.storageId=b.STORAGEID AND a.goodId=b.GOODID AND a.priceHasTax=b.priceHasTax
+        LEFT JOIN(--售出
+        SELECT COMPANYID,STORAGEID,GOODID,PRICEHASTAX,sum(AFFIRMNUM)sellOut FROM REC_STOCK
+        WHERE STOCKCODE='004' AND STATUSCODE='001'
+        GROUP BY COMPANYID,STORAGEID,GOODID,PRICEHASTAX
+        )c ON a.companyId=c.COMPANYID AND a.storageId=c.STORAGEID AND a.goodId=c.GOODID AND a.priceHasTax=c.priceHasTax
+        ORDER BY storageId,priceHasTax)
+    </select>
+
+    <!--根据companyId、storageId、goodId获取商品列表-->
+    <select id="queryGoodsByStorageId">
+        SELECT GOODID,STORAGEID,PRICEHASTAX,sum(AFFIRMNUM) sumAffirm from REC_STOCK
+        WHERE COMPANYID=#{0} AND GOODID=#{1} AND STORAGEID=#{2} AND STOCKCODE=#{3}
+        GROUP BY GOODID,STORAGEID,PRICEHASTAX
+    </select>
+
+    <!--查询下架页面商品信息-->
+    <select id="queryDownSellGoods" resultType="Map">
+        SELECT a.PRICEHASTAX,a.upSell,nvl(b.DOWNSELL,0)DOWNSELL,nvl(c.sellOut,0)sellOut FROM
+        (SELECT COMPANYID,STORAGEID,GOODID,PRICEHASTAX,sum(AFFIRMNUM)upSell from REC_STOCK rs
+        WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND STOCKCODE='002'
+        GROUP BY COMPANYID,STORAGEID,GOODID,PRICEHASTAX )a LEFT JOIN
+        (SELECT PRICEHASTAX,sum(AFFIRMNUM)downSell from REC_STOCK
+        WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND STOCKCODE='003'
+        GROUP BY PRICEHASTAX)b ON a.PRICEHASTAX=b.PRICEHASTAX LEFT JOIN
+        (SELECT PRICEHASTAX,sum(AFFIRMNUM)sellOut from REC_STOCK
+        WHERE COMPANYID=#{0} AND STORAGEID=#{1} AND GOODID=#{2} AND STOCKCODE='004'
+        GROUP BY PRICEHASTAX)c ON a.PRICEHASTAX=c.PRICEHASTAX
+    </select>
+
+    <!--查询商品是否存在-->
+    <select id="getExistGoodId" resultType="java.lang.Long" parameterType="com.juhuawang.model.Good">
+        SELECT g.id AS id
+        FROM DIC_GOOD g
+        WHERE g.MARK = #{mark,jdbcType=VARCHAR}   AND
+              g.GOODKINDCODE = #{goodkindcode,jdbcType=VARCHAR}
+              AND g.USECODE = #{usecode,jdbcType=VARCHAR} AND nvl(g.MACCODE, 0) = nvl(#{maccode,jdbcType=VARCHAR}, 0)
+              AND nvl(g.GOODTYPECODE, 0) = nvl(#{goodtypecode,jdbcType=VARCHAR}, 0)
+              AND nvl(g.RATE, 0) = nvl(#{rate,jdbcType=DECIMAL}, 0)
+              AND nvl(g.PRODUCINGAREA, 0) = nvl(#{producingarea,jdbcType=VARCHAR}, 0)
+              AND nvl(g.PRODUCER, 0) = nvl(#{producer,jdbcType=VARCHAR}, 0)
+              AND nvl(g.PACKCONTENT, 0) = nvl(#{packcontent,jdbcType=VARCHAR}, 0)
+              AND nvl(g.PACKTYPECODE, 0) = nvl(#{packtypecode,jdbcType=VARCHAR}, 0) AND
+              nvl(g.MEACODE, 0) = nvl(#{meacode,jdbcType=VARCHAR}, 0) AND  rownum =1
+    </select>
+</mapper>

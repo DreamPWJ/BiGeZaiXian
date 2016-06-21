@@ -1,0 +1,36 @@
+.kz {
+    width: 100%;
+    height: 230px;
+    background: url("../../images/mobilephone/jurongbao/jrb1p.png") repeat-x;
+}
+.zt1 {
+    width: 980px;
+    height: 230px;
+    margin: 0px auto;
+    background: url("../../images/mobilephone/jurongbao/fwa111.png")no-repeat;
+}
+.ct1 {
+    width: 980px;
+    margin: 0px auto;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #ddd;
+}
+.ct2 {
+    width: 980px;
+    height: 2348px;
+    margin: 0px auto;
+    padding: 0px;
+    background: url("../../images/mobilephone/jurongbao/shbz.jpg")no-repeat;
+}
+.sqjrb {
+    width: 174px;
+    height: 51px;
+    line-height: 51px;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 380px;
+    padding: 0px;
+    background: #3384FF;
+    margin-bottom: 100px;
+}

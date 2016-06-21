@@ -1,0 +1,363 @@
+@charset "utf-8";
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+    color: #3f3f3f;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    word-break: break-all;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    display: block;
+}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+body, button, input, select, textarea {
+    font: 12px/1.5 \5FAE\8F6F\96C5\9ED1, \5b8b\4f53, sans-serif, Arial, Helvetica;
+}
+
+input, select, textarea {
+    font-size: 100%;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* IE bug fixed: th 不继承 text-align*/
+th {
+    text-align: inherit;
+
+}
+
+/* 去除默认边框 */
+fieldset, img {
+    border: 0;
+}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+    display: block;
+}
+
+/* 去掉 firefox 下此元素的边框 */
+abbr, acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+/* 一致的 del 样式 */
+del {
+    text-decoration: line-through;
+}
+
+address, caption, cite, code, dfn, em, var {
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* 去掉列表前的标识, li 会继承 */
+ol, ul {
+    list-style: none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption {
+    text-align: left;
+}
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 500;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+/* 统一上标和下标 */
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+a {
+    color: #117ed2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #117ed2;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins, a {
+    text-decoration: none;
+}
+
+/* 清理浮动 */
+.fn-clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.fn-clear {
+    zoom: 1; /* for IE6 IE7 */
+}
+
+/* 隐藏, 通常用来与 JS 配合 */
+body .fn-hide {
+    display: none;
+}
+
+/* 设置内联, 减少浮动带来的bug */
+.fn-left, .fn-right {
+    display: inline;
+}
+
+.fn-block {
+    display: block;
+}
+
+.fn-left {
+    float: left;
+}
+
+.fn-right {
+    float: right;
+}
+
+/* 单行文字溢出时出现省略号，需设定宽度 */
+.fn-text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.color-white, .color-white a {
+    color: #fff;
+}
+
+.color-red, .color-red a {
+    color: #e4393c;
+}
+
+.color-gray {
+    color: #c0c0c0;
+}
+
+.color-blue {
+    color: #2477d5;
+}
+
+.color-green {
+    color: #00cc33;
+}
+
+.color-yellow {
+    color: #ffcc00;
+}
+
+.color-orange {
+    color: #f30;
+}
+
+
+
+/*     loading动画效果*/
+#loader {
+    position: absolute;
+    left: 48%;
+    top: 40%;
+}
+
+.loading {
+    position: relative;
+}
+
+.loading i {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #149bdf;
+    position: absolute;
+}
+
+.loading i:nth-child(1) {
+    top: 25px;
+    left: 0;
+    -webkit-animation: loading-animation 1s ease 0s infinite; /* Safari 和 Chrome */
+    animation: loading-animation 1s ease 0s infinite;;
+    -moz-animation: loading-animation 1s ease 0s infinite; /* Firefox */
+    -o-animation: loading-animation 1s ease 0s infinite;; /* Opera */
+    -ms-animation: loading-animation 1s ease 0s infinite;; /* IE */
+
+}
+
+.loading i:nth-child(2) {
+    top: 17px;
+    left: 17px;
+    -webkit-animation: loading-animation 1s ease -0.12s infinite; /* Safari 和 Chrome */
+    animation: loading-animation 1s ease -0.12s infinite;;
+    -moz-animation: loading-animation 1s ease -0.12s infinite; /* Firefox */
+    -o-animation: loading-animation 1s ease -0.12s infinite;; /* Opera */
+    -ms-animation: loading-animation 1s ease -0.12s infinite;; /* IE */
+}
+
+.loading i:nth-child(3) {
+    top: 0px;
+    left: 25px;
+    -webkit-animation: loading-animation 1s ease -0.24s infinite; /* Safari 和 Chrome */
+    animation: loading-animation 1s ease -0.24s infinite;;
+    -moz-animation: loading-animation 1s ease -0.24s infinite; /* Firefox */
+    -o-animation: loading-animation 1s ease -0.24s infinite;; /* Opera */
+    -ms-animation: loading-animation 1s ease -0.24s infinite;; /* IE */
+}
+
+.loading i:nth-child(4) {
+    top: -17px;
+    left: 17px;
+    -webkit-animation: loading-animation 1s ease -0.36s infinite; /* Safari 和 Chrome */
+    animation: loading-animation 1s ease -0.36s infinite;;
+    -moz-animation: loading-animation 1s ease -0.36s infinite; /* Firefox */
+    -o-animation: loading-animation 1s ease -0.36s infinite;; /* Opera */
+    -ms-animation: loading-animation 1s ease -0.36s infinite;; /* IE */
+}
+
+.loading i:nth-child(5) {
+    top: -25px;
+    left: 0px;
+    -webkit-animation: loading-animation 1s ease -0.48s infinite; /* Safari 和 Chrome */
+    animation: loading-animation 1s ease -0.48s infinite;;
+    -moz-animation: loading-animation 1s ease -0.48s infinite; /* Firefox */
+    -o-animation: loading-animation 1s ease -0.48s infinite;; /* Opera */
+    -ms-animation: loading-animation 1s ease -0.48s infinite;; /* IE */
+}
+
+.loading i:nth-child(6) {
+    top: -17px;
+    left: -17px;
+    -webkit-animation: loading-animation 1s ease -0.6s infinite; /* Safari 和 Chrome */
+    animation: loading-animation 1s ease -0.6s infinite;;
+    -moz-animation: loading-animation 1s ease -0.6s infinite; /* Firefox */
+    -o-animation: loading-animation 1s ease -0.6s infinite;; /* Opera */
+    -ms-animation: loading-animation 1s ease -0.6s infinite;; /* IE */
+}
+
+.loading i:nth-child(7) {
+    top: 0px;
+    left: -25px;
+    -webkit-animation: loading-animation 1s ease -0.72s infinite; /* Safari 和 Chrome */
+    animation: loading-animation 1s ease -0.72s infinite;;
+    -moz-animation: loading-animation 1s ease -0.72s infinite; /* Firefox */
+    -o-animation: loading-animation 1s ease -0.72s infinite;; /* Opera */
+    -ms-animation: loading-animation 1s ease -0.72s infinite;; /* IE */
+}
+
+.loading i:nth-child(8) {
+    top: 17px;
+    left: -17px;
+    -webkit-animation: loading-animation 1s ease -0.84s infinite; /* Safari 和 Chrome */
+    animation: loading-animation 1s ease -0.84s infinite;;
+    -moz-animation: loading-animation 1s ease -0.84s infinite; /* Firefox */
+    -o-animation: loading-animation 1s ease -0.84s infinite;; /* Opera */
+    -ms-animation: loading-animation 1s ease -0.84s infinite;; /* IE */
+}
+
+@-webkit-keyframes loading-animation {
+    50% {
+        transform: scale(0.4);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes loading-animation {
+    50% {
+        transform: scale(0.4);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes loading-animation {
+    50% {
+        transform: scale(0.4);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes loading-animation {
+    50% {
+        transform: scale(0.4);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes loading-animation {
+    50% {
+        transform: scale(0.4);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/*     loading动画效果*/

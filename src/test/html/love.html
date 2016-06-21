@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css练习</title>
+    <style type="text/css">
+        input {
+            color: #cccccc;
+            padding: 6px;
+            margin: 10px;
+            outline: none;
+            overflow: hidden;
+            border-radius: 18px; /*圆角效果*/
+            background: #fafafa;
+            border: 1px solid #DDDDDD;
+            -moz-box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.1); /* Firefox下盒子的阴影效果*/
+            -webkit-box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.1); /*Chrome , Safari下盒子的阴影效果*/
+            box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.1);
+            -webkit-transition: all .3s; /*过度效果的时间*/
+            -moz-transition: all .3s;
+            -o-transtition: all .3s;
+        }
+
+        .styleone {
+            width: 100px;
+        }
+
+        .styleone:focus {
+            width: 160px;
+        }
+
+        /*      loading动画效果*/
+        #loader {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left:0px;
+            top:0px;
+            bottom:0px;
+            right:0px;
+            margin: auto;
+        }
+
+        .loading {
+            position: relative;
+        }
+
+        .loading i {
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #f26604;
+            position: absolute;
+        }
+
+        .loading i:nth-child(1) {
+            top: 25px;
+            left: 0;
+            -webkit-animation: loading-animation 1s ease 0s infinite; /* Safari 和 Chrome */
+            animation: loading-animation 1s ease 0s infinite;;
+            -moz-animation: loading-animation 1s ease 0s infinite; /* Firefox */
+            -o-animation: loading-animation 1s ease 0s infinite;; /* Opera */
+            -ms-animation: loading-animation 1s ease 0s infinite;; /* IE */
+
+        }
+
+        .loading i:nth-child(2) {
+            top: 17px;
+            left: 17px;
+            -webkit-animation: loading-animation 1s ease -0.12s infinite; /* Safari 和 Chrome */
+            animation: loading-animation 1s ease -0.12s infinite;;
+            -moz-animation: loading-animation 1s ease -0.12s infinite; /* Firefox */
+            -o-animation: loading-animation 1s ease -0.12s infinite;; /* Opera */
+            -ms-animation: loading-animation 1s ease -0.12s infinite;; /* IE */
+        }
+
+        .loading i:nth-child(3) {
+            top: 0px;
+            left: 25px;
+            -webkit-animation: loading-animation 1s ease -0.24s infinite; /* Safari 和 Chrome */
+            animation: loading-animation 1s ease -0.24s infinite;;
+            -moz-animation: loading-animation 1s ease -0.24s infinite; /* Firefox */
+            -o-animation: loading-animation 1s ease -0.24s infinite;; /* Opera */
+            -ms-animation: loading-animation 1s ease -0.24s infinite;; /* IE */
+        }
+
+        .loading i:nth-child(4) {
+            top: -17px;
+            left: 17px;
+            -webkit-animation: loading-animation 1s ease -0.36s infinite; /* Safari 和 Chrome */
+            animation: loading-animation 1s ease -0.36s infinite;;
+            -moz-animation: loading-animation 1s ease -0.36s infinite; /* Firefox */
+            -o-animation: loading-animation 1s ease -0.36s infinite;; /* Opera */
+            -ms-animation: loading-animation 1s ease -0.36s infinite;; /* IE */
+        }
+
+        .loading i:nth-child(5) {
+            top: -25px;
+            left: 0px;
+            -webkit-animation: loading-animation 1s ease -0.48s infinite; /* Safari 和 Chrome */
+            animation: loading-animation 1s ease -0.48s infinite;;
+            -moz-animation: loading-animation 1s ease -0.48s infinite; /* Firefox */
+            -o-animation: loading-animation 1s ease -0.48s infinite;; /* Opera */
+            -ms-animation: loading-animation 1s ease -0.48s infinite;; /* IE */
+        }
+
+        .loading i:nth-child(6) {
+            top: -17px;
+            left: -17px;
+            -webkit-animation: loading-animation 1s ease -0.6s infinite; /* Safari 和 Chrome */
+            animation: loading-animation 1s ease -0.6s infinite;;
+            -moz-animation: loading-animation 1s ease -0.6s infinite; /* Firefox */
+            -o-animation: loading-animation 1s ease -0.6s infinite;; /* Opera */
+            -ms-animation: loading-animation 1s ease -0.6s infinite;; /* IE */
+        }
+
+        .loading i:nth-child(7) {
+            top: 0px;
+            left: -25px;
+            -webkit-animation: loading-animation 1s ease -0.72s infinite; /* Safari 和 Chrome */
+            animation: loading-animation 1s ease -0.72s infinite;;
+            -moz-animation: loading-animation 1s ease -0.72s infinite; /* Firefox */
+            -o-animation: loading-animation 1s ease -0.72s infinite;; /* Opera */
+            -ms-animation: loading-animation 1s ease -0.72s infinite;; /* IE */
+        }
+
+        .loading i:nth-child(8) {
+            top: 17px;
+            left: -17px;
+            -webkit-animation: loading-animation 1s ease -0.84s infinite; /* Safari 和 Chrome */
+            animation: loading-animation 1s ease -0.84s infinite;;
+            -moz-animation: loading-animation 1s ease -0.84s infinite; /* Firefox */
+            -o-animation: loading-animation 1s ease -0.84s infinite;; /* Opera */
+            -ms-animation: loading-animation 1s ease -0.84s infinite;; /* IE */
+        }
+
+        @-webkit-keyframes loading-animation {
+            50% {
+                transform: scale(0.4);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes loading-animation {
+            50% {
+                transform: scale(0.4);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes loading-animation {
+            50% {
+                transform: scale(0.4);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes loading-animation {
+            50% {
+                transform: scale(0.4);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @-ms-keyframes loading-animation {
+            50% {
+                transform: scale(0.4);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /*     loading动画效果*/
+    </style>
+</head>
+<body>
+<!--<input class="styleone" type="text"/>-->
+
+<div id="loader">
+    <div class="loading">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="jquery-1.10.2.min.js">
+</script>
+<script type="text/javascript">
+    $(function () {
+        /*      var d=new Date();
+         alert(d.toLocaleDateString());
+         alert(d.toLocaleString());
+         alert(d.toLocaleTimeString());*/
+    })
+
+</script>

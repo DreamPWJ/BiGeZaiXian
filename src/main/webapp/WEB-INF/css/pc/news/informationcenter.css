@@ -1,0 +1,391 @@
+/* CSS Document */
+
+body {
+    min-width: 1200px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*主体*/
+.content {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 100px; /*background:#FCC;*/
+    animation: loadinghtml 0.3s ease-out;
+}
+
+@keyframes loadinghtml {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform:translateX(0px);
+    }
+}
+.lsa1 {
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #A7A7A7;
+}
+
+.lsa4 {
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #666;
+}
+
+.lsa5 {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #333;
+}
+
+/*导航*/
+
+.daoh1-1 a {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #1caaeb;
+    text-decoration: none;
+}
+
+.daoh1-1 a:hover {
+    text-decoration: none;
+}
+
+.daoh1-2 a {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #616161;
+    text-decoration: none;
+}
+
+.daoh1-2 a:hover {
+    color: #1caaeb;
+    text-decoration: none;
+}
+
+/*内容*/
+
+/*左侧*/
+.N-L {
+    width: 1100px;
+    height: auto;
+    float: left;
+    margin-right: 20px; /*background:#966;*/
+}
+.newMain:hover{ cursor: pointer;}
+
+.L1-2 {
+    width: 210px;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: "微软雅黑";
+    color: #666;
+    letter-spacing: 1px; /* background:#996;*/;
+    margin-top: 15px;
+    padding-left: 15px;
+}
+
+.L1-2 img {
+    position: relative;
+    top: -5px;
+    margin-right: 10px;
+}
+
+/*内容1*/
+.L2 {
+    width: 1100px;
+    height: auto;
+    margin-top: 30px;
+    margin-left: 150px;
+    float: left;
+    padding-bottom: 30px;
+    border-bottom: 1px dotted #D0D0D0;
+}
+
+.L2-t {
+    width: 228px;
+    height: 140px;
+    float: left;
+    margin-right: 15px;
+}
+
+.L2-z {
+    width: 537px;
+    height: 140px;
+    float: left; /*background:#F63;*/
+}
+
+.L2-z1 {
+    width: 537px;
+    height: 44px;
+}
+
+.L2-z1-1 {
+    width: 447px;
+    height: 44px;
+    line-height: 44px;
+    float: left;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #333;
+    text-align: left;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.L2-z1-1 a {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #333;
+    text-decoration: none;
+}
+
+.L2-z1-1 a:hover {
+    text-decoration: none;
+}
+
+.L2-z1-2 {
+    width: 90px;
+    height: 44px;
+    line-height: 44px;
+    float: left;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #ccc;
+    text-align: right;
+    overflow: hidden;
+}
+
+.L2-z2 {
+    width: 537px;
+    height: 54px;
+    line-height: 27px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #666;
+    overflow: hidden; /*background:#336;*/
+}
+
+.L2-z3 {
+    width: 537px;
+    height: 42px;
+    line-height: 36px;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #1caaeb;
+    overflow: hidden;
+    letter-spacing: 2px;
+}
+
+.L2-z3 a {
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #1caaeb;
+    text-decoration: none;
+}
+
+.L2-z3 a:hover {
+    text-decoration: none;
+}
+
+/*右侧*/
+.N-R {
+    width: 380px;
+    height: auto;
+    float: left; /*background:#93F;*/
+}
+
+.R1 {
+    width: 380px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #D0D0D0;
+}
+
+.R1-3 a {
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #666;
+    text-decoration: none;
+}
+
+.R1-3 a:hover {
+    color: #1caaeb;
+    text-decoration: none;
+}
+
+.R2-1 a {
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #666;
+    text-decoration: none;
+}
+
+.R2-1 a:hover {
+    text-decoration: none;
+}
+
+/*平台活动*/
+.pthd {
+    width: 1200px;
+    height: 15px;
+    margin: 0px 10px;
+    clear: left;
+    border-bottom: 1px solid #1caaeb; /*background:#F93;*/
+
+}
+
+.pthd-z {
+    width: 150px;
+    height: 20px;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #EA6611;
+    float: right;
+    text-align: center;
+    margin-right: 63px;
+    margin-top: 0px;
+    background: #FFF;
+    letter-spacing: 2px;
+}
+.pthd-z a{
+    color: #EA6611;
+}
+
+/*平台活动内容*/
+.pthdnr {
+    width: 1200px;
+    height: auto;
+    margin: 30px 70px;
+    padding: 0px 30px;
+    float: left; /*background:#669;*/
+}
+
+.pthdnr1 {
+    width: 250px;
+    height: 260px;
+    float: left;
+    margin-right: 30px;
+}
+
+.pthdnr1-1 {
+    width: 250px;
+    height: 218px;
+}
+
+.pthdnr1-2 {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left:15px;
+    margin-top: 12px;
+    font-size: 15px;
+    
+    color: #FFF;
+    letter-spacing: 2px;
+    background: url(../../../images/pc/news/an01.jpg) no-repeat;
+}
+
+.pthdnr1-2 a {
+    font-size: 15px;
+    
+    color: #FFF;
+    text-decoration: none;
+}
+
+.pthdnr1-2 a:hover {
+    font-size: 16px;
+    
+    color: #1caaeb;
+    text-decoration: none;
+}
+
+.text-overflow_news {
+    display: block; /*内联对象需加*/
+    width: 420px;
+    word-break: keep-all; /* 不换行 */
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis; /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+
+.nav-tabs {
+    margin-top: 30px;
+    border-bottom: 1px solid #1caaeb;
+}
+
+.nav-tabs li a {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #000500;
+
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #1caaeb;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #1caaeb;
+    border-bottom-color: transparent;
+}
+
+.clearborder {
+    width: 100%;
+    border-top: 1px solid #D0D0D0;
+    clear: both;
+}
+
+.btn-color {
+    color: #fff;
+    background-color: #1CAAEB;
+    border-color: #1CAAEB;
+    width:120px;
+}
+.btn.btn-color:hover{
+    background-color:#EA6611;
+    color: #fff;
+    border-color: #EA6611;
+}
+
+/*最新修改css样式  2015-2-22*/
+.banner {
+    width:100%;
+    margin-bottom:10px;
+}
+.flat {
+    margin-bottom:30px;
+}
+.flat .news {
+    margin-bottom:20px;
+}
+.flat .title {
+    display:inline-block;
+    margin:10px 15px 5px 0;
+    font-size:16px;
+}
+.flat .con {
+    padding:5px;
+}
+.flat .con .img {
+    float:left;
+    padding-right:15px;
+}
+.flat .con .value {
+    float:left;
+    padding:10px;
+    font-size:14px;
+    width:945px;
+    text-align:justify;
+}
+.flat .con .value .summary .detail {
+    color:#EA6611;
+    border-color: #EA6611;
+}
+

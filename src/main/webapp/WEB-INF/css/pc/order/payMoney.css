@@ -1,0 +1,625 @@
+/* CSS Document */
+
+body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+}
+
+/*主体*/
+.content {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 0 100px;
+}
+
+/*面包屑制作*/
+
+.ZiFu label {
+    float: left;
+    font-weight: 500;
+}
+
+input[type=radio] {
+    margin: 22px 20px;
+}
+
+/*确认冻结保证金*/
+.prompt {
+    width: 1200px;
+    height: auto; /*clear:left;*/
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-top: 2px solid #1caaeb
+}
+
+.pt-1 {
+    width: 1200px;
+    height: 44px;
+    float: left;
+}
+
+.pt-1-1 {
+    width: 808px;
+    height: 44px;
+    line-height: 60px;
+    text-align: left;
+    float: left;
+    padding-left: 32px;
+    font-size: 15px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #2E2D2B;
+}
+
+.pt-sa1 {
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #1caaeb;
+}
+
+.pt-1-2 {
+    width: 328px;
+    height: 44px;
+    line-height: 56px;
+    float: right;
+    text-align: right;
+    padding-right: 32px;
+    font-size: 18px;
+    font-family: "微软雅黑";
+}
+
+.pt-sa2 {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #d43f3a;
+}
+
+.pt-2 {
+    width: 1168px;
+    height: 24px;
+    line-height: 24px;
+    float: left;
+    padding-left: 32px;
+    text-align: left;
+    font-size: 15px;
+    font-family: "微软雅黑";
+    color: #333;
+}
+
+.pt-sa3 {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #1caaeb;
+}
+
+.pt-3 {
+    width: 1148px;
+    height: auto;
+    min-height: 72px;
+    float: left;
+    padding-left: 12px;
+    margin-left: 20px;
+    margin-top: 14px;
+    border-top: 1px solid #E2E2E2; /*background:#FFC;*/
+}
+.select-pay-way{
+    font-weight: bolder;
+    color:#1caaeb;
+    border-bottom: 3px solid #1caaeb;
+}
+.pt-3-1 {
+    width: 1148px;
+    height: 36px;
+    line-height: 36px;
+    float: left;
+}
+
+.pt-3-1-1 {
+    width: 50px;
+    height: 36px;
+    line-height: 36px;
+    float: left;
+    text-align: left;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #2E2D2B;
+}
+
+.pt-3-1-2 {
+    width: 1098px;
+    height: 36px;
+    float: left;
+    overflow: hidden;
+}
+
+.pt-sa4 {
+    padding: 3px 15px;
+    font-size: 13px;
+    font-family: "微软雅黑";
+    color: #333;
+}
+
+/*支付*/
+.ZiFu {
+    width: 1198px;
+    height: auto;
+    clear: left;
+    min-height: 400px;
+    border-top: 2px solid #1caaeb;
+}
+
+.ZiFu-1 {
+    width: 1072px;
+    height: 54px;
+    float: left;
+    margin-left: 28px;
+    margin-top: 12px;
+    padding-left: 68px; /*border:2px solid #B4C5E3;*/
+}
+
+.ZiFu-1-x {
+    margin-top: 21px;
+    float: left;
+    cursor: pointer;
+    margin-right: 27px;
+}
+
+.ZiFu-1-1 {
+    width: auto;
+    min-width: 150px;
+    height: 54px;
+    line-height: 52px;
+    float: left;
+    text-align: left;
+    margin-right: 24px;
+    font-size: 17px;
+    font-family: "微软雅黑";
+    color: #333;
+}
+
+.ZiFu-sa1 {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #d43f3a;
+}
+
+.ZiFu-1-2 {
+    width: 500px;
+    height: 54px;
+    float: left;
+    overflow: hidden;
+}
+
+.ZiFu-1-2-1 {
+    width: 500px;
+    height: 54px;
+    float: left;
+}
+
+.ZiFu-1-2-2 {
+    width: 500px;
+    height: 54px;
+    float: left;
+}
+
+.ZiFu-1v-t {
+    width: 13px;
+    height: 13px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 14px;
+    background: url(../../../images/pc/account/ts.png) no-repeat;
+}
+
+.ZiFu-1v-z {
+    width: 473px;
+    height: 54px;
+    line-height: 54px;
+    float: left;
+    text-align: left;
+    font-size: 15px;
+    font-family: "微软雅黑";
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.ZiFu-1v-z a, .ZiFu-1v-z a:hover {
+    font-size: 15px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #1caaeb;
+    text-decoration: none;
+}
+
+.ddt {
+    font-size: 15px;
+    font-family: "微软雅黑";
+    font-weight: normal;
+    color: #333;
+}
+
+.ZiFu-2 {
+    width: 1140px;
+    height: auto;
+    min-height: 54px;
+    float: left;
+    margin-left: 28px;
+    margin-top: 2px;
+}
+
+.ZiFu-2v {
+    width: 1140px;
+    height: auto;
+    float: left;
+    margin-left: 68px;
+}
+
+.ZiFu-1-x1 {
+    margin-top: 20px;
+    float: left;
+    cursor: pointer;
+    margin-left: 268px;
+}
+
+.ZiFu-2-1 {
+    width: 1004px;
+    height: auto;
+    float: left;
+    margin-left: 50px;
+}
+
+
+.TB {
+    width: 1104px;
+    height: 36px;
+}
+
+.R-BT-1 {
+    width: 1104px;
+    height: 36px;
+    float: left;
+    border-bottom: 1px solid #1caaeb;
+}
+
+.R-BT-1-2 {
+    width: 124px;
+    height: 36px;
+    float: left;
+    margin-right: 20px;
+    overflow: hidden;
+    cursor: pointer; /*background:#9CF;*/
+}
+
+.R-BT-1-2-1 {
+    display:inline;
+    width: 120px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    float: left;
+    font-size: 16px;
+    font-family: "微软雅黑";
+
+}
+
+.R-BT-1-2-2 {
+    display:inline;
+    width: 120px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    float: left;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: inherit;
+    overflow: hidden;
+}
+
+.CQL1 {
+    display:inline;
+    width: 1104px;
+    height: auto;
+    float: left;
+}
+
+.CQL2 {
+    width: 1104px;
+    font-family: "微软雅黑";
+    font-size: 15px;
+    margin-bottom: 60px;
+}
+
+
+.CQL3 {
+    display:none;
+    width: 1104px;
+    height: 230px;
+    line-height: 230px;
+    text-align: center;
+    float: left;
+    font-size: 25px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #ffffff;
+
+}
+.CQL3 button{
+    width: 120px;
+    height: 120px;
+    background-color: #1caaeb;
+    border: 0;
+    border-radius: 50%;
+    margin-top: 60px;
+    font-size: inherit;
+    margin-left: -80px;
+}
+.ZiFu-2-1-v1 {
+    width: 1004px;
+    height: 48px;
+    line-height: 48px;
+    float: left;
+    text-align: left;
+    font-size: 15px;
+    font-family: "微软雅黑";
+    color: #333;
+}
+
+/*黄色*/
+.ZiFu-2-1-v1 a, .ZiFu-2-1-v1 a:hover {
+    font-size: 15px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #1caaeb;
+    text-decoration: none;
+}
+
+.ZiFu-2-1-v2 {
+    display: none;
+    width: 1004px;
+    height: auto;
+    float: left;
+    padding-bottom: 24px;
+}
+
+/*粉色*/
+.v2-1 {
+    width: 220px;
+    height: 45px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid #B4C5E3;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.v2-1:hover{
+    border: 1px solid #1caaeb;
+}
+/*选中对号*/
+.v2-1-pigeon {
+
+    background: url(../../../images/pc/pay/pigeon.png) no-repeat top right;
+    background-size: 30px 30px;
+    border: 1px solid #1caaeb;
+}
+
+/*输入密码*/
+.SrMm {
+    width: 1198px;
+    height: 170px;
+    clear: both;
+    margin-top: 80px;
+
+}
+
+.SrMm-1 {
+    width: 1160px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 17px;
+    color: #333;
+    padding-top:30px;
+    padding-left: 380px;
+}
+
+.SrMm-1-1 {
+    width: 86px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+    font-size: 16px;
+    color: grey;
+    font-weight: bolder;
+}
+
+.in-SrMm {
+    width: 220px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    border: 2px solid #1caaeb;
+    font-size: 30px;
+    color:#1caaeb;
+    margin:0 16px;
+    padding-left: 25px;
+    letter-spacing: 15px;
+}
+
+.SrMm-1-1 a {
+    font-size: 16px;
+    color: #1caaeb;
+    text-decoration: none;
+}
+
+.SrMm-1-1 a:hover {
+    font-size: 16px;
+    color: #d43f3a;
+    text-decoration: none;
+}
+
+input[class="in-SrMm"]:hover {
+    border: 2px solid #d43f3a;
+}
+
+input[class="in-SrMm"]:focus {
+    border: 2px solid #d43f3a;
+    color: #1caaeb;
+}
+
+
+.SrMm-2 {
+    width: 970px;
+    height: 32px;
+    line-height: 32px;
+    float: left;
+    margin-left: 430px;
+    padding-left: 88px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: grey;
+}
+
+/*确定/取消*/
+.QdQx {
+    width: 1158px;
+    height: 112px;
+    margin: 0 auto;
+    border-top: 1px solid #E2E2E2;
+}
+
+.QdQx-1 {
+    width: 180px;
+    height: 48px;
+    margin: 30px auto;
+}
+
+.QdQx-1-1 {
+    border: 0;
+    width: 170px;
+    height: 45px;
+    float: left;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #FFF;
+    background: #3285FF;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+button[class="QdQx-1-1"]:hover {
+    background: #1caaeb;
+}
+
+.R-BT-1-2:hover{
+    color:#1caaeb;
+}
+
+.CQL2 .time span{
+    padding-left: 6px;
+    color: #f43838;
+}
+
+.CQL2 p{
+    padding:10px 10px;
+}
+
+.CQL2 p.contact-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.account-title{
+    font-size: 20px;
+}
+
+#bank-account{
+    margin-top: 6px;
+    border: 1px solid #ddd;
+    padding: 10px  10px 20px;
+}
+.account-wrap{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.account-show{
+    margin-top: 10px;
+    border: 1px solid #1caaeb;
+}
+
+.account-show img{
+    display: block;
+    margin: 0 auto;
+    width: 220px;
+    height: 50px;
+    padding-left: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.account-show >p>span,.prompt-info span{
+    color: #1caaeb;
+    font-weight: bolder;
+}
+
+.prompt-info{
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.btn-bottom{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.btn-bottom button{
+    margin-left: 150px;
+    vertical-align: bottom;
+    border: none;
+}
+.btn-bottom button a{
+    display:block;
+    width: 150px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #1caaeb;
+    box-shadow: 0 6px 0 #1B82EB;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none;
+    outline: none;
+}
+
+
+.btn-bottom button a:hover{
+    box-shadow: 0 3px 0 #1caaeb;
+}
+
+.account-show .more{
+    width: 250px;
+    font-size: 2rem;
+    margin:40px auto;
+    color: #1caaeb;
+    padding: 0;
+    text-align: center;
+
+}
+
+div.bottom{
+    position: relative!important;
+}

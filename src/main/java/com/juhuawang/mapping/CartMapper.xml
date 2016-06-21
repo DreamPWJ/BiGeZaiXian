@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.CartMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.Cart" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="CODENO" property="codeno" jdbcType="VARCHAR" />
+    <result column="FRONTUSERID" property="frontuserid" jdbcType="DECIMAL" />
+    <result column="OPERATIONIP" property="operationip" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="STATUSCODE" property="statuscode" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+    <result column="STOCKID" property="stockid" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, CODENO, FRONTUSERID, OPERATIONIP, CREATETIME, STATUSCODE, MEMO, STOCKID
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from REC_CART
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from REC_CART
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.Cart" >
+    insert into REC_CART (ID, CODENO,FRONTUSERID, OPERATIONIP, CREATETIME, STATUSCODE, MEMO, STOCKID)
+    values (#{id,jdbcType=DECIMAL}, #{codeno,jdbcType=VARCHAR},
+      #{frontuserid,jdbcType=DECIMAL}, #{operationip,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{statuscode,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR}, #{stockid,jdbcType=DECIMAL}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.Cart" >
+    insert into REC_CART
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+        ID,
+      <if test="codeno != null" >
+        CODENO,
+      </if>
+      <if test="frontuserid != null" >
+        FRONTUSERID,
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP,
+      </if>
+      <if test="createtime != null" >
+        CREATETIME,
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+      <if test="stockid != null" >
+        STOCKID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+        seq_rec_cart.nextval,
+      <if test="codeno != null" >
+        #{codeno,jdbcType=VARCHAR},
+      </if>
+      <if test="frontuserid != null" >
+        #{frontuserid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="stockid != null" >
+        #{stockid,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.Cart" >
+    update REC_CART
+    <set >
+      <if test="codeno != null" >
+        CODENO = #{codeno,jdbcType=VARCHAR},
+      </if>
+      <if test="frontuserid != null" >
+        FRONTUSERID = #{frontuserid,jdbcType=DECIMAL},
+      </if>
+      <if test="operationip != null" >
+        OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statuscode != null" >
+        STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="stockid != null" >
+        STOCKID = #{stockid,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.Cart" >
+    update REC_CART
+    set CODENO = #{codeno,jdbcType=VARCHAR},
+      FRONTUSERID = #{frontuserid,jdbcType=DECIMAL},
+      OPERATIONIP = #{operationip,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      STATUSCODE = #{statuscode,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR},
+      STOCKID = #{stockid,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+
+  <!--检查用户加入购物车的商品是否已经存在-->
+  <select id="getCount" resultType="java.lang.Long">
+    SELECT a.STOCKID
+FROM REC_CART a join REC_STOCK b ON a.STOCKID=b.id
+WHERE a.FRONTUSERID=#{0} AND b.COMPANYID=#{1} AND b.storageId=#{2} AND b.goodId=#{3} AND b.priceHasTax=#{4}
+  </select>
+
+  <!--根据用户ID查询购物车中商品信息-->
+  <select id="queryByFrontUserId" resultType="Map" parameterType="java.lang.Long">
+    SELECT ROWNUM rn,t.* FROM(
+    SELECT a.id cartId,a.STOCKID,b.COMPANYID,b.STORAGEID,d.name storageName,b.GOODID,b.PRICEHASTAX,b.AFFIRMNUM,c.mark,c.producingArea,
+    (SELECT name FROM VIEW_DICTYPE WHERE ENG='goodKind' AND LEVELCODE=c.goodKindCode)goodKind,
+    (SELECT name FROM VIEW_DICTYPE WHERE ENG='mea' AND LEVELCODE=c.meaCode)mea
+    FROM REC_CART a LEFT JOIN REC_STOCK b ON a.STOCKID=b.id LEFT JOIN DIC_GOOD c ON b.goodId=c.id LEFT JOIN
+    DIC_STORAGE d ON b.storageId=d.id
+    WHERE a.FRONTUSERID=#{0} AND a.STATUSCODE='001' AND b.STATUSCODE='001' AND c.statusCode='001' AND d.STATUSCODE='001'
+    ORDER BY a.CREATETIME DESC)t
+  </select>
+
+  <!--根据用户ID查询购物车中商品的总数和总价-->
+  <!--<select id="getAmountByUserId" parameterType="java.lang.Long" resultType="Map">
+    SELECT SUM(rc.NUM)amountNum,SUM(RS.PRICEHASTAX*rc.NUM) amountMoney
+    FROM REC_CART rc join REC_STOCK rs ON RC.STOCKID=RS.id
+    WHERE RC.FRONTUSERID=#{0}
+    AND RC.STATUSCODE='001' AND RS.STATUSCODE='001'
+  </select>-->
+</mapper>

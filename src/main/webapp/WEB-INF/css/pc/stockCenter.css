@@ -1,0 +1,174 @@
+/* CSS Document */
+
+.auto-style1 {
+    width: 48px;
+}
+
+body {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*------------����-----------------*/
+.content {
+    margin: 0 auto;
+    width: 1200px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.grid_5 {
+    float: left;
+    width: 140px;
+    margin: 0px;
+}
+
+.header.base {
+    padding-top: 0;
+}
+
+.product-list.base {
+    width: auto;
+    margin-top: 0;
+}
+
+.order-sertype-con .base {
+    padding: 0 20px;
+}
+
+.grid_20 {
+    float: left;
+    width: 1000px;
+    margin-top: 10px;
+    margin-left: 50px;
+    padding-bottom: 20px;
+}
+
+.uibox {
+    float: left;
+    width: 99.8%;
+}
+
+.uibox-head {
+    height: 45px;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #1CAAEB;
+}
+.btn-color{
+    color:#FFF;
+    background-color: #1CAAEB;
+    border-color: #1CAAEB;
+}
+
+
+.uibox-head.sm {
+    height: 35px;
+}
+
+.titbase {
+    padding-left: 22px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    color: #1CAAEB;
+}
+
+.titbase.fontsm {
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.titbase.displine {
+    float: left;
+}
+
+.titbase .fb {
+    font-size: 12px;
+    color: #939292;
+    padding-left: 20px;
+}
+
+.toptext {
+    margin-top: 15px;
+}
+
+.type-search {
+    padding: 12px 0;
+    _height: 25px;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.searchnav {
+    float: left;
+    width: 720px;
+    margin: 0 30px;
+}
+
+.searchnav span, .searchnavli span {
+    float: left;
+    width: 60px;
+    margin-right: 5px;
+    line-height: 25px;
+    text-align: right;
+}
+
+.searchnav select {
+    background-images: none;
+}
+
+.searchnav input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.searchnav input::-moz-placeholder {
+    color: #999;
+}
+
+.searchnav p {
+    float: left;
+    margin: 0 30px 0 0;
+}
+
+.text-cen td, .text-cen th, .text-cen-none th, .text-cen-none td {
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.text-cen.nobord td {
+    border: solid #e0e0e0;
+    border-width: 1px;
+}
+
+.text-cen td.textle {
+    text-align: left;
+}
+
+.bordertb {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/*��ҳ*/
+
+.gys-feny-u a {
+    color: #000500;
+}
+
+.gys-feny-u a:hover {
+    color: #FF7519;
+}
+
+#data-table thead tr th,#data-table tbody tr td{
+    font-size: 14px;
+    color: rgb(116, 116, 116);
+}
+
+#data-table thead tr th{
+    border-bottom: 0px;
+    border-top: 0px;
+}

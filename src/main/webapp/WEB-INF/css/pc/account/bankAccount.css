@@ -1,0 +1,63 @@
+/* CSS Document */
+
+body{width:100%; margin:0px; padding:0px;}
+/*主体*/
+.content{width:1200px; height:auto;  margin:0 auto;  /*background:#FCC;*/}
+
+/*右侧展示*/
+.R-show{ width:1000px; height:auto; margin-top: 10px;float:left; margin-left:20px; margin-bottom:100px; /*background:#FCF;*/}
+	.R-BT{width:100%; height:40px; padding-left:30px; border-bottom:1px solid #1caaeb; }
+		.R-BT-1{ width:50%; height:40px; line-height:40px; text-align:left; float:left; font-size:18px; font-family:"微软雅黑"; color: #1caaeb; letter-spacing:1px;}
+		.R-BT-2{ width:50%; height:40px; line-height:40px; text-align:right; float:left; letter-spacing:1px; padding-right:4px; /*background:#0CC;*/}
+			.R-BT-2-1{ width:130px; height:34px; line-height:34px; text-align:center; float:right; background: #1caaeb;
+				-moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; overflow:hidden; cursor:pointer; 
+			}
+				.R-BT-2-1 a{font-size:14px; font-family:"微软雅黑"; color:#FFF; text-decoration:none;}
+				.R-BT-2-1 a:hover{font-size:14px; font-family:"微软雅黑"; color:#65BBEE; text-decoration:none;}
+			
+			
+	
+	/*�?*/
+	.ZONG{width:1000px; height:auto; float:left; overflow:hidden; /*background:#FFC;*/}/*浅黄*/
+		.yhzh{ width:1000px; height:40px; float:left;  background:#EEEEEE; }
+			.yhzh-1{width:210px; height:40px; line-height:40px; text-align:center; float:left; font-size:16px; font-family:"微软雅黑"; color:#666;   }
+			.yhzh-2{width:180px; height:40px; line-height:40px; text-align:center; float:left; font-size:16px; font-family:"微软雅黑"; color:#666;}	
+			.yhzh-3{width:250px; height:40px; line-height:40px; text-align:left; float:left; font-size:16px; font-family:"微软雅黑"; color:#666;  }
+			.yhzh-4{width:130px; height:40px; line-height:40px; text-align:center; float:left; font-size:16px; font-family:"微软雅黑"; color:#666;    }
+			.yhzh-5{width:180px; height:40px; line-height:40px; text-align:center; float:left; font-size:16px; font-family:"微软雅黑"; color:#666;    }
+		
+		.Zhu-z{width:1000px; height:auto; max-height:602px; min-height:62px; float:left; overflow:hidden; /*background:#F9C;*/}
+		.Zhu{width:1000px; height:60px; float:left; border-bottom:1px solid #E7E7E7;}
+			.Zhu-1{width:210px; height:60px; line-height:60px; text-align:center; float:left;   overflow:hidden;}
+			.Zhu-2{width:180px; height:60px; line-height:60px; text-align:center; float:left;  overflow:hidden;}
+			.Zhu-3{width:250px; height:60px; line-height:60px; text-align:left; float:left;   overflow:hidden;}
+			.Zhu-4{width:130px; height:60px; line-height:60px; text-align:center; float:left;  overflow:hidden;}
+			.Zhu-5{width:180px; height:60px; line-height:60px; text-align:center; float:left;   overflow:hidden;}
+				.Zhu-5-1{ border:0px; width:70px; height:20px; line-height:20px; float:left;  margin-top:20px; font-size:14px; font-family:"微软雅黑"; color:#FFF; background: #1caaeb;
+					-moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; overflow:hidden; cursor:pointer; margin-left:10px;
+				}
+				.Zhu-5-2{border:0px; width:70px; height:20px; line-height:1px;  float:left;  margin-left:20px; margin-top:20px; font-size:14px; font-family:"微软雅黑"; color: #1caaeb;
+					-moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; overflow:hidden; cursor:pointer; border:1px solid #1caaeb;
+				}
+				
+				.Zhu-sa1{font-size:14px; font-family:"微软雅黑"; color:#999;}
+				.Zhu-sa2{font-size:14px; font-family:"微软雅黑"; color: #1caaeb;}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	/*分页*/
+	.Fy{width:100%; height:140px; float:left; /*background:#FCF;*/ border-left:none; border-right:none; }
+		.L4{ width:510px; height:34px; margin:0 auto; margin-top:60px; list-style:none; padding:0px; /*background:#66C;*/}
+			.lsa4{font-size:14px; font-family:"微软雅黑";color:#999;}
+			.L4 li{ float:left; margin:0px; padding:0px; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; overflow:hidden; cursor:pointer;}
+			.L4-1{ width:54px; height:34px; line-height:33px; text-align:center; font-size:14px;  font-family:"微软雅黑";color:#999; border:1px solid #DADADA; /*background:#E9ECF1;*/}
+			.L4-2{width:34px; height:34px; line-height:33px; text-align:center; font-size:14px;  font-family:"微软雅黑";color:#999; border:1px solid #DADADA; /*background:#E9ECF1;*/}
+			.L4-3{width:70px; height:34px; line-height:32px; text-align:center; font-size:16px;  font-family:"微软雅黑";color:#999; border:1px solid #DADADA; /*background:#E9ECF1;*/ overflow:hidden;}
+	

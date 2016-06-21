@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2975972611">
+    <data-source source="LOCAL" name="Oracle 测试 - @192.168.0.37" uuid="bec0f9fc-8760-40c3-967e-9d42973d08f2">
+      <driver-ref>oracle</driver-ref>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@//192.168.0.37:1521/juhuawang</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://E:/ojdbc7.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Oracle 正式- @192.168.0.27" uuid="5ebf8dfa-966f-426d-a779-846efdfaa0be">
+      <driver-ref>oracle</driver-ref>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@//192.168.0.27:1521/juhuawang</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://E:/ojdbc7.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>

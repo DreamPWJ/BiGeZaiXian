@@ -1,0 +1,277 @@
+/* CSS Document */
+
+body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+/*主体*/
+.content {
+    width: 1200px;
+    min-width: 1200px;
+    height: auto;
+    padding: 0;
+    margin: 0 auto 50PX;
+    border: 0;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    overflow: hidden;
+    animation: loadinghtml 0.3s ease-out;
+}
+
+@keyframes loadinghtml {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform:translateX(0px);
+    }
+}
+/*关于我们*/
+.biaot {
+    width: auto;
+    height: 40px;
+    margin: 20px 30px;
+    border-bottom: 1px solid #E7EBEE; /* background:#F93;*/
+}
+
+.biaot-z {
+    width: 104px;
+    height: 24px;
+    font-size: 20px;
+    
+    color: #616161;
+    float: left;
+    text-align: center;
+    margin-left: 22px;
+    margin-top: 24px;
+    background: #FFF;
+}
+
+/*主体  左边*/
+.ztL {
+    width: 800px;
+    height: auto;
+    float: left; /*background:#FCC; */
+}
+
+.L-1 {
+    width: auto;
+    height: 400px;
+    line-height: 26px;
+    padding: 0 50px;
+    margin-top: 20px;
+    font-size: 14px;
+    
+    color: #4F4F4F;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.L-bt {
+    width: auto;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 60px;
+    padding-left: 10px;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #EB6100;
+    text-align: left;
+    letter-spacing: 2px;
+    border-left: 3px solid #EB6100;
+}
+
+/*主体  右边*/
+.ztR {
+    width: 398px;
+    height: 850px;
+    float: left;
+    margin-top: -20px;
+    border-left: 1px solid #E7EBEE; /*background:#0F9;*/
+}
+
+.R-1 {
+    width: 206px;
+    height: auto;
+    /*background:#FCF;*/
+    margin: 46px auto 0;
+}
+
+.R-1-1 {
+    width: 206px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 2px;
+    background: #6C8CBF;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.R-1-1 a {
+    font-size: 20px;
+    
+    color: #FFF;
+    text-decoration: none;
+}
+
+.R-1-1 a:hover {
+    font-size: 20px;
+    
+    color: #EB6100;
+    text-decoration: none;
+}
+
+.R-1-2 {
+    width: 206px;
+    height: auto;
+    padding: 0;
+    color: #616161;
+}
+
+.R-1-2 li {
+    width: 206px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    font-size: 16px;
+    
+    color: #616161;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #E7EBEE;
+    cursor: pointer;
+}
+
+.R-1-2 a {
+    text-decoration: none;
+}
+
+.R-1-2 a:hover {
+    text-decoration: none;
+}
+
+.R-2 {
+    width: 208px;
+    height: 190px;
+    background: #F0F5F8;
+    margin: 40px auto 0;
+    padding-top: 18px;
+}
+
+.R-2-1 {
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 16px;
+    text-align: left;
+    font-size: 14px;
+    
+    color: #6C8CBF;
+}
+
+.R-2-2 {
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 16px;
+    text-align: left;
+    font-size: 22px;
+    
+    color: #6C8CBF;
+}
+
+.R-2-3 {
+    width: auto;
+    height: 34px;
+    line-height: 40px;
+    padding-left: 16px;
+    text-align: left;
+    font-size: 14px;
+    
+    color: #6C8CBF;
+}
+
+.R-2-4 {
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 16px;
+    text-align: left;
+    font-size: 16px;
+    
+    color: #EB6100;
+}
+
+.R-3 {
+    width: 208px;
+    height: 190px;
+    padding-top: 20px;
+    background: #F0F5F8;
+    margin: 40px auto 0;
+}
+
+.R-3-wz {
+    width: 208px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    
+    color: #616161;
+}
+
+.fgx {
+    width: 1200px;
+    height: 1px;
+    float: left;
+}
+
+.biaot2 {
+    width: 1140px;
+    height: 40px;
+    margin: 0 30px;
+    float: left;
+    border-bottom: 1px solid #E7EBEE;
+}
+
+#bank-account{
+    font-size: 1.5rem;
+    color:#4F4F4F;
+    margin-top: 6px;
+    padding: 10px  10px 20px;
+}
+.account-wrap{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.account-show{
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #dddddd;
+}
+
+.account-show p{
+    margin-top: 10px;
+}
+
+.account-show img{
+    display: block;
+    margin: 0 auto;
+    width: 220px;
+    height: 50px;
+    padding-left: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.account-show >p>span,.prompt-info span{
+    color:#f55d12;
+    font-weight: bolder;
+}

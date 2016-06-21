@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.ITestDao">
+    <!--  <cache/>二级缓存 开启 有效范围本mapper xml文件-->
+    <!--  <cache/>-->
+    <resultMap id="BaseResultMap" type="com.juhuawang.model.TestUser">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="version" property="version" jdbcType="INTEGER"/>
+        <result column="enable" property="enable" jdbcType="BIT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="registerTime" property="registertime" jdbcType="TIMESTAMP"/>
+        <result column="roleId" property="roleid" jdbcType="INTEGER"/>
+        <result column="organizationId" property="organizationid" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, version, enable, name, email, username, password, registerTime, roleId, organizationId
+  </sql>
+    <select id="selectByPrimaryKey" resultType="TestUser" parameterType="int">
+        select
+        <include refid="Base_Column_List"/>
+        from account
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from account
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.juhuawang.model.TestUser">
+    insert into account (id, version, enable, 
+      name, email, username, 
+      password, registerTime, roleId, 
+      organizationId)
+    values (#{id,jdbcType=INTEGER}, #{version,jdbcType=INTEGER}, #{enable,jdbcType=BIT}, 
+      #{name,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{registertime,jdbcType=TIMESTAMP}, #{roleid,jdbcType=INTEGER}, 
+      #{organizationid,jdbcType=INTEGER})
+  </insert>
+    <insert id="insertSelective" parameterType="com.juhuawang.model.TestUser">
+        insert into account
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="version != null">
+                version,
+            </if>
+            <if test="enable != null">
+                enable,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="email != null">
+                email,
+            </if>
+            <if test="username != null">
+                username,
+            </if>
+            <if test="password != null">
+                password,
+            </if>
+            <if test="registertime != null">
+                registerTime,
+            </if>
+            <if test="roleid != null">
+                roleId,
+            </if>
+            <if test="organizationid != null">
+                organizationId,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="version != null">
+                #{version,jdbcType=INTEGER},
+            </if>
+            <if test="enable != null">
+                #{enable,jdbcType=BIT},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="username != null">
+                #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="registertime != null">
+                #{registertime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="roleid != null">
+                #{roleid,jdbcType=INTEGER},
+            </if>
+            <if test="organizationid != null">
+                #{organizationid,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.TestUser">
+        update account
+        <set>
+            <if test="version != null">
+                version = #{version,jdbcType=INTEGER},
+            </if>
+            <if test="enable != null">
+                enable = #{enable,jdbcType=BIT},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                email = #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="username != null">
+                username = #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="registertime != null">
+                registerTime = #{registertime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="roleid != null">
+                roleId = #{roleid,jdbcType=INTEGER},
+            </if>
+            <if test="organizationid != null">
+                organizationId = #{organizationid,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.TestUser">
+    update account
+    set version = #{version,jdbcType=INTEGER},
+      enable = #{enable,jdbcType=BIT},
+      name = #{name,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      registerTime = #{registertime,jdbcType=TIMESTAMP},
+      roleId = #{roleid,jdbcType=INTEGER},
+      organizationId = #{organizationid,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+    <!-- 查询表全部信息  resultMap="实体类ID" resultMap="BaseResultMap"-->
+    <select id="getAll" resultType="map">
+    select * from account </select>
+    <select id="getUserById" parameterType="int" resultType="TestUser">
+    select * from account where id=#{id}
+  </select>
+
+
+    <select id="cascadeOperation" statementType="CALLABLE">
+        {call cascadeoperation}
+    </select>
+
+    <select id="execProcedure" statementType="CALLABLE"
+            parameterType="java.util.Map">
+        <!--        <![CDATA[-->
+        {call user_selectList(
+        #{enable,mode=IN,jdbcType=INTEGER},
+        #{myrows,mode=OUT,jdbcType=INTEGER},
+        #{p_CURSOR,mode=OUT,jdbcType=CURSOR,javaType=java.sql.ResultSet,resultMap=resultMap1}
+        )}
+        <!--    	]]>-->
+    </select>
+
+    <resultMap id="resultMap1" type="map">
+    </resultMap>
+
+    <!-- 分页存储过程调用-->
+    <select id="getPageUserbyProcedure" statementType="CALLABLE" parameterType="map">
+             {call sp_com_page(
+             #{tableName,mode=IN,jdbcType=VARCHAR},#{fields,mode=IN,jdbcType=VARCHAR},#{wherecase,mode=IN,jdbcType=VARCHAR},#{pageSize,mode=IN,jdbcType=INTEGER},#{pageNow,mode=IN,jdbcType=INTEGER},#{orderField,mode=IN,jdbcType=VARCHAR},#{orderFlag,mode=IN,jdbcType=INTEGER},
+             #{myrows,mode=OUT,jdbcType=INTEGER},#{myPageCount,mode=OUT,jdbcType=INTEGER},#{p_cursor,jdbcType=CURSOR,mode=OUT,javaType=java.sql.ResultSet, resultMap=resultMap1}
+             )}
+
+       </select>
+</mapper>

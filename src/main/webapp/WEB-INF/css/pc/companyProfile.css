@@ -1,0 +1,104 @@
+/* CSS Document */
+
+/*--main--*/
+div.Gsjj-main {
+    width: 1200px; /*height:900px;*/
+    margin: 0px auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left;
+    border: 1px solid #bec3c6;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+div.gsjj-bt {
+    width: 1200px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-left: 10px;
+    float: left;
+    color: #000500; /*border:1px solid #ff0000;*/
+}
+
+div.gsjj-dx {
+    width: 1100px;
+    border-bottom: 2px solid #EB6100;
+    clear: left;
+}
+
+div.gsjj-s1 {
+    width: 1000px;
+    height: 230px;
+    margin: 0px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px; /*background:#bec3c6;*/
+}
+
+p.gsjj-s1-l {
+    width: 500px;
+    height: 230px;
+    line-height: 30px;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    font-size: 14px;
+    color: #000500; /*background:#808080;*/
+}
+
+div.gsjj-s1-r {
+    width: 400px;
+    height: 184px;
+    float: right;
+    margin-top: 8px; /*background:#EB6100;*/
+}
+
+div.gsxx-x1 {
+    width: 1100px;
+    height: 300px;
+    margin: 0px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0px;
+    margin-top: 20px;
+    border-top: 1px solid #bec3c6; /*background:#bec3c6;*/
+}
+
+div.gsxx-x1-0 {
+    width: 880px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    color: #ff7519;
+    text-align: left;
+}
+
+div.gsxx-x1-l {
+    width: 460px;
+    height: 192px;
+    line-height: 30px;
+    margin: 0px 50px;
+    padding: 0px;
+    float: left; /* background:#808080;*/
+}
+
+div.gsxx-x1-l-xx {
+    width: 460px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #000500;
+    text-align: left; /*background:#ff0000;*/
+}
+
+div.gsxx-x1-r {
+    width: 334px;
+    height: 184px;
+    float: right;
+    margin-top: 8px; /*background:#EB6100; */
+}

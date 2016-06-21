@@ -1,0 +1,29 @@
+.top_titile {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bolder;
+    border: 1px solid #c2ccd1;
+}
+
+.paytype {
+    padding: 10px 100px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.bankimg {
+    margin: 20px 100px;
+}
+
+.bankimg .rizhao img {
+    width: 136px;
+    height: 46px;
+}
+
+.paybutton{
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+.paydetail{
+    margin: 30px 0;
+}

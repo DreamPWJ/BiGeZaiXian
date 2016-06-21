@@ -1,0 +1,112 @@
+.account-leftmenu {
+    width: 160px;
+    float: left;
+}
+
+.account-leftmenu a {
+    font-size: 16px;
+    color: #585858;
+    text-decoration: none;
+}
+
+.account-leftmenu a:hover {
+    color: #1CAAEB;
+}
+
+.account-leftmenu ul li {
+    text-align: center;
+    line-height: 48px;
+}
+
+.account-leftmenu > ul:nth-child(1) > li:before {
+    position: relative;
+    top: 3px;
+    left: -10px;
+    content: url("../../../images/pc/account/001.png");
+}
+
+.account-leftmenu > ul:nth-child(2) > li:before {
+    position: relative;
+    top: 3px;
+    left: -10px;
+    content: url("../../../images/pc/account/002.png");
+}
+
+.account-leftmenu > ul:nth-child(3) > li:before {
+    position: relative;
+    top: 3px;
+    left: -10px;
+    content: url("../../../images/pc/account/003.png");
+}
+
+.account-leftmenu > ul:nth-child(4) > li:before {
+    position: relative;
+    top: 3px;
+    left: -10px;
+    content: url("../../../images/pc/account/004.png");
+}
+
+.account-leftmenu > ul:nth-child(5) > li:before {
+    position: relative;
+    top: 3px;
+    left: -10px;
+    content: url("../../../images/pc/account/005.png");
+}
+
+.account-leftmenu > ul:nth-child(6) > li:before {
+    position: relative;
+    top: 3px;
+    left: -10px;
+    content: url("../../../images/pc/account/006.png");
+}
+
+.account-leftmenu > ul:nth-child(7) > li:before {
+    position: relative;
+    top: 3px;
+    left: -10px;
+    content: url("../../../images/pc/account/007.png");
+}
+
+.account-leftmenu > ul:nth-child(8) > li:before {
+    position: relative;
+    top: 3px;
+    left: -10px;
+    content: url("../../../images/pc/account/008.png");
+}
+
+.account-leftmenu > ul:nth-child(9) > li:before {
+    position: relative;
+    top: 3px;
+    left: -10px;
+    content: url("../../../images/pc/account/009.png");
+}
+
+.account-leftmenu > ul:nth-child(10) > li:before {
+    position: relative;
+    top: 3px;
+    left: -10px;
+    content: url("../../../images/pc/account/010.png");
+}
+
+.menu-items {
+    display: none;
+}
+
+.menu-items ul li {
+    padding-left: 35px;
+    line-height: 35px;
+}
+
+.menu-items a {
+    font-size: 13px;
+    color: #585858;
+}
+
+.menu-click-color {
+    border-bottom: 2px solid #1CAAEB;
+}
+
+div.bottom {
+    position: relative!important;
+    top: 100%;
+}

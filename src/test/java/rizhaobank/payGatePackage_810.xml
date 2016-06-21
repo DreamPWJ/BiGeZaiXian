@@ -1,0 +1,19 @@
+<?xml version=”1.0” encoding=”UTF-8”?>
+<BankData xmlns=”http://www.bylife.com/schema/payGatePackage_810”>
+
+  <opReq><!--交易请求数据-->
+    <CHANNALNUM>…</CHANNALNUM>
+    <TRANTYPE>…</TRANTYPE>
+    <MERCHANTID>…</MERCHANTID>
+    <MERCHANTNAME>…</MERCHANTNAME>
+    <PAYMENT>…</PAYMENT>
+    <ORDERID>…</ORDERID>
+    <TRANDATE>…</TRANDATE>
+    <REACCNO>…</REACCNO>
+    <PAYACCNO>…</PAYACCNO>
+    <CURCODE>…</CURCODE>
+    <MERCHANTURL>…</MERCHANTURL>
+    <CURCODE>…</CURCODE>
+    <REMARK>…</REMARK>
+  </opReq>
+</BankData>

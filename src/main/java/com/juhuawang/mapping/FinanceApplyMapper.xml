@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.FinanceApplyMapper" >
+  <resultMap id="BaseResultMap" type="com.juhuawang.model.FinanceApply" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="TELPHONE" property="telphone" jdbcType="VARCHAR" />
+    <result column="COMPANYNAME" property="companyname" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, USERNAME, TELPHONE, COMPANYNAME
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.math.BigDecimal" >
+    select 
+    <include refid="Base_Column_List" />
+    from FINANCEAPPLY
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.math.BigDecimal" >
+    delete from FINANCEAPPLY
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.juhuawang.model.FinanceApply" >
+    insert into FINANCEAPPLY (ID, USERNAME, TELPHONE, 
+      COMPANYNAME)
+    values (#{id,jdbcType=DECIMAL}, #{username,jdbcType=VARCHAR}, #{telphone,jdbcType=VARCHAR}, 
+      #{companyname,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.juhuawang.model.FinanceApply" >
+    insert into FINANCEAPPLY
+      <trim prefix="(" suffix=")" suffixOverrides="," >
+        ID,
+      <if test="username != null" >
+        USERNAME,
+      </if>
+      <if test="telphone != null" >
+        TELPHONE,
+      </if>
+      <if test="companyname != null" >
+        COMPANYNAME,
+      </if>
+
+    </trim>
+      <trim prefix="values (" suffix=")" suffixOverrides="," >
+        SEQ_REC_FINDGOOD.NEXTVAL,
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="telphone != null" >
+        #{telphone,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null" >
+        #{companyname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.juhuawang.model.FinanceApply" >
+    update FINANCEAPPLY
+    <set >
+      <if test="username != null" >
+        USERNAME = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="telphone != null" >
+        TELPHONE = #{telphone,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null" >
+        COMPANYNAME = #{companyname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.juhuawang.model.FinanceApply" >
+    update FINANCEAPPLY
+    set USERNAME = #{username,jdbcType=VARCHAR},
+      TELPHONE = #{telphone,jdbcType=VARCHAR},
+      COMPANYNAME = #{companyname,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

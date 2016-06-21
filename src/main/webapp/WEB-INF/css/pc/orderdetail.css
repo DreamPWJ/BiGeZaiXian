@@ -1,0 +1,130 @@
+/* CSS Document */
+
+.content {
+    margin: 0 auto 150px;
+    width: 1200px;
+    overflow: hidden;
+}
+
+.ordershow {
+    position: relative;
+    margin-top: 15px;
+    background-color: #ffffff;
+    border: 1px solid #1CAAEB;
+    padding: 15px 20px 5px;
+}
+
+.ordershow .orshow-head {
+    padding-bottom: 5px;
+    height: 25px;
+
+}
+
+.ordershow .tylist li {
+    float: left;
+    margin: 0 30px 15px 0;
+}
+
+.ordershow .tylist li a {
+    padding-left: 20px;
+    background-position: -42px -930px;
+    color: #f97f3d;
+}
+
+.ordershow .tylist li a:hover {
+    color: #1CAAEB;
+}
+
+.orshow-head .ornmb {
+    float: left;
+    font-size: 14px;
+    padding-top: 3px;
+    font-weight: bold;
+    color: #000;
+}
+
+.orshow-head .ornmb b {
+    color: #1CAAEB;
+}
+
+.orshow-head .ornmb .tyfont {
+    padding-left: 30px;
+}
+
+.btnyfl {
+    float: right;
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: #149bdf;
+    font-size: 16px;
+    color: #ffffff;
+    margin-left: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.btnyfl:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #f55d12;
+}
+
+.orshow-con {
+    padding: 15px 0;
+}
+
+.order-sertype {
+    margin-top: 20px;
+}
+
+.order-sertype-head {
+    background-color: #fbfbfb;
+    border: 1px solid #e0e0e0;
+    height: 36px;
+    position: relative;
+}
+
+.serhead-type {
+    float: left;
+    padding: 7px 0 5px 22px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.order-sertype-con {
+    padding: 15px 0;
+    background-color: #fff;
+    border: solid #e0e0e0;
+    border-width: 0 1px 1px 1px;
+}
+
+.order-sertype-con .base {
+    padding: 0 20px;
+}
+
+.zl-base {
+    padding: 0 22px;
+    overflow: hidden;
+}
+
+.zl-base td {
+    padding: 5px 0;
+}
+
+.bordertb {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.thtextle th {
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: bold;
+}
+#data-table th,#data-table td{
+    font-size: 13px;
+    text-align: center;
+}

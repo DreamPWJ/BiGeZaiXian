@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML5 图片上传预览</title>
+    <style type="text/css">.file {
+        position: relative;
+        display: inline-block;
+        background: #D0EEFF;
+        border: 1px solid #99D3F5;
+        border-radius: 4px;
+        padding: 4px 12px;
+        overflow: hidden;
+        color: #1E88C7;
+        text-decoration: none;
+        text-indent: 0;
+        line-height: 20px;
+    }
+    .file input {
+        position: absolute;
+        font-size: 100px;
+        right: 0;
+        top: 0;
+        opacity: 0;
+    }
+    .file:hover {
+        background: #AADFFD;
+        border-color: #78C3F3;
+        color: #004974;
+        text-decoration: none;
+    }</style>
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#img').change(function(){;
+                var file = this.files[0]; //选择上传的文件
+                var r = new FileReader();
+                r.readAsDataURL(file); //Base64
+                $(r).load(function(){
+                    $('div').html('<img src="'+ this.result +'" width="200px" height="200px" alt="商品图片" />');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<h3>HTML5 图片上传预览</h3>
+<div></div>
+
+
+<a href="javascript:void (0);" class="file">上传图片
+    <input id="img" type="file" accept="image/*" />
+</a>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* CSS Document */
+
+/*xmain*/
+  .xmain {
+  	  width:1200px;
+      margin:0px auto;
+      border: solid 1px #D6D7D6; /*==py1*/
+	  margin-bottom:50px;
+  }
+  /*xmain_left*/
+    .xmain_left {
+      width: 665px;
+      padding-right: 30px;
+      border-right: solid 1px #D6D7D6;
+      padding-left: 0px!important; /*==py1*/
+    }
+      /*xmain_left1*/
+        .xmain_left1 {
+          background: url(../images/zxzx_industry/media_pic1.png) no-repeat 24px 24px;
+          height:250px;
+        }
+        /*xmain_left1_title*/
+          .xmain_left1_title {
+            font-size: 13px;
+            font-weight: bold;
+            padding-left: 460px;
+            padding-top: 60px;
+            padding-bottom: 20px;
+          }
+        /*xmain_left1_cnt*/
+          .xmain_left1_cnt {
+            font-size: 12px;
+            padding-left: 460px;
+          }
+      /*xmain_left2*/
+        /*xmain_left2_img*/
+          .xmain_left21_img {
+            background: url(../images/zxzx_industry/media_pic2.png) no-repeat 24px 20px;
+            height:170px;
+          }
+          .xmain_left22_img {
+            background: url(../images/zxzx_industry/media_pic3.png) no-repeat 24px 20px;
+            height:170px;
+          }
+          .xmain_left23_img {
+            background: url(../images/zxzx_industry/media_pic4.png) no-repeat 24px 20px;
+            height:170px;
+          }
+          .xmain_left24_img {
+            background: url(../images/zxzx_industry/media_pic5.png) no-repeat 24px 20px;
+            height:170px;
+          }
+          .xmain_left25_img {
+            background: url(../images/zxzx_industry/media_pic6.png) no-repeat 24px 20px;
+            height:170px;
+          }
+        /*xmain_left2_title*/
+          .xmain_left2_title {
+            font-size: 17px;
+            font-weight: bold;
+            padding-left: 240px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            float: left;
+          }
+        /*xmain_left2_date*/
+          .xmain_left2_date {
+            font-size: 17px;
+            color: grey;
+            padding-left: 140px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            float: right;
+          }
+        /*xmain_left2_cnt*/
+          .xmain_left2_cnt {
+            clear: both;
+            font-size: 12px;
+            padding-left: 240px;
+          }
+      /*xmain_left_line*/
+          .xmain_left_line {
+            border-bottom: solid 1px #D6D7D6;
+            margin: 0px 24px;
+          }
+  /*xmain_right*/
+    .xmain_right {
+      padding: 0px 15px;
+      width:350px;
+      background-color: #FFFBFF;
+    }
+    /*xmain_right_ext*/
+      .xmain_right_ext {
+        /*padding-left: 24px;*/
+        padding-top: 24px;
+      }
+      /*xmain_right_ext_head*/
+        .xmain_right_ext_head {
+          border-bottom: solid 1px #D6D7D6;
+          margin-bottom: 20px;
+        }
+      /*xmain_right_ext_title*/
+        .xmain_right_ext_title {
+          font-size: 16px;
+          border-bottom: solid 3px grey;
+          width: 80px;
+        }
+
+      /*xmain_right_ext_cnt*/
+        .xmain_right_ext .xmain_right_ext_cnt{
+          padding-top: 10px;
+          padding-left: 90px;
+          border: solid 1px #D6D7D6;
+          background-color: white;
+          margin-bottom: 20px;
+        }
+        .xmain_right_ext_cnt_title {
+          font-size: 13px;
+          padding-bottom: 2px;
+        }
+        .xmain_right_ext_cnt_detail {
+          font-size: 12px;
+          text-overflow: ellipsis;
+          white-space:normal;
+          /*overflow:hidden;*/
+        }
+        .xmain_right_ext_cnt_pic1 {
+          background: url(../images/zxzx_industry/media_man1.png) no-repeat 2px 2px;
+          height: 73px;
+        }
+	.xmain_right_ext_cnt_pic2 {
+          background: url(../images/zxzx_industry/media_man2.png) no-repeat 2px 2px;
+          height: 73px;
+        }
+	.xmain_right_ext_cnt_pic3 {
+          background: url(../images/zxzx_industry/media_man3.png) no-repeat 2px 2px;
+          height: 73px;
+        }
+
+    /*xmain_right_hot*/
+      .xmain_right_hot {
+        padding-top: 24px;
+      }
+      /*xmain_right_hot_head*/
+        .xmain_right_hot_head {
+          border-bottom: solid 1px #D6D7D6;
+          margin-bottom: 20px;
+        }
+      /*xmain_right_hot_title*/
+        .xmain_right_hot_title {
+          font-size: 16px;
+          border-bottom: solid 3px #EF6100;
+          width: 80px;
+        }
+      /*xmain_right_hot_tab_head*/
+        .xmain_right_hot_tab_head li a{
+          padding: 5px 32px;
+        }
+      /*xmain_right_hot_tab_cnt*/
+        .xmain_right_hot_tab_cnt {
+          padding: 24px 24px;
+          font-size: 13px;
+        }
+        .xmain_right_hot_tab_cnt ol{
+          padding-left: 10px;
+        }
+        .xmain_right_hot_tab_cnt ol li{
+          line-height: 30px;
+        }

@@ -1,0 +1,76 @@
+/* CSS Document */
+
+body{min-width:1200px; margin:0px; padding:0px;}
+/*主体*/
+.content{ width:1200px; min-width:1200px; height:auto; margin:0 auto; padding:0px; margin-bottom:50PX; border:1px solid #E7EBEE;
+			-moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; overflow:hidden;
+		}
+		
+/*法律声明*/
+.biaot{ width:auto; height:40px; margin:20px 30px; border-bottom:1px solid #E7EBEE;}
+	.biaot-z{ width:104px; height:24px; font-size:20px; font-family:"微软雅黑"; color:#616161; float:left; text-align:center; margin-left:22px; margin-top:24px;  background:#FFF;}
+
+/*主体  左边*/
+.ztL{ width:800px; height:auto; float:left; /*background:#FCC;*/ }
+	.L-1{ width:auto; height:160px; line-height:26px; padding:0px 50px; margin-top:20px; font-size:14px; font-family:"微软雅黑"; color:#4F4F4F;text-align:left;letter-spacing:2px; }
+	.L-bt{width:auto; height:30px; line-height:30px; padding:0px 50px; margin-top:20px; font-size:16px; font-family:"微软雅黑"; color:#EB6100;text-align:left;letter-spacing:2px; }
+	.bqsm{width:auto; height:202px; line-height:26px; padding:0px 50px; margin-top:20px; font-size:14px; color:#4F4F4F; letter-spacing:2px; }
+	.mztk{width:auto; height:470px; line-height:26px; margin:0 50px; margin-top:20px; font-size:14px; color:#4F4F4F; letter-spacing:2px; }
+	.wzlj{width:auto; height:130px; line-height:26px; margin:0 50px; margin-top:20px; font-size:14px; color:#4F4F4F; letter-spacing:2px;  }
+	.bdmz{width:auto; height:78px; line-height:26px; margin:0 50px; margin-top:20px; font-size:14px; color:#4F4F4F; letter-spacing:2px;  }
+	.flgx{width:auto; height:106px; line-height:26px; margin:0 50px; margin-top:20px; margin-bottom:50px; font-size:14px; color:#4F4F4F; letter-spacing:2px;}
+
+
+/*主体  右边*/
+.ztR{width:398px; height:1545px; float:left; margin-top:-20px; border-left:1px solid #E7EBEE; /*background:#0F9;*/ }
+	.R-1{ width:206px; height:auto; margin:0 auto; margin-top:46px; /*background:#FCF;*/}
+		.R-1-1{ width:206px; height:50px; line-height:50px; text-align:center; letter-spacing:2px; background:#6C8CBF;
+				-moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; overflow:hidden;
+			}
+			.R-1-1 a{ font-size:20px; font-family:"微软雅黑"; color:#FFF; text-decoration:none;}
+			.R-1-1 a:hover{ font-size:20px; font-family:"微软雅黑"; color:#EB6100; text-decoration:none;}
+
+		.R-1-2{width:206px; height:auto; padding:0px; color:#616161; }
+		.R-1-2 li{width:206px; height:46px; line-height:46px; text-align:center; font-size:16px; font-family:"微软雅黑"; color:#616161;letter-spacing:2px;
+					border-bottom:1px solid #E7EBEE; cursor:pointer;
+				}
+				.R-1-2 a{text-decoration:none;}
+				.R-1-2 a:hover{ text-decoration:none;}
+
+
+	.R-2{ width:208px; height:190px; background:#F0F5F8; margin:0 auto; margin-top:40px; padding-top:18px;}
+		.R-2-1{width:auto; height:30px; line-height:30px; padding-left:16px; text-align:left; font-size:14px; font-family:"微软雅黑"; color:#6C8CBF;}
+		.R-2-2{width:auto; height:30px; line-height:30px; padding-left:16px; text-align:left; font-size:22px; font-family:"微软雅黑"; color:#6C8CBF;}
+		.R-2-3{width:auto; height:34px; line-height:40px; padding-left:16px; text-align:left; font-size:14px; font-family:"微软雅黑"; color:#6C8CBF;}
+		.R-2-4{width:auto; height:30px; line-height:30px; padding-left:16px; text-align:left; font-size:16px; font-family:"微软雅黑"; color:#EB6100;}
+		
+	.R-3{ width:208px; height:190px; padding-top:20px; background:#F0F5F8; margin:0 auto; margin-top:40px;}
+		.R-3-ewm{ width:112px; height:112px; background:url(../../../images/pc/legalNotices/wx.jpg) no-repeat; margin-left:48px; }
+		.R-3-wz{width:208px; height:50px; line-height:50px; text-align:center; font-size:16px; font-family:"微软雅黑"; color:#616161;}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

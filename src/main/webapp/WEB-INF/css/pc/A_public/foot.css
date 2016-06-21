@@ -1,0 +1,106 @@
+/* 聚化网foot公共 CSS Document */
+div.bottom {
+    min-width: 1220px;
+    margin-top: 30px;
+    padding: 0;
+    clear: both;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #202125;
+
+}
+
+.xfoot {
+    margin: 10px auto;
+    width: 1200px;
+    padding-bottom: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.xfoot1 {
+
+    height: 60px;
+    padding-left: 70px;
+    display: inline-block;
+}
+
+.xfoot2 {
+    height: 60px;
+    padding-left: 70px;
+    display: inline-block;
+}
+
+.xfoot3 {
+    height: 180px;
+    padding-left: 70px;
+    display: inline-block;
+}
+
+.xfoot1_title {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    margin-left: -25px;
+
+}
+
+.xfoot1_cnt {
+    font-size: 13px;
+}
+
+.xfoot1_cnt a {
+    font-size: 13px;
+    color: grey;
+}
+
+.xfoot1_cnt a:hover {
+    font-size: 12px;
+    color: orange;
+    cursor: pointer;
+}
+
+.xfloor1 {
+    text-align: center;
+    font-size: small;
+    margin-bottom: 5px;
+}
+
+.xfloor1 a {
+    color: #999;
+
+}
+
+.xfloor1 a:not(:last-of-type):after{
+    padding:0 20px;
+    content: '|';
+}
+
+.xfloor1 a:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.xfloor2 {
+    text-align: center;
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+.bott31 img {
+    width: 130px;
+    height: 50px;
+}
+
+.xfloor{
+    color: #999;
+}
+
+.xfoot1_title .fa{
+    vertical-align: middle;
+   font-size: 2.6rem;
+   margin-right: 15px;
+}

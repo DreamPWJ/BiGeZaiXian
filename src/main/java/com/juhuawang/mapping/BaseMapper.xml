@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.juhuawang.dao.interfaces.BaseMapper">
+    <!--    默认情况下，如果全局开启了缓存，insert/update/delete成功后，会自动刷新相关的缓存项-->
+<!--    <cache></cache>-->
+    <resultMap id="pageResultMap" type="map">
+    </resultMap>
+    <!-- 公用分页存储过程调用 缓存不支持带输出参数的存储过程 所以关闭useCache="false"缓存-->
+    <select id="getPaging" statementType="CALLABLE" parameterType="map" useCache="false">
+        {call sp_com_page(
+        #{tableName,mode=IN,jdbcType=VARCHAR},#{fields,mode=IN,jdbcType=VARCHAR},#{wherecase,mode=IN,jdbcType=VARCHAR},#{pageSize,mode=IN,jdbcType=INTEGER},#{pageNow,mode=IN,jdbcType=INTEGER},#{orderField,mode=IN,jdbcType=VARCHAR},#{orderFlag,mode=IN,jdbcType=INTEGER},
+        #{myrows,mode=OUT,jdbcType=INTEGER},#{myPageCount,mode=OUT,jdbcType=INTEGER},#{p_cursor,jdbcType=CURSOR,mode=OUT,javaType=java.sql.ResultSet, resultMap=pageResultMap}
+        )}
+
+    </select>
+
+    <!-- 根据当前用户获取公司的Id -->
+    <select id="getCompayIdByUser" parameterType="long" resultType="long">
+      SELECT id from REC_COMPANY  WHERE  id=(select COMPANYID  from REC_FRONTUSER  WHERE id=#{userId})
+    </select>
+
+    <!-- 获取所有库存类型的公共方法 -->
+    <select id="getStockTypes" resultType="map">
+     select LEVELCODE,NAME FROM VIEW_DICTYPE WHERE ENG='stock'
+    </select>
+
+    <!-- 商品中 品种的信息查询-->
+    <select id="getGoodKindCode" resultType="map">
+      /*  select d.id,d.name,d.shortName,d.levelCode,d.parentid from dic_DicType t INNER  JOIN dic_dic d   on t.id=d.TYPEID where eng='goodKind'*/
+   with goodKind(id,name,shortName,levelCode,parentid,leve) as(
+   select id,name,shortName,levelCode,parentid,1 as leve from view_dictype  where eng='goodKind' and  parentid is null
+   union all  select a.id,a.name,a.shortName,a.levelCode,a.parentid ,(g.leve+1) as leve  from goodKind  g ,view_dictype  a  where a.eng='goodKind' and  g.id=a.parentid
+   )
+   select * from goodKind order by levelcode
+    </select>
+
+    <!-- 商品中 计量单位的信息查询-->
+    <select id="getMeaCode" resultType="map">
+        select d.id,d.name,d.shortName,d.levelCode from dic_DicType t INNER  JOIN dic_dic d   on t.id=d.TYPEID where eng='mea' order by d.LEVELCODE desc
+    </select>
+
+    <!-- 商品中 用途级别的信息查询-->
+    <select id="getUseCode" resultType="map">
+        select d.id,d.name,d.shortName,d.levelCode from dic_DicType t INNER  JOIN dic_dic d   on t.id=d.TYPEID where eng='use'
+    </select>
+
+    <!-- 商品中 加工级别的信息查询-->
+    <select id="getMacCode" resultType="map">
+        select d.id,d.name,d.shortName,d.levelCode from dic_DicType t INNER  JOIN dic_dic d   on t.id=d.TYPEID where eng='mac'
+    </select>
+
+    <!-- 商品中 商品类型的信息查询-->
+    <select id="getGoodTypeCode" resultType="map">
+        select d.id,d.name,d.shortName,d.levelCode from dic_DicType t INNER  JOIN dic_dic d   on t.id=d.TYPEID where eng='goodType'
+    </select>
+
+    <!-- 获取字典表的包装类型 -->
+    <select id="getPackTypeCode" resultType="map">
+        select d.id,d.name,d.shortName,d.levelCode from dic_DicType t INNER  JOIN dic_dic d   on t.id=d.TYPEID where eng='packType'
+    </select>
+
+    <!-- 获取字典表包装说明类型 -->
+    <select id="getPackContent" resultType="map">
+        select d.id,d.name,d.shortName,d.levelCode from dic_DicType t INNER  JOIN dic_dic d   on t.id=d.TYPEID where eng='packageMemo'
+    </select>
+
+    <!-- 获取字典表包装单位类型 -->
+    <select id="getPackageCode" resultType="map">
+        select d.id,d.name,d.shortName,d.levelCode from dic_DicType t INNER  JOIN dic_dic d   on t.id=d.TYPEID where eng='package'
+    </select>
+
+    <!-- 获取仓库地址下拉列表展示  -->
+    <select id="getStoragesForSelect" resultType="map">
+        select id,NAME from DIC_STORAGE
+    </select>
+</mapper>

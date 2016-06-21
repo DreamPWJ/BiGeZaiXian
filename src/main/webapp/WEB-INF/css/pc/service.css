@@ -1,0 +1,27 @@
+/* CSS Document */
+
+.sqjrb {
+    width: 174px;
+    height: 51px;
+    line-height: 51px;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 380px;
+    padding: 0px;
+    background: #3384FF;
+    margin-bottom: 100px;
+}
+
+.sqjrb a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sqjrb a:hover {
+    color: #fff100;
+    cursor: pointer;
+    font-weight: bold;
+}
+div.bottom {
+    top: 100%;
+}

@@ -1,0 +1,551 @@
+/* 登录页面CSS Document */
+
+body {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/*--top--*/
+.top1 {
+    width: 100%;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.top2 {
+    width: 1200px;
+    height: 30px;
+    padding: 5px 0;
+    margin: 0 auto;
+}
+
+.top3 {
+    width: 550px;
+    height: 26px;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.top4 {
+    width: 480px;
+    height: 26px;
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+
+.top3-1 {
+    width: 220px;
+    height: 26px;
+    line-height: 26px;
+    text-align: left;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.top3-2 {
+    width: 310px;
+    height: 26px;
+    line-height: 26px;
+    text-align: left;
+    float: left;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.top3-2 a {
+    font-size: 12px;
+}
+
+.top3-2 a:hover {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.top4-1 {
+    width: 50px;
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+    float: right;
+    padding: 0;
+    margin-right: 15px;
+    color: #333333;
+}
+
+.top4-1 a {
+    font-size: 12px;
+    color: #333333;
+}
+
+.top4-1 a:hover {
+    text-decoration: none;
+    color: #1caaeb;
+}
+
+.top4-2 {
+    width: 50px;
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+    float: right;
+    padding: 0;
+    margin-right: 15px;
+    color: #333333;
+}
+
+.top4-2 a {
+    font-size: 12px;
+    color: #333333;
+}
+
+.top4-2 a:hover {
+    text-decoration: none;
+    color: #1caaeb;
+}
+
+.top4-3 {
+    width: 120px;
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+    float: right;
+    padding: 0;
+    margin: 0;
+    color: #333333;
+}
+
+div.top {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.top-bgcolor {
+    width: 100%;
+    height: 80px;
+}
+
+.logo_area {
+    margin: 0 auto;
+    width: 1200px;
+    height: 48px;
+    padding: 20px 0; /* overflow:hidden; */
+}
+
+.logo_area {
+    margin: 0 auto;
+    width: 1200px;
+    height: 48px;
+    padding: 20px 0; /* overflow:hidden; */
+}
+
+.header-logo {
+    float: left;
+    position: relative;
+    width: 270px;
+}
+
+.header-logo a {
+    display: block;
+    width: 270px;
+    height: 55px;
+    overflow: hidden;
+    background: url("../../images/pc/A_public/bigelogo.png") no-repeat;
+    background-size: 200px 55px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.content {
+    width: 1200px;
+    overflow: hidden;
+    margin: 20px auto 80px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    border: 2px solid #1caaeb;
+    padding-bottom: 60px;
+}
+
+.content-auto {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.login-left {
+    width: 1200px;
+    padding: 20px 0;
+}
+
+.login-left h3 {
+    font-size: 18px;
+    font-weight: 500;
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #0099FF;
+    color: #ffffff;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 5px 5px 15px  #0099FF;
+    position: relative;
+    z-index: 10;
+}
+
+.login-table td {
+    height: 50px;
+}
+
+.login-table a {
+    color: #117ed2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input-base {
+    padding: 7px;
+    min-width: 220px;
+    border: 1px #d7d7d7 solid;
+    border-radius: 5px;
+}
+
+.input-dl {
+    display: block;
+    width: 170px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    background: #2ecc71;
+    color: #FFF;
+}
+
+.input-btn {
+    padding: 0 20px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    background: #2ecc71;
+    color: #FFF;
+}
+
+.error-td {
+    height: 20px;
+}
+
+.error-td span {
+    color: red;
+}
+
+.login-right {
+    display: none;
+    float: left;
+    width: 230px;
+    margin: 50px 0;
+    padding: 50px 0 0 75px;
+    height: 335px;
+    text-align: left;
+}
+
+.login-right h3 {
+    padding: 60px 0;
+    color: #b2b2b2;
+    font-size: 14px;
+}
+
+.login-right .infotext li {
+    padding-bottom: 15px;
+    overflow: hidden;
+}
+
+.login-right .infotext li {
+    padding-bottom: 15px;
+    overflow: hidden;
+}
+
+.infotext li span p {
+    color: #cacaca;
+}
+
+.infotext li i.ico1 {
+    float: left;
+    margin: 3px 12px 0 0;
+    width: 17px;
+    height: 21px;
+    background: url("../../images/pc/login/qd.png") no-repeat;
+}
+
+.infotext li i.ico2 {
+    float: left;
+    margin: 3px 12px 0 0;
+    width: 19px;
+    height: 19px;
+    background: url("../../images/pc/login/qt.png") no-repeat;
+}
+
+#t1, #t2, #validate {
+    color: red;
+    font-weight: 600;
+}
+
+.portlet-body {
+    margin-top: 10px;
+}
+
+#vCode {
+    margin: 0;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    -moz-border-radius: 3px 3px;
+    -webkit-border-radius: 3px 3px;
+    border-radius: 3px 3px;
+}
+
+#loginname, #password {
+    height: 38px;
+    margin-top: 16px;
+}
+
+#btnLogin {
+    margin-top: 50px;
+    width: 160px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 20px;
+    animation: searchbutton 0.8s;
+    -webkit-animation: searchbutton 0.8s;
+    outline: none;
+    background-color:#1caaeb;
+}
+
+button.btn-success{
+    border:none;
+}
+
+#btnLogin:hover{
+    background-color:#84b91f;
+}
+
+@keyframes searchbutton {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes searchbutton {
+    0% {
+        -webkit-transform: scale(0);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+#btnLogin[rocking="true"] {
+    animation: myfirst 0.6s;
+    -moz-animation: myfirst 0.6s; /* Firefox */
+    -webkit-animation: myfirst 0.6s; /* Safari 和 Chrome */
+    -o-animation: myfirst 0.6s; /* Opera */
+}
+
+@keyframes myfirst {
+    0% {
+        transform: translate(-3em, 0);
+    }
+    20% {
+        transform: translate(3em, 0);
+    }
+    40% {
+        transform: translate(-3em, 0);
+    }
+    60% {
+        transform: translate(3em, 0);
+    }
+    80% {
+        transform: translate(-3em, 0)
+    }
+    100% {
+        transform: translate(0em, 0)
+    }
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    0% {
+        -moz-transform: translate(-3em, 0);
+    }
+    20% {
+        -moz-transform: translate(3em, 0);
+    }
+    40% {
+        -moz-transform: translate(-3em, 0);
+    }
+    60% {
+        -moz-transform: translate(3em, 0);
+    }
+    80% {
+        -moz-transform: translate(-3em, 0)
+    }
+    100% {
+        -moz-transform: translate(0em, 0)
+    }
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+    0% {
+        -webkit-transform: translate(-3em, 0);
+    }
+    20% {
+        -webkit-transform: translate(3em, 0);
+    }
+    40% {
+        -webkit-transform: translate(-3em, 0);
+    }
+    60% {
+        -webkit-transform: translate(3em, 0);
+    }
+    80% {
+        -webkit-transform: translate(-3em, 0)
+    }
+    100% {
+        -webkit-transform: translate(0em, 0)
+    }
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+    0% {
+        -o-transform: translate(-3em, 0);
+    }
+    20% {
+        -o-transform: translate(3em, 0);
+    }
+    40% {
+        -o-transform: translate(-3em, 0);
+    }
+    60% {
+        -o-transform: translate(3em, 0);
+    }
+    80% {
+        -o-transform: translate(-3em, 0)
+    }
+    100% {
+        -o-transform: translate(0em, 0)
+    }
+}
+
+
+
+#tiptool {
+    display: none;
+    width: 230px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #1caaeb;
+    color: #ffffff;
+    position: absolute;
+    top: 8%;
+    left: 42%;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+#secret {
+    width: 1200px;
+    height: 110px;
+    background: #1caaeb;
+    margin: -56px auto 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#secret-head {
+    width: 120px;
+    height: 110px;
+    background: url("../../images/pc/login/tou.png") no-repeat center 5px;
+}
+
+#secret-hand-left, #secret-hand-right {
+    position: relative;
+    width: 70px;
+    height: 20px;
+    top: 100%;
+    margin-top: -10px;
+}
+
+#secret-hand-left {
+    background: url("../../images/pc/login/hand.png") no-repeat right 100%;
+}
+
+#secret-hand-right {
+    background: url("../../images/pc/login/hand.png") no-repeat left 100%;
+}
+
+@keyframes secret-animation-left {
+    50% {
+        height: 40px;
+        transform: translate(90px, -30px);
+        background: url("../../images/pc/login/left_handing.png") no-repeat;
+    }
+
+    100% {
+        height: 80px;
+        transform: translate(96px, -40px) scale(1.2);
+        background: url("../../images/pc/login/left_hand.png") no-repeat;
+    }
+}
+
+@keyframes secret-animation-right {
+    50% {
+        height: 40px;
+        transform: translate(-50px, -30px);
+        background: url("../../images/pc/login/right_handing.png") no-repeat;
+    }
+
+    100% {
+        height: 80px;
+        transform: translate(-50px, -40px) scale(1.2);
+        background: url("../../images/pc/login/right_hand.png") no-repeat;
+    }
+}
+
+.top3-2-2 {
+    color: #1caaeb;
+    margin-left: 25px;
+}
+
+.form-body .fa {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    color:#1caaeb;
+}
+
+.form-body input{
+    border-radius: 20px;
+}
+
+.login-left .fa{
+    font-size: 2.5rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}

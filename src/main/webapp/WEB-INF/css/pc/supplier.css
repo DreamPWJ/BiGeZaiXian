@@ -1,0 +1,143 @@
+/* CSS Document */
+
+div.Gys-main {
+    width: 1200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left;
+    margin: 20px auto 50px;
+    animation: loadinghtml 0.3s ease-out;
+}
+
+@keyframes loadinghtml {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform:translateX(0px);
+    }
+}
+
+div.gysbt {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    float: left;
+    color: #ffffff; /*border:1px solid #ff0000;*/
+    background-color: #1caaeb;
+    border-radius: 25px;
+    text-align: center;
+    animation: mysupplier 1s;
+    -moz-animation: mysupplier 1s; /* Firefox */
+    -webkit-animation: mysupplier 1s; /* Safari 和 Chrome */
+}
+
+@keyframes mysupplier {
+    0% {
+        transform: translate(60em,0) scale(0);
+    }
+    100% {
+        transform:translate(0, 0) scale(1);
+}
+}
+
+@-webkit-keyframes mysupplier /* Safari 和 Chrome */
+{
+    0% {
+        -webkit-transform: translate(60em,0) scale(0);
+    }
+    100% {
+        -webkit-transform: translate(0, 0) scale(1);
+    }
+}
+
+div.gdx1 {
+    width: 110px;
+    float: left;
+}
+
+div.gdx2 {
+    width: 880px;
+    float: left;
+}
+
+div.SH {
+    width: 880px;
+    clear: left;
+    margin: 0px auto;
+    padding-top: 40px;
+    padding-bottom: 10px; /*background:#6cd554;*/
+}
+
+div.d1p {
+    width: 880px;
+    height: 116px;
+    margin-bottom: 20px; /*background:#EB6100;*/
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF7519;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+div.g1 {
+    width: 250px;
+    height: 116px;
+    margin-right: 65px;
+    float: left; /* background:#aee4a2;*/
+}
+
+div.d1-1 {
+    width: 170px;
+    height: 70px;
+    margin: 0px auto;
+}
+
+div.d1-2 {
+    width: 250px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 13px;
+    margin-top: 2px;
+    text-align: center; /*background:#d0bdb0;*/
+}
+
+div.d1-3 {
+    width: 250px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    margin: 0px;
+    text-align: center; /*background:#c8a4a2;*/
+}
+
+div.g2 {
+    width: 250px;
+    height: 116px;
+    margin: 0px;
+    float: left; /*background:#aee4a2;*/
+}
+
+div.gdx3 {
+    width: 880px;
+    clear: left;
+    margin-bottom: 20px;
+}
+
+/*��ҳ��ʽ*/
+
+.gys-feny-u a {
+    color: #000500;
+}
+
+.gys-feny-u a:hover {
+    color: #FF7519;
+}

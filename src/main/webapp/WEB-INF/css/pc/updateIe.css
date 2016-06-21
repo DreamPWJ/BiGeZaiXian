@@ -1,0 +1,67 @@
+/* CSS Document */
+
+body {
+    height: 100%;
+    text-align: center;
+}
+
+div.Uie-1 {
+    width: 344px;
+    height: 230px;
+    margin: 0px auto;
+    padding: 0px; /*border:1px solid #ff0000;*/
+}
+
+div.Uie-2 {
+    width: 900px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0px auto;
+    padding: 0px;
+    color: #6b6c6b; /*border:1px solid #000000;*/
+}
+
+div.Uie-3 {
+    width: 325px;
+    height: 26px;
+    margin: 0px auto;
+    padding-top: 10px;
+}
+
+div.Uie-4 {
+    width: 410px;
+    height: 114px;
+    margin: 0px auto;
+    margin-top: 30px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+div.Uie-4-1 {
+    width: 69px;
+    height: 110px;
+    float: left;
+    margin-right: 100px;
+    padding: 0px;
+}
+
+div.Uie-4-2 {
+    width: 69px;
+    height: 110px;
+    float: left;
+    margin-right: 100px;
+    padding: 0px;
+}
+
+div.Uie-4-3 {
+    width: 69px;
+    height: 110px;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}

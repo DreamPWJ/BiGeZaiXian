@@ -1,0 +1,416 @@
+/* CSS Document */
+
+/*头部*/
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.zhongti {
+    width: 100%;
+    height: auto;
+    position: relative;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0px;
+    background-size: 100% 100%; /*border-bottom:1px solid #FF0000;*/
+}
+
+.v2 {
+    width: 100%;
+    height: 50px;
+    background: #171B27;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    color: #FFFFFF;
+    background-size: 100% 100%;
+    overflow: hidden;
+    letter-spacing: 4px;
+}
+
+.v2-1 {
+    width: 24px;
+    height: 50px;
+    background: #FF0000;
+    margin-left: 18px;
+    padding: 0px;
+    float: left;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon.png) no-repeat scroll 0px -335px;
+}
+
+.v2-3 {
+    width: 24px;
+    height: 50px;
+    background: #FF0000;
+    margin-right: 22px;
+    padding: 0px;
+    float: right;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon.png) no-repeat scroll 0px -382px;
+}
+
+/*头部隐藏菜单�?*/
+.top-dh {
+    width: 100%;
+    height: 58px;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.top-dh-1 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-1-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon2.png) no-repeat scroll 0px 5px;
+}
+
+.top-dh-2 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-2-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon2.png) no-repeat scroll 0px -76px;
+}
+
+.top-dh-3 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-3-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon2.png) no-repeat scroll 0px -156px;
+}
+
+.top-dh-4 {
+    width: 25%;
+    height: 58px;
+    float: left;
+}
+
+.top-dh-4-1 {
+    width: 44px;
+    height: 52px;
+    margin: 0 auto;
+    background: transparent url(../../../images/mobilephone/jrb/Apublic/icon2.png) no-repeat scroll 0px -240px;
+}
+
+.too1 {
+    width: 42px;
+    height: 50px;
+}
+
+/*底线*/
+.dx {
+    width: 100%;
+    clear: left;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+/*top-logo*/
+.top-logo {
+    width: 100%;
+    height: auto;
+    background: url(../../../images/mobilephone/jrb/jrbInstructions/1px.jpg) repeat-x;
+    overflow: hidden;
+}
+
+.logo {
+    width: 100%;
+    height: 48px;
+    margin-top: 50px;
+    background-size: 100% 100%; /*background:#0F6;*/
+}
+
+.logo-1 {
+    width: 174px;
+    height: 48px;
+    float: left;
+    margin-left: 20px;
+    background: url(../../../images/mobilephone/jrb/jrbInstructions/logo.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.logo-2 {
+    width: 185px;
+    height: 44px;
+    float: left;
+    margin-top: 2px;
+    margin-left: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #FFF;
+    border-left: 2px solid #F8CA12;
+}
+
+.logo1 {
+    width: 100%;
+    height: 30px;
+    float: left;
+    margin-top: 10px;
+    background: #FB7222;
+}
+
+.logo1 a {
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #FFF;
+    text-decoration: none;
+}
+
+.logo1-1 {
+    width: 24%;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+    float: left;
+}
+
+.logo1-2 {
+    width: 28%;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+    float: left;
+}
+
+.logo1-1-1 {
+    width: 50px;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 3px solid #F8CA12;
+}
+
+/*聚融宝产品介绍，适用客户*/
+.cpjs {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    background: #FFF;
+}
+
+.cpjs-1 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 4px; /*background:#F9F;*/
+}
+
+.cpjs-1-t {
+    height: 30px;
+    border-left: 3px solid #F8CA12;
+    float: left;
+    margin-top: 5px;
+}
+
+.cpjs-1-z {
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    margin: 0px 10px 0px 8px;
+    text-align: left;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #333;
+    overflow: hidden;
+}
+
+.cpjs-1-t-1 {
+    height: 30px;
+    border-left: 3px solid #F94E20;
+    float: left;
+    margin-top: 5px;
+}
+
+.cpjs-2 {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    text-align: left;
+    padding-left: 8px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #6C6C6C; /* background:#F9F;*/
+}
+
+/*�?1*/
+.imag1 {
+    width: 100%;
+    height: 144px;
+    background: url(../../../images/mobilephone/jrb/jrbInstructions/pic007.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+/*操作流程*/
+.czlc {
+    width: 100%;
+    height: 82px;
+    margin-top: 20px;
+    background: url(../../../images/mobilephone/jrb/jrbInstructions/pic002.jpg) no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.czlc-1 {
+    width: 140px;
+    height: 82px;
+    line-height: 82px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 21px;
+    font-family: "微软雅黑";
+    color: #FFF;
+    letter-spacing: 4px; /*background:#999;*/
+}
+
+/*平台注册*/
+.ptzc {
+    width: 100%;
+    height: 58px;
+    margin-top: 20px; /*background:#CCC;*/
+}
+
+.ptzc-1 {
+    width: 166px;
+    height: 55px;
+    float: left;
+    margin-left: 8px;
+    background: url(../../../images/mobilephone/jrb/jrbInstructions/pic003.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.ptzc-1-1 {
+    width: 166px;
+    height: 43px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #FFF;
+}
+
+/*流程介绍1*/
+.lcjs1 {
+    width: auto;
+    line-height: 22px;
+    padding: 6px 20px 10px 20px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #F84848;
+}
+
+.czlc-san1 {
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #F84848;
+}
+
+/*金币飘带*/
+.jinbi {
+    width: 100%;
+    height: 48px;
+    margin: 20px 0px;
+    background: url(../../../images/mobilephone/jrb/jrbInstructions/pic025.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/*融资介绍*/
+.rzjs {
+    width: auto;
+    line-height: 22px;
+    padding: 6px 20px 10px 20px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #6C6C6C;
+}
+
+.rzjs-san1 {
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #FFF;
+    background: #F84848;
+}
+
+/*回顶�?*/
+* html {
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+
+/*解决IE6下滚动抖动的问题*/
+#hdb {
+    width: 50px;
+    height: 50;
+    position: fixed;
+    bottom: 80px;
+    right: 2px;
+    display: block;
+    _position: absolute;
+    _bottom: auto;
+    _top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+    _margin-bottom: 15px;
+}
+
+/*解决IE6下不兼容 position:fixed 的问*/
+
+/*我要申请聚融�?*/
+/*#sqjrb{width:100%; height:60px; border-top:1px solid #CCC; background:#FFF;
+	position:fixed; bottom:0px; display:block; _position:absolute; _bottom:auto;
+	_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+	_margin-bottom:15px;
+}*/
+.sqjrb {
+    width: auto;
+    height: 60px;
+    border: 1px solid #CCC;
+}
+
+.sqjrb-1 {
+    width: 208px;
+    height: 48px;
+    line-height: 44px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 6px;
+    background: url(../../../images/mobilephone/jrb/jrbInstructions/pic005.png) no-repeat;
+}
+
+.sqjrb-1 a {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #FFF;
+    text-decoration: none;
+}
+
+.sqjrb-1 a:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
+/*底部*/
+/*
+.dib{ width:auto; height:150px; padding:14px  22px 0px 22px; background:#F4F4F4;}
+	.tuic{ width:auto; height:44px; line-height:44px; text-align:center; background:#EB6100; margin-bottom:44px; overflow:hidden; letter-spacing:8px;}
+		.tuic a{ font-size:18px; color:#FFFFFF; text-decoration:none;}
+		.tuic a:hover{color:#009fe8; }
+	.wz{width:auto; height:44px; line-height:44px; text-align:center; font-size:14px; color:#666666; background:#E2E2E2; overflow:hidden;}
+*/
+	
