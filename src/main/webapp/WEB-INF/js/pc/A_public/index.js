@@ -56,7 +56,7 @@ $(function () {
 
     $('#pvc').vTicker({
         height: 0,
-        showItems: 9,
+        showItems: 11,
         pause: 3000,
         speed: 500,
         animation: "fade",
@@ -67,7 +67,7 @@ $(function () {
 
     $('#pp').vTicker({
         height: 0,
-        showItems: 9,
+        showItems: 11,
         pause: 3000,
         speed: 500,
         animation: "fade",
@@ -77,7 +77,7 @@ $(function () {
 
     $('#pe').vTicker({
         height: 0,
-        showItems: 9,
+        showItems: 11,
         pause: 3000,
         speed: 500,
         animation: "fade",

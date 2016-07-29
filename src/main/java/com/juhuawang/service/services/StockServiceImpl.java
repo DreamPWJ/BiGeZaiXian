@@ -314,7 +314,7 @@ public class StockServiceImpl implements IStockService {
                 "WHERE g.GOODKINDCODE like ''||(select levelcode from VIEW_DICTYPE where NAME=\'" + argmap.get("goodKindName") + "\')||'%' ) a ");
         paramMap.put("fields", "  a.*, case when a.DIFFERHOURS>=60 and a.DIFFERHOURS<1440 then floor(a.DIFFERHOURS/60)||'小时' when a.DIFFERHOURS>=1440 then floor(a.DIFFERHOURS/1440) ||'天前' else a.DIFFERHOURS || '分钟' end  as differtime ");
         paramMap.put("pageNow", 1);
-        paramMap.put("pageSize", 10);
+        paramMap.put("pageSize", 12);
         paramMap.put("orderField", " a.createtime");
         paramMap.put("orderFlag", 1);
         this.baseMapper.getPaging(paramMap);

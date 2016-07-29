@@ -310,6 +310,9 @@
 .xPdt_table_cnt td {
     text-align: center;
     font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .xban3 {
@@ -349,7 +352,7 @@
 }
 
 .xMedia_col {
-    height: 190px;
+    height: 200px;
     padding-left: 10px;
     overflow: hidden;
 }
@@ -442,7 +445,7 @@
 .xfk {
     border: none;
     width: 300px;
-    height: 347px;
+    height: 360px;
     float: left;
     padding: 0;
     margin-top: -43px;
@@ -453,7 +456,7 @@
 .xzxbj {
     border: none;
     width: 880px;
-    height: 347px;
+    height: 380px;
     float: left;
     padding: 0;
     margin-left: 16px;
@@ -773,7 +776,7 @@ a {
     font-weight: bolder;
     border-radius: 12px;
     line-height: 26px;
-    box-shadow: 0 5px 0 #079AEB ,0 5px 25px rgba(0,0,0,0.6);
+    box-shadow: 0 5px 0 #079AEB ,0 5px 10px rgba(0,0,0,0.6);
     transition: all 0.2s ease;
 }
 
